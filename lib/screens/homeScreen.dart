@@ -1,108 +1,8 @@
 import 'package:flutter/material.dart';
-
-const String data = "data";
-const String catImage = "CategoryImage";
-
-final Map<String, Map<String, List<dynamic>>> dataList = {
-  "Product Category1": {
-    data: [
-      [
-        "Product Name1",
-        0,
-        "https://fastly.picsum.photos/id/237/400/400.jpg?hmac=xOOBt-lNJA0YjxEj0QoS_0PZV5iI3oxZA_weJ4E1xEw",
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name2",
-        0,
-        "https://fastly.picsum.photos/id/474/200/200.jpg?hmac=X5gJb746aYb_1-VdQG2Cti4XcHC10gwaOfRGfs6fTNk",
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: [
-      "https://fastly.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc"
-    ],
-  },
-  "Product Category2": {
-    data: [
-      ["Product Name!", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      [
-        "Product Name2",
-        0,
-        "https://fastly.picsum.photos/id/237/400/400.jpg?hmac=xOOBt-lNJA0YjxEj0QoS_0PZV5iI3oxZA_weJ4E1xEw",
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: ["CatergoryImageUrl"],
-  },
-  "Product Category3": {
-    data: [
-      ["Product Name!", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name2", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: ["CatergoryImageUrl"],
-  },
-  "Product Category4": {
-    data: [
-      ["Product Name!", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name2", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: ["CatergoryImageUrl"],
-  },
-  "Product Category5": {
-    data: [
-      ["Product Name!", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name2", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: ["CatergoryImageUrl"],
-  },
-  "Product Category6": {
-    data: [
-      ["Product Name!", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name2", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name3", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name4", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name5", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name6", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name7", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-      ["Product Name8", 0, "ImageUrl", "PO#: 20042", "Anothr detail"],
-    ],
-    catImage: ["CatergoryImageUrl"],
-  },
-};
+import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/data.dart';
+import 'package:restrosupply/modules/adaptive.dart';
+import 'package:restrosupply/widgets/body/producs.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -112,7 +12,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<String> keys = dataList.keys.toList();
+  late final List<String> keys;
+
+  @override
+  void initState() {
+    keys = dataList.keys.toList();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -120,262 +26,373 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.85,
+            height: mobileWidth,
             child: Stack(
               children: [
                 Image.network(
                   "https://fastly.picsum.photos/id/371/200/170.jpg?hmac=wdhdDfYq7-5mdVfZCplHul6PBaxFrpPNkPwllJz93gA",
-                  fit: BoxFit.contain,
-                  height: MediaQuery.of(context).size.height * 0.85,
+                  fit: BoxFit.cover,
+                  height: mobileWidth,
                   width: MediaQuery.of(context).size.width,
                 ),
                 Align(
                   alignment: Alignment(-0.75, 0),
                   child: SizedBox(
-                    height: (MediaQuery.of(context).size.width /
-                                MediaQuery.of(context).size.height) >
-                            1.3
-                        ? MediaQuery.of(context).size.height * 0.5
-                        : MediaQuery.of(context).size.height * 0.8,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Wrap(children: [
+                    height: 450,
+                    child: Wrap(children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                           SizedBox(
-                            width: MediaQuery.of(context).size.width > 480
-                                ? MediaQuery.of(context).size.width * 0.5
-                                : MediaQuery.of(context).size.width,
+                            width:
+                                MediaQuery.of(context).size.width >= mobileWidth
+                                    ? MediaQuery.of(context).size.width * 0.5
+                                    : MediaQuery.of(context).size.width,
                             child: Text(
                               "Provide complete tableware solutions for the catering industry",
-                              style: Theme.of(context).textTheme.displayLarge,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .displayLarge!
+                                  .copyWith(
+                                      color: Theme.of(context).primaryColor),
                             ),
                           ),
-                        ]),
-                        Container(
-                          width: 180,
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "All categories",
-                              style: Theme.of(context).textTheme.labelMedium,
-                            ),
+                          SizedBox(
+                            height: 20,
                           ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            color: Colors.amber,
-            height: MediaQuery.of(context).size.height * 0.6,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "Shop By Category",
-                  style: Theme.of(context).textTheme.displayMedium,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: List.generate(
-                    6,
-                    (index) => Container(
-                      color: Colors.black,
-                      width: MediaQuery.of(context).size.width / 8,
-                      height: MediaQuery.of(context).size.width / 6,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            height: MediaQuery.of(context).size.width / 8,
-                            color: Colors.red,
-                            child: Image.network(
-                              dataList[keys[index]]![catImage]![0],
-                              fit: BoxFit.fill,
+                          InkWell(
+                            child: Container(
+                              width: 180,
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                  color: Theme.of(context).primaryColor,
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: Center(
+                                child: Text(
+                                  "All categories",
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium,
+                                ),
+                              ),
                             ),
-                          ),
-                          Text(
-                            keys[index],
-                            style: Theme.of(context).textTheme.labelMedium,
                           )
                         ],
                       ),
-                    ),
+                    ]),
                   ),
-                )
+                ),
               ],
             ),
           ),
-          Container(
-            color: Colors.orange,
-            height: MediaQuery.of(context).size.height * 0.35,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [Placeholder(), Placeholder(), Placeholder()],
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Shop By Category",
+                style: Theme.of(context).textTheme.displayMedium,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              MediaQuery.of(context).size.width >= mobileWidth
+                  ? Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: List.generate(
+                        6,
+                        (index) => ProductsInfo(keys: keys, index: index),
+                      ),
+                    )
+                  : Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: List.generate(
+                        6,
+                        (index) => ProductsInfo(keys: keys, index: index),
+                      ),
+                    ),
+            ],
           ),
           Container(
-            color: Colors.grey,
-            height: ((MediaQuery.of(context).size.height * 0.5) + 20) * 5,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: List.generate(
-                5,
-                (index) => Container(
-                  color: Colors.white,
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.height * 0.5,
-                        child: Column(
+            color: Theme.of(context).primaryColor,
+            child: MediaQuery.of(context).size.width >= mobileWidth
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [Placeholder(), Placeholder(), Placeholder()],
+                  )
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [Placeholder(), Placeholder(), Placeholder()],
+                  ),
+          ),
+          MediaQuery.of(context).size.width >= mobileWidth
+              ? Container(
+                  height: ((mobileWidth * 0.5) + 20) * 5,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(
+                      5,
+                      (index) => Container(
+                        height: mobileWidth * 0.5,
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        child: Row(
                           children: [
-                            Text(
-                              keys[index],
-                              style: Theme.of(context).textTheme.displayMedium,
+                            SizedBox(
+                              width: mobileWidth * 0.5,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    keys[index],
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
+                                  ),
+                                  Stack(
+                                    children: [
+                                      Center(
+                                        child: SizedBox(
+                                          width: 300,
+                                          height: 300,
+                                          child: Image.network(
+                                            dataList[keys[index]]![catImage]![0]
+                                                [0],
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned.fill(
+                                        child: Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Container(
+                                            width: 150,
+                                            height: 50,
+                                            padding: EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                                color: Theme.of(context)
+                                                    .primaryColor,
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                            child: Center(
+                                              child: Text(
+                                                "View More",
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .titleMedium,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
-                            Stack(
-                              children: [
-                                Center(
-                                  child: SizedBox(
-                                    width: MediaQuery.of(context).size.height *
-                                        0.4,
-                                    height: MediaQuery.of(context).size.height *
-                                        0.4,
-                                    child: Image.network(
-                                      dataList[keys[index]]![catImage]![0],
-                                      fit: BoxFit.fill,
+                            SizedBox(
+                              width: (MediaQuery.of(context).size.width * 0.8) -
+                                  (mobileWidth * 0.5),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  children: List.generate(
+                                    dataList[keys[index]]![data]!.length,
+                                    (_index) => Container(
+                                      width:
+                                          MediaQuery.of(context).size.width / 8,
+                                      padding: EdgeInsets.only(
+                                          right: 10, left: 10, top: 15),
+                                      height: 250,
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                8,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                8,
+                                            child: Image.network(
+                                              dataList[keys[index]]![data]![
+                                                  _index][imageIndex],
+                                              fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            dataList[keys[index]]![data]![
+                                                _index][textIndex],
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .labelMedium,
+                                            maxLines: 3,
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                                Positioned.fill(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                      width: 150,
-                                      height: 40,
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                          color: Theme.of(context).primaryColor,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: Center(
-                                        child: Text(
-                                          "View More",
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelMedium,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
+                              ),
+                            )
                           ],
                         ),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.8 -
-                            MediaQuery.of(context).size.height * 0.5,
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: List.generate(
-                                dataList[keys[index]]![data]!.length,
-                                (_index) => Container(
-                                      margin: EdgeInsets.all(20),
-                                      width:
-                                          ((MediaQuery.of(context).size.width *
-                                                      0.8 -
-                                                  MediaQuery.of(context)
-                                                          .size
-                                                          .height *
-                                                      0.5) /
-                                              3),
-                                      height:
-                                          MediaQuery.of(context).size.height *
-                                              0.5,
-                                      color: Colors.amber,
-                                      child: Column(
-                                        children: [
-                                          Spacer(),
-                                          Center(
-                                            child: Image.network(
-                                              dataList[keys[index]]![data]![
-                                                  _index][2],
-                                              width: ((MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.8 -
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .height *
-                                                          0.5) /
-                                                  3),
-                                              fit: BoxFit.fill,
-                                              height: ((MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.8 -
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .height *
-                                                          0.5) /
-                                                  3),
-                                            ),
-                                          ),
-                                          Spacer(),
-                                          Center(
-                                            child: Text(
-                                              dataList[keys[index]]![data]![
-                                                  _index][0],
-                                              maxLines: 2,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .labelMedium!
-                                                  .copyWith(
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                            ),
-                                          ),
-                                          Spacer(),
-                                        ],
-                                      ),
-                                    )),
-                          ),
-                        ),
-                      )
-                    ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.8,
-            color: Colors.amber,
-            child: Row(
-              children: [
-                Placeholder(
-                  fallbackWidth: MediaQuery.of(context).size.width / 2,
                 )
+              : SizedBox(
+                  height: 20,
+                ),
+          isDevice(
+            desktop: Row(
+              children: [
+                Spacer(),
+                Image.network(
+                  "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+                  width: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width / 2 <= 400
+                          ? MediaQuery.of(context).size.width / 2
+                          : 400
+                      : MediaQuery.of(context).size.width * 0.8,
+                  height: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width / 2 <= 400
+                          ? MediaQuery.of(context).size.width / 2
+                          : 400
+                      : MediaQuery.of(context).size.width * 0.8,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width * 0.03
+                      : 0,
+                  height:
+                      MediaQuery.of(context).size.width >= mobileWidth ? 20 : 0,
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Our Commitment",
+                      style: Theme.of(context).textTheme.displaySmall,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      child: Text(
+                        """At Golden Maple Plastic & Paper Inc., we are dedicated to providing environmentally friendly, non-toxic, and high-quality products to meet the needs of Canada's food industry. We take pride in our contributions to environmental sustainability, hygiene, and safety. We are a company committed to a green economy and social responsibility. If you have any inquiries or need information about our products and services, please feel free to contact us. We look forward to serving you and making a positive impact on Canada's food industry.""",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(color: Colors.black),
+                        softWrap: true,
+                      ),
+                    ),
+                    Container(
+                      width: 180,
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border:
+                              Border.all(color: Theme.of(context).primaryColor),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Text(
+                          "Contact Us",
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Spacer(),
+              ],
+            ),
+            mobile: Column(
+              children: [
+                Image.network(
+                  "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+                  width: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width / 2 <= 400
+                          ? MediaQuery.of(context).size.width / 2
+                          : 400
+                      : MediaQuery.of(context).size.width * 0.8,
+                  height: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width / 2 <= 400
+                          ? MediaQuery.of(context).size.width / 2
+                          : 400
+                      : MediaQuery.of(context).size.width * 0.8,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width >= mobileWidth
+                      ? MediaQuery.of(context).size.width * 0.03
+                      : 0,
+                  height:
+                      MediaQuery.of(context).size.width >= mobileWidth ? 20 : 0,
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Our Commitment",
+                      style: Theme.of(context).textTheme.displayMedium,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      child: Text(
+                        """At Golden Maple Plastic & Paper Inc., we are dedicated to providing environmentally friendly, non-toxic, and high-quality products to meet the needs of Canada's food industry. We take pride in our contributions to environmental sustainability, hygiene, and safety. We are a company committed to a green economy and social responsibility. If you have any inquiries or need information about our products and services, please feel free to contact us. We look forward to serving you and making a positive impact on Canada's food industry.""",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium!
+                            .copyWith(color: Colors.black),
+                        softWrap: true,
+                      ),
+                    ),
+                    Container(
+                      width: 180,
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border:
+                              Border.all(color: Theme.of(context).primaryColor),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Text(
+                          "Contact Us",
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.4,
-            color: Colors.green,
+            height: 240,
+            color: Colors.black54,
           )
         ],
       ),
