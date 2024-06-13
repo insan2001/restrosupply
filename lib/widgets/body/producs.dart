@@ -23,21 +23,27 @@ class ProductsInfo extends StatelessWidget {
             child: Image.network(
               dataList[keys[index]]![catImage]![0][0],
               fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width >= mobileWidth
+                  ? MediaQuery.of(context).size.width / 7.5
+                  : MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.width >= mobileWidth
+                  ? MediaQuery.of(context).size.width / 7.5
+                  : MediaQuery.of(context).size.width,
             ),
           ),
           SizedBox(
             height: 5,
           ),
-          Text(
-            keys[index],
-            style: MediaQuery.of(context).size.width >= mobileWidth
-                ? Theme.of(context).textTheme.labelMedium
-                : Theme.of(context).textTheme.displaySmall,
-            maxLines: 3,
-          ),
           SizedBox(
-            height: 10,
-          )
+            height: 40,
+            child: Text(
+              keys[index],
+              style: MediaQuery.of(context).size.width >= mobileWidth
+                  ? Theme.of(context).textTheme.labelMedium
+                  : Theme.of(context).textTheme.displaySmall,
+              maxLines: 3,
+            ),
+          ),
         ],
       ),
     );

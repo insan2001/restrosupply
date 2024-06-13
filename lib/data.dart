@@ -1,252 +1,242 @@
 import 'package:restrosupply/constants.dart';
 
 final Map<String, Map<String, List<List<dynamic>>>> dataList = {
-  "Category one": {
+  "Bagasse Products": {
     data: [
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Clear Lid For 48oz Bagasse Round Bowl - 300ct/CS",
+        "assets/images/sugarcane/1.png",
         true,
         true,
         true,
+        "",
         "PO#: 20042",
-        "Anothr detail"
+        "Packing: 6X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Clear Lid For 24/32oz Bagasse Round Bowl - 600ct/CS",
+        "assets/images/sugarcane/1.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 20039",
+        "Packing: 12X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Clear Lid For 12/16oz Bagasse Round Bowl - 600ct/CS",
+        "assets/images/sugarcane/1.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 20035",
+        "Packing: 12X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - 48oz Round Bowl - Bagasse - 300ct/CS",
+        "assets/images/sugarcane/2.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 20035",
+        "Packing: 12X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - 32oz Round Bowl - Bagasse - 600ct/CS",
+        "assets/images/sugarcane/2.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#:20037",
+        "Pacing: 12X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - 24oz Round Bowl - Bagasse - 600ct/CS",
+        "assets/images/sugarcane/2.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
+        "Golden Maple - 24oz Round Bowl - Bagasse - 6X100CT/CS",
+        "Packiong: 12X50 CT"
+      ],
+      [
+        "Golden Maple - 16oz Round Bowl - Bagasse - 600ct/CS",
+        "assets/images/sugarcane/3.png",
+        true,
+        true,
+        true,
+        "Golden Maple - 16oz Round Bowl - Bagasse - 6X100CT/CS",
+        "Packing: 12X50 CT"
+      ],
+      ["", "assets/images/sugarcane/3.png", true, true, true, "", ""],
+      ["", "assets/images/sugarcane/3.png", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+    ],
+    catImage: [
+      ["assets/images/sugarcane/0.webp", "Sugarcane Compostable Products"]
+    ]
+  },
+  "Kraft Paper Fold Box": {
+    data: [
+      [
+        "Wisdom - #8 Kraft Paper Fold Box - 40X50ct/CS",
+        "assets/images/kraftPaper/0.webp",
+        true,
+        true,
+        true,
+        "PO#: 90008",
+        "Packing: 4X50ct"
+      ],
+      [
+        "Wisdom - #1 Kraft Paper Fold Box - 40X50ct/CS",
+        "assets/images/kraftPaper/0.webp",
+        true,
+        true,
+        true,
+        "PO#: 90001",
+        "Packing: 4X50ct"
+      ],
+      [
+        "Wisdom - #2 Kraft Paper Fold Box - 40X50ct/CS",
+        "assets/images/kraftPaper/0.webp",
+        true,
+        true,
+        true,
+        "PO#: 90002",
+        "Packing: 4X50ct"
+      ],
+      [
+        "Wisdom - #4 Kraft Paper Fold Box - 40X40ct/CS",
+        "assets/images/kraftPaper/0.webp",
+        true,
+        true,
+        true,
+        "Wisdom-#4 Kraft Paper Fold Box",
+        "Packing: 4X40ct"
+      ],
+      [
+        "Wisdom - #3 Kraft Paper Fold Box - 40X50ct/CS",
+        "assets/images/kraftPaper/0.webp",
+        true,
+        true,
+        true,
+        "PO#: 90003",
+        "Packing: 4X50ct"
+      ],
     ],
     catImage: [
       [
-        "https://fastly.picsum.photos/id/35/200/300.jpg?hmac=No1hMogzX_PUqgWDfLRCc4wGPYTIeviBhJbzjqskoMA"
+        "assets/images/kraftPaper/0.webp",
+        "Kraft Paper Fold Box",
       ]
     ]
   },
-  "Category two": {
+  "Aluminum Foil": {
     data: [
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Chartland - Aluminium Rectangle Steam Pan - 4332 - 50ct/CS",
+        "assets/images/alumnum/1.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 10046",
+        "Packing: 50ct/CS"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Chartland - Full Size Lid For Aluminium Steam Pan - Little Packing - 100ct/CS",
+        "",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#：10045",
+        "Packing: 20X5ct"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Chartland - Half Size Lid For Aluminium Steam Pan - Little Packing - 400ct/CS",
+        "",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#：10044",
+        "Packing: 40X10ct"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Chartland - Foil Half Size Medium - Aluminium Steam Pan - Little Packing - 100ct/CS",
+        "assets/images/alumnum/2.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#：10040",
+        "Packing: 10X10ct",
+        "PO#:: 10039"
       ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
     ],
     catImage: [
-      [
-        "https://fastly.picsum.photos/id/546/200/200.jpg?hmac=qPx0UfEYgljp1xwhEAy3t7xCT8uLxWCGibv7hu6EkwQ"
-      ]
+      ["assets/images/alumnum/0.webp", "Foil Container and Lid"]
     ]
   },
-  "Category three": {
+  "Paper Soup Cups": {
     data: [
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
     ],
     catImage: [
-      ["catImage"]
-    ]
-  },
-  "Category four": {
-    data: [
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
-    ],
-    catImage: [
-      ["catImage"]
+      ["catImage", "Paper Soup Cups and Lid"]
     ]
   },
   "Category five": {
@@ -307,7 +297,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["catImage"]
+      ["catImage", ""]
     ]
   },
   "Category 6": {
@@ -368,7 +358,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["catImage"]
+      ["catImage", ""]
     ]
   },
   "Category seven": {
@@ -429,7 +419,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["catImage"]
+      ["catImage", ""]
     ]
   },
   "Category eight": {
@@ -490,7 +480,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["catImage"]
+      ["catImage", ""]
     ]
   },
   "Category nine": {
@@ -551,7 +541,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["catImage"]
+      ["catImage", ""]
     ]
   },
 };

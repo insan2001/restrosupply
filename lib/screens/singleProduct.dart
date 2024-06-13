@@ -1,10 +1,16 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
-import 'package:restrosupply/widgets/contacts.dart';
+import 'package:restrosupply/modules/adaptive.dart';
+import 'package:restrosupply/widgets/appBar/customScaffold.dart';
+import 'package:restrosupply/screens/contacts.dart';
+import 'package:restrosupply/widgets/singleProduct/information.dart';
+import 'package:restrosupply/widgets/singleProduct/location.dart';
+import 'package:restrosupply/widgets/singleProduct/productImage.dart';
+import 'package:restrosupply/widgets/singleProduct/suggestGrid.dart';
+import 'package:restrosupply/widgets/singleProduct/suggestText.dart';
 
-// name, imageUrl, stock, pickup, shipping, details
+// name, imagepath, stock, pickup, shipping, details
 
 class SingleProduct extends StatefulWidget {
   final int index;
@@ -22,213 +28,91 @@ class SingleProduct extends StatefulWidget {
 
 class _SingleProductState extends State<SingleProduct> {
   late final List<dynamic> productData;
+  late final String category;
   late final List<List<dynamic>> productsData;
 
   @override
   void initState() {
     productsData = dataList[widget.category]![data]!;
     productData = productsData[widget.index];
-    productsData.removeAt(widget.index);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          RichText(
-            text: TextSpan(
-              style: Theme.of(context).textTheme.labelMedium,
-              children: <TextSpan>[
-                TextSpan(
-                    text: 'Home',
-                    style: Theme.of(context).textTheme.labelLarge,
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        Navigator.maybeOf(context);
-                      }),
-                TextSpan(
-                  text: " > ",
-                  style: Theme.of(context).textTheme.labelLarge,
-                ),
-                TextSpan(
-                  text: widget.category,
-                  style: Theme.of(context).textTheme.labelLarge,
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Navigator.pop(context);
-                    },
-                ),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+    return CustomScaffold(
+      body: SingleChildScrollView(
+        child: isDevice(
+          desktop: Column(
             children: [
-              Spacer(
-                flex: 2,
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                  ),
-                ),
-                child: Image.network(
-                  productData[imageIndex],
-                  width: MediaQuery.of(context).size.width * 0.32,
-                  height: 400,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Spacer(
-                flex: 1,
-              ),
-              Container(
-                color: Colors.amber,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      productData[textIndex],
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          productData[stockIndex] ? Icons.check : Icons.close,
-                          color: productData[stockIndex]
-                              ? Colors.green
-                              : Colors.red,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          productData[stockIndex] ? "In Stock" : "Out of stock",
-                          style:
-                              Theme.of(context).textTheme.labelMedium!.copyWith(
-                                    color: productData[stockIndex]
-                                        ? Colors.green
-                                        : Colors.red,
-                                  ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          productData[pickupIndex] ? Icons.check : Icons.close,
-                          color: productData[pickupIndex]
-                              ? Colors.green
-                              : Colors.red,
-                        ),
-                        Text(
-                          "Pickup - In store",
-                          style:
-                              Theme.of(context).textTheme.labelMedium!.copyWith(
-                                    color: productData[pickupIndex]
-                                        ? Colors.green
-                                        : Colors.red,
-                                  ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          productData[shippingIndex]
-                              ? Icons.check
-                              : Icons.close,
-                          color: productData[shippingIndex]
-                              ? Colors.green
-                              : Colors.red,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Shinpping",
-                          style:
-                              Theme.of(context).textTheme.labelMedium!.copyWith(
-                                    color: productData[shippingIndex]
-                                        ? Colors.green
-                                        : Colors.red,
-                                  ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: List.generate(
-                          productData.length - detailsIndex,
-                          (_index) => Column(
-                                children: [
-                                  Text(
-                                    productData[detailsIndex + _index],
-                                    style:
-                                        Theme.of(context).textTheme.labelMedium,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  )
-                                ],
-                              )),
-                    ),
-                  ],
-                ),
-              ),
-              Spacer(
-                flex: 5,
-              ),
-            ],
-          ),
-          Text(
-            "You might also like these",
-            style: Theme.of(context).textTheme.displayMedium,
-          ),
-          GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.all(20),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 0.8),
-            shrinkWrap: true,
-            itemCount: productsData.length <= 8 ? productsData.length : 8,
-            itemBuilder: (context, _index) => Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Colors.black,
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              Row(
                 children: [
-                  Image.network(
-                    productsData[_index][imageIndex],
-                    fit: BoxFit.cover,
-                    height: (MediaQuery.of(context).size.width / 4) - 20,
-                    width: (MediaQuery.of(context).size.width / 4) - 20,
+                  Spacer(
+                    flex: 1,
                   ),
-                  Text(
-                    productsData[_index][textIndex],
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.labelMedium,
+                  isDevice(desktop: LocationWidget(category: widget.category)),
+                  Spacer(
+                    flex: 6,
                   ),
                 ],
               ),
-            ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Spacer(
+                    flex: 2,
+                  ),
+                  ProductImageWidget(path: productData[imageIndex]),
+                  Spacer(
+                    flex: 1,
+                  ),
+                  InformationWidget(productData: productData),
+                  Spacer(
+                    flex: 5,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SuggestTextWidget(),
+              SuggestGridWidget(
+                productsData: productsData,
+                num: 4,
+                index: widget.index,
+                category: widget.category,
+              ),
+              ContactDetails()
+            ],
           ),
-          ContactDetails()
-        ],
+          mobile: Column(
+            children: [
+              isDevice(
+                desktop: Container(
+                  child: Text("Desktop : ${MediaQuery.of(context).size.width}"),
+                ),
+                mobile: Container(
+                  child: Text("Mobile : ${MediaQuery.of(context).size.width}"),
+                ),
+              ),
+              LocationWidget(category: widget.category),
+              ProductImageWidget(path: productData[imageIndex]),
+              InformationWidget(productData: productData),
+              SuggestTextWidget(),
+              SuggestGridWidget(
+                productsData: productsData,
+                num: 1,
+                index: widget.index,
+                category: widget.category,
+              ),
+              ContactDetails(),
+            ],
+          ),
+        ),
       ),
     );
   }

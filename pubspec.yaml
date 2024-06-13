@@ -10,6 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
+  go_router: ^14.1.4
+  google_maps_flutter: ^2.7.0
+  flutter_config: ^2.0.2
 
 dev_dependencies:
   flutter_test:
@@ -19,4 +22,12 @@ dev_dependencies:
 flutter:
   assets:
     - assets/data.json
+    - assets/images/
+    - assets/images/sugarcane/
+    - assets/images/kraftPaper/
+    - assets/images/alumnum/
+    - assets/images/paperSoupCup/
+    - assets/images/paperCoffeeCup/
+    - assets/images/paperShoppingBag/
+    
   uses-material-design: true

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
+import 'package:restrosupply/screens/contacts.dart';
+import 'package:restrosupply/screens/singleProduct.dart';
+import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/circleImage.dart';
+import 'package:restrosupply/widgets/singleProduct/moreImage.dart';
 
 class AllProducts extends StatefulWidget {
   final String category;
@@ -35,88 +39,97 @@ class _AllProductsState extends State<AllProducts> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Center(
-            child: Text(
-              widget.category,
-              style: Theme.of(context).textTheme.displayLarge,
+    return CustomScaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                  widget.category == all
+                      ? "All Products"
+                      : dataList[widget.category]![catImage]![0][1],
+                  style: Theme.of(context).textTheme.displayLarge),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Center(
-            child: Text(
-              "${selectedData.length} item(s) found",
-              style: Theme.of(context).textTheme.labelMedium,
+            SizedBox(
+              height: 20,
             ),
-          ),
-          isDevice(
-            desktop: GridView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.only(
-                left: 100,
-                right: 100,
-                top: 20,
+            Center(
+              child: Text(
+                "${selectedData.length} item(s) found",
+                style: Theme.of(context).textTheme.labelMedium,
               ),
-              itemCount: selectedData.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
+            ),
+            isDevice(
+              desktop: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                padding: EdgeInsets.only(
+                  left: 100,
+                  right: 100,
+                  top: 20,
+                ),
+                itemCount: selectedData.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                ),
+                shrinkWrap: true,
+                itemBuilder: (context, index) => InkWell(
+                  splashColor: null,
+                  highlightColor: null,
+                  onTap: () {
+                    String cat = widget.category;
+                    if (widget.category == all) {
+                      for (String key in dataList.keys) {
+                        if (index > dataList[key]!.length) {
+                          cat = key;
+                          break;
+                        } else {
+                          index -= dataList[key]!.length;
+                        }
+                      }
+                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            SingleProduct(index: index, category: cat),
+                      ),
+                    );
+                  },
+                  child:
+                      SuggestWidget(index: index, productsData: selectedData),
+                ),
               ),
-              shrinkWrap: true,
-              itemBuilder: (context, index) => Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Colors.black,
+              mobile: ListView.separated(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: selectedData.length,
+                separatorBuilder: (context, index) => SizedBox(
+                  height: 5,
+                ),
+                shrinkWrap: true,
+                itemBuilder: (context, index) => ListTile(
+                  leading: CircleImage(
+                    imgUrl: selectedData[index][imageIndex],
+                    size: 40,
+                  ),
+                  title: Text(
+                    selectedData[index][textIndex],
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelLarge!
+                        .copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.network(
-                      selectedData[index][imageIndex],
-                      fit: BoxFit.fitWidth,
-                      height: 200,
-                    ),
-                    Text(
-                      selectedData[index][textIndex],
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.labelMedium,
-                    ),
-                  ],
-                ),
               ),
             ),
-            mobile: ListView.separated(
-              padding: EdgeInsets.only(left: 10, right: 10),
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: selectedData.length,
-              separatorBuilder: (context, index) => SizedBox(
-                height: 5,
-              ),
-              shrinkWrap: true,
-              itemBuilder: (context, index) => ListTile(
-                leading: CircleImage(
-                  imgUrl: selectedData[index][imageIndex],
-                  size: 40,
-                ),
-                title: Text(
-                  selectedData[index][textIndex],
-                  style: Theme.of(context).textTheme.labelLarge,
-                ),
-              ),
+            SizedBox(
+              height: 20,
             ),
-          ),
-        ],
+            ContactDetails(),
+          ],
+        ),
       ),
     );
   }
