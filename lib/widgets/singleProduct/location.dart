@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/screens/allProduct.dart';
 import 'package:restrosupply/screens/homeScreen.dart';
 
@@ -11,11 +12,12 @@ class LocationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        style: Theme.of(context).textTheme.labelMedium,
+        style: MediaQuery.of(context).size.width > mobileWidth
+            ? Theme.of(context).textTheme.headlineLarge
+            : Theme.of(context).textTheme.headlineMedium,
         children: <TextSpan>[
           TextSpan(
               text: 'Home',
-              style: Theme.of(context).textTheme.headlineLarge,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   Navigator.push(context,
@@ -23,11 +25,9 @@ class LocationWidget extends StatelessWidget {
                 }),
           TextSpan(
             text: " > ",
-            style: Theme.of(context).textTheme.headlineLarge,
           ),
           TextSpan(
             text: category,
-            style: Theme.of(context).textTheme.headlineLarge,
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 Navigator.push(

@@ -48,7 +48,15 @@ class HorizondalWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: List.generate(
                     6,
-                    (index) => ProductsInfo(keys: keys, index: index),
+                    (index) => InkWell(
+                        splashColor: null,
+                        highlightColor: null,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AllProducts(
+                                    category: dataList.keys.toList()[index]))),
+                        child: ProductsInfo(keys: keys, index: index)),
                   ),
                 ),
         ],

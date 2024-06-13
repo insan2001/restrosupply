@@ -5,9 +5,6 @@ import 'package:restrosupply/screens/homeScreen.dart';
 final List<List<dynamic>> appbarNameList = [
   ["Home", HomeScreen()],
   ["Products", AllProducts(category: all)],
-  [
-    "About Us",
-  ],
   ["Contact Us", ContactUsScreen()],
 ];
 

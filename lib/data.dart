@@ -224,10 +224,41 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
   },
   "Paper Soup Cups": {
     data: [
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
+      [
+        "Golden Maple - 8 oz Paper Soup Container - Printed - 1000ct/CS",
+        "assets/images/paperSoupCup/1.png",
+        true,
+        true,
+        true,
+        "PO#: 40006",
+        "Packing: 20X50CT"
+      ],
+      [
+        "Golden Maple - 32 oz Paper Soup Container - White - 500ct/CS",
+        "assets/images/paperSoupCup/2.webp",
+        true,
+        true,
+        true,
+        "PO#: 40005",
+        "Packing: 20X25CT"
+      ],
+      [
+        "Golden Maple - 8 oz Paper Soup Container - Printed - 1000ct/CS",
+        "assets/images/paperSoupCup/3.png",
+        true,
+        true,
+        true,
+        "PO#: 40006",
+        "Packing: 20X50CT"
+      ],
+      [
+        "Golden Maple - Plastic Lid for 4 oz Paper Soup Container",
+        "assets/images/paperSoupCup/4.webp",
+        true,
+        true,
+        true,
+        "Golden Maple - Plastic Lid for 4 oz Paper Soup Container"
+      ],
       ["", "", true, true, true, "", ""],
       ["", "", true, true, true, "", ""],
       ["", "", true, true, true, "", ""],
@@ -236,129 +267,119 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ["", "", true, true, true, "", ""],
     ],
     catImage: [
-      ["catImage", "Paper Soup Cups and Lid"]
+      ["assets/images/paperSoupCup/0.webp", "Paper Soup Cups and Lid"]
     ]
   },
-  "Category five": {
+  "Paper Coffe Cup": {
     data: [
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Black Dome Tear Lid for 10-20oz Paper Cup - 1000ct/CS",
+        "assets/images/paperCoffeeCup/1.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 30020",
+        "Packing: 20X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple-10 oz White Paper Cup - 1000ct/CS",
+        "assets/images/paperCoffeeCup/2.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 30003",
+        "Packing: 20X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - White Dome Lid for 8oz Paper Cup - 1000ct/CS",
+        "assets/images/paperCoffeeCup/3.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 30019",
+        "Packing: 20X50 CT"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - 16oz Paper Cup - Printed - 1000ct/CS",
+        "assets/images/paperCoffeeCup/4.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: 30010",
+        "Packing: 20X50 CT"
       ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
     ],
     catImage: [
-      ["catImage", ""]
+      ["assets/images/paperCoffeeCup/0.webp", "Paper Coffee Cup and Lid"]
     ]
   },
-  "Category 6": {
+  "Paper Shopping Bag": {
     data: [
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS",
+        "assets/images/paperShoppingBag/1.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: PB003",
+        "Packing: 250ct/CS"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Kraft Paper Bags with Twisted Handles - 13X8.5X13 - 250ct/CS",
+        "assets/images/paperShoppingBag/2.webp",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO# PB004",
+        "Packing: 250ct/CS"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - Kraft Paper Bags with Twisted Handles - 13X7X17 - 250ct/CS",
+        "assets/images/paperShoppingBag/3.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: PB006",
+        "Packing: 250ct/CS"
       ],
       [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
+        "Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS",
+        "assets/images/paperShoppingBag/4.png",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Anothr detail"
+        "PO#: PB009W",
+        "Packing: 250ct/CS"
       ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
+      ["", "", true, true, true, "", ""],
     ],
     catImage: [
-      ["catImage", ""]
+      ["assets/images/paperShoppingBag/0.webp", ""]
     ]
   },
   "Category seven": {

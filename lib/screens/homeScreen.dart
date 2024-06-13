@@ -72,14 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
               mobile: Column(
                 children: [
                   CommitImageWidget(),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width >= mobileWidth
-                        ? MediaQuery.of(context).size.width * 0.03
-                        : 0,
-                    height: MediaQuery.of(context).size.width >= mobileWidth
-                        ? 20
-                        : 0,
-                  ),
                   CommitTextWidget(),
                 ],
               ),

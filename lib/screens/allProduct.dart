@@ -81,7 +81,7 @@ class _AllProductsState extends State<AllProducts> {
                     String cat = widget.category;
                     if (widget.category == all) {
                       for (String key in dataList.keys) {
-                        if (index > dataList[key]!.length) {
+                        if (index <= dataList[key]![data]!.length) {
                           cat = key;
                           break;
                         } else {
@@ -105,11 +105,32 @@ class _AllProductsState extends State<AllProducts> {
                 padding: EdgeInsets.only(left: 10, right: 10),
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: selectedData.length,
-                separatorBuilder: (context, index) => SizedBox(
-                  height: 5,
+                separatorBuilder: (context, index) => Container(
+                  height: 0.5,
+                  color: Theme.of(context).primaryColor,
                 ),
                 shrinkWrap: true,
                 itemBuilder: (context, index) => ListTile(
+                  onTap: () {
+                    String cat = widget.category;
+                    if (widget.category == all) {
+                      for (String key in dataList.keys) {
+                        if (index <= dataList[key]![data]!.length) {
+                          cat = key;
+                          break;
+                        } else {
+                          index -= dataList[key]!.length;
+                        }
+                      }
+                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            SingleProduct(index: index, category: cat),
+                      ),
+                    );
+                  },
                   leading: CircleImage(
                     imgUrl: selectedData[index][imageIndex],
                     size: 40,

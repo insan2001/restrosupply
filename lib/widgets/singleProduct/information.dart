@@ -11,7 +11,9 @@ class InformationWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width > mobileWidth
+              ? MediaQuery.of(context).size.width * 0.5
+              : MediaQuery.of(context).size.width * 0.8,
           child: Text(
             productData[textIndex],
             maxLines: 2,

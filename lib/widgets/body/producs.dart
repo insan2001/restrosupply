@@ -10,10 +10,10 @@ class ProductsInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width >= mobileWidth
+      width: MediaQuery.of(context).size.width > mobileWidth
           ? MediaQuery.of(context).size.width / 8
           : MediaQuery.of(context).size.width,
-      padding: MediaQuery.of(context).size.width >= mobileWidth
+      padding: MediaQuery.of(context).size.width > mobileWidth
           ? EdgeInsets.all(0)
           : EdgeInsets.all(22),
       child: Column(
@@ -35,7 +35,7 @@ class ProductsInfo extends StatelessWidget {
             height: 5,
           ),
           SizedBox(
-            height: 40,
+            height: 45,
             child: Text(
               keys[index],
               style: MediaQuery.of(context).size.width >= mobileWidth

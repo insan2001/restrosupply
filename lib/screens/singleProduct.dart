@@ -42,24 +42,24 @@ class _SingleProductState extends State<SingleProduct> {
   Widget build(BuildContext context) {
     return CustomScaffold(
       body: SingleChildScrollView(
-        child: isDevice(
-          desktop: Column(
-            children: [
-              Row(
-                children: [
-                  Spacer(
-                    flex: 1,
-                  ),
-                  isDevice(desktop: LocationWidget(category: widget.category)),
-                  Spacer(
-                    flex: 6,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Row(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Spacer(
+                  flex: 1,
+                ),
+                isDevice(desktop: LocationWidget(category: widget.category)),
+                Spacer(
+                  flex: 6,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            isDevice(
+              desktop: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -76,42 +76,25 @@ class _SingleProductState extends State<SingleProduct> {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 20,
+              mobile: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ProductImageWidget(path: productData[imageIndex]),
+                  SizedBox(height: 10),
+                  InformationWidget(productData: productData),
+                ],
               ),
-              SuggestTextWidget(),
-              SuggestGridWidget(
-                productsData: productsData,
-                num: 4,
-                index: widget.index,
-                category: widget.category,
-              ),
-              ContactDetails()
-            ],
-          ),
-          mobile: Column(
-            children: [
-              isDevice(
-                desktop: Container(
-                  child: Text("Desktop : ${MediaQuery.of(context).size.width}"),
-                ),
-                mobile: Container(
-                  child: Text("Mobile : ${MediaQuery.of(context).size.width}"),
-                ),
-              ),
-              LocationWidget(category: widget.category),
-              ProductImageWidget(path: productData[imageIndex]),
-              InformationWidget(productData: productData),
-              SuggestTextWidget(),
-              SuggestGridWidget(
-                productsData: productsData,
-                num: 1,
-                index: widget.index,
-                category: widget.category,
-              ),
-              ContactDetails(),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SuggestTextWidget(),
+            SuggestGridWidget(
+              category: widget.category,
+            ),
+            ContactDetails()
+          ],
         ),
       ),
     );

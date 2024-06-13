@@ -19,10 +19,7 @@ class ProductImageWidget extends StatelessWidget {
         width: MediaQuery.of(context).size.width > mobileWidth
             ? MediaQuery.of(context).size.width * 0.27
             : MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.width > mobileWidth
-            ? MediaQuery.of(context).size.width * 0.27
-            : MediaQuery.of(context).size.width * 0.8,
-        fit: BoxFit.cover,
+        fit: BoxFit.fitWidth,
       ),
     );
   }

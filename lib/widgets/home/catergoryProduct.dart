@@ -130,7 +130,7 @@ class CatergoryproductWidget extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 10,
+                                        height: 8,
                                       ),
                                       Text(
                                         dataList[keys[index]]![data]![_index]
@@ -138,7 +138,8 @@ class CatergoryproductWidget extends StatelessWidget {
                                         style: Theme.of(context)
                                             .textTheme
                                             .labelMedium,
-                                        maxLines: 3,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.fade,
                                       )
                                     ],
                                   ),

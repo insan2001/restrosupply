@@ -20,10 +20,16 @@ class SuggestWidget extends StatelessWidget {
       child: Stack(
         children: [
           Center(
-            child: Image.network(productsData[index][imageIndex],
-                fit: BoxFit.cover,
-                height: MediaQuery.of(context).size.width / 10,
-                width: MediaQuery.of(context).size.width / 10),
+            child: Image.network(
+              productsData[index][imageIndex],
+              fit: BoxFit.cover,
+              height: MediaQuery.of(context).size.width > mobileWidth
+                  ? MediaQuery.of(context).size.width / 10
+                  : MediaQuery.of(context).size.width * 0.8,
+              width: MediaQuery.of(context).size.width > mobileWidth
+                  ? MediaQuery.of(context).size.width / 10
+                  : MediaQuery.of(context).size.width * 0.8,
+            ),
           ),
           Positioned(
             bottom: 10,
