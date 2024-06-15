@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
-import 'package:restrosupply/screens/contacts.dart';
+import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/screens/singleProduct.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/circleImage.dart';
@@ -81,11 +81,11 @@ class _AllProductsState extends State<AllProducts> {
                     String cat = widget.category;
                     if (widget.category == all) {
                       for (String key in dataList.keys) {
-                        if (index <= dataList[key]![data]!.length) {
+                        if (index <= dataList[key]![data]!.length - 1) {
                           cat = key;
                           break;
                         } else {
-                          index -= dataList[key]!.length;
+                          index -= dataList[key]![data]!.length;
                         }
                       }
                     }
@@ -132,7 +132,9 @@ class _AllProductsState extends State<AllProducts> {
                     );
                   },
                   leading: CircleImage(
-                    imgUrl: selectedData[index][imageIndex],
+                    path: selectedData[index][imageIndex] == ""
+                        ? emptyImage
+                        : selectedData[index][imageIndex],
                     size: 40,
                   ),
                   title: Text(

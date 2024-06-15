@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 
 class SuggestWidget extends StatelessWidget {
   final int index;
@@ -20,14 +21,13 @@ class SuggestWidget extends StatelessWidget {
       child: Stack(
         children: [
           Center(
-            child: Image.network(
-              productsData[index][imageIndex],
-              fit: BoxFit.cover,
+            child: CustomImageWidget(
+              path: productsData[index][imageIndex],
               height: MediaQuery.of(context).size.width > mobileWidth
-                  ? MediaQuery.of(context).size.width / 10
+                  ? MediaQuery.of(context).size.width * 0.5
                   : MediaQuery.of(context).size.width * 0.8,
               width: MediaQuery.of(context).size.width > mobileWidth
-                  ? MediaQuery.of(context).size.width / 10
+                  ? MediaQuery.of(context).size.width * 0.5
                   : MediaQuery.of(context).size.width * 0.8,
             ),
           ),

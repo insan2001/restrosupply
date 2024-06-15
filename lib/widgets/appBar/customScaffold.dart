@@ -13,12 +13,6 @@ class CustomScaffold extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 90,
-          leading: const isDevice(
-            desktop: CircleImage(
-                size: 90,
-                imgUrl:
-                    "https://fastly.picsum.photos/id/477/200/200.jpg?hmac=pGA68LBET23UPGB7L8xL1pA7PYT_x7JazGX__CnlliU"),
-          ),
           backgroundColor: Colors.white,
           title: Center(
             child: isDevice(
@@ -35,10 +29,7 @@ class CustomScaffold extends StatelessWidget {
                             ),
                         child: TitleWidget(name: appbarNameList[index][0]))),
               ),
-              mobile: CircleImage(
-                  size: 90,
-                  imgUrl:
-                      "https://fastly.picsum.photos/id/477/200/200.jpg?hmac=pGA68LBET23UPGB7L8xL1pA7PYT_x7JazGX__CnlliU"),
+              mobile: CircleImage(size: 90, path: logoImage),
             ),
           ),
         ),

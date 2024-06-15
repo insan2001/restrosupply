@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/screens/allProduct.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 
 class BannerWidget extends StatelessWidget {
   const BannerWidget({super.key});
@@ -11,9 +12,8 @@ class BannerWidget extends StatelessWidget {
       height: 600,
       child: Stack(
         children: [
-          Image.asset(
-            "assets/images/bg.png",
-            fit: BoxFit.cover,
+          CustomImageWidget(
+            path: "assets/images/bg.png",
             height: mobileWidth,
             width: MediaQuery.of(context).size.width,
           ),

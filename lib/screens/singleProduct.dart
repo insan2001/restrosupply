@@ -3,7 +3,7 @@ import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
-import 'package:restrosupply/screens/contacts.dart';
+import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/singleProduct/information.dart';
 import 'package:restrosupply/widgets/singleProduct/location.dart';
 import 'package:restrosupply/widgets/singleProduct/productImage.dart';

@@ -10,57 +10,54 @@ class HorizondalWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromARGB(255, 248, 249, 250),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Shop By Category",
-            style: Theme.of(context).textTheme.displayMedium,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          MediaQuery.of(context).size.width >= mobileWidth
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: List.generate(
-                    6,
-                    (index) => InkWell(
-                        splashColor: null,
-                        highlightColor: null,
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AllProducts(
-                                    category: dataList.keys.toList()[index]))),
-                        child: ProductsInfo(keys: keys, index: index)),
-                  ),
-                )
-              : Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: List.generate(
-                    6,
-                    (index) => InkWell(
-                        splashColor: null,
-                        highlightColor: null,
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AllProducts(
-                                    category: dataList.keys.toList()[index]))),
-                        child: ProductsInfo(keys: keys, index: index)),
-                  ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          "Shop By Category",
+          style: Theme.of(context).textTheme.displayMedium,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        MediaQuery.of(context).size.width >= mobileWidth
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: List.generate(
+                  6,
+                  (index) => InkWell(
+                      splashColor: null,
+                      highlightColor: null,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AllProducts(
+                                  category: dataList.keys.toList()[index]))),
+                      child: ProductsInfo(keys: keys, index: index)),
                 ),
-        ],
-      ),
+              )
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: List.generate(
+                  6,
+                  (index) => InkWell(
+                      splashColor: null,
+                      highlightColor: null,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AllProducts(
+                                  category: dataList.keys.toList()[index]))),
+                      child: ProductsInfo(keys: keys, index: index)),
+                ),
+              ),
+      ],
     );
   }
 }

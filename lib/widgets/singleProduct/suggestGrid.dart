@@ -24,7 +24,11 @@ class _SuggestGridWidgetState extends State<SuggestGridWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(50),
+      padding: EdgeInsets.only(
+          top: 10,
+          bottom: 10,
+          left: MediaQuery.of(context).size.width * 0.05,
+          right: MediaQuery.of(context).size.width * 0.05),
       child: GridView.builder(
         physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.all(20),

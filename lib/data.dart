@@ -9,7 +9,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         true,
-        "",
         "PO#: 20042",
         "Packing: 6X50 CT"
       ],
@@ -67,44 +66,78 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Golden Maple - 16oz Round Bowl - Bagasse - 6X100CT/CS",
         "Packing: 12X50 CT"
       ],
-      ["", "assets/images/sugarcane/3.png", true, true, true, "", ""],
-      ["", "assets/images/sugarcane/3.png", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
+      [
+        "Golden Maple - 12oz Round Bowl - Bagasse - 1000ct/CS",
+        "assets/images/sugarcane/3.png",
+        true,
+        true,
+        true,
+        "Golden Maple - 12oz Round Bowl - Bagasse - 10X100CT/CS",
+        "Packing: 10X100 CT"
+      ],
+      [
+        "Chartland - 9\"-3 Compartment Bagasse Plates - 500ct/CS",
+        "assets/images/sugarcane/4.webp",
+        true,
+        true,
+        true,
+        "PO#: 20012",
+        "Pacing: 10X50 CT"
+      ],
+      [
+        "Chartland - 8\"- Bagasse Square Plate - 1000ct/CS",
+        "",
+        true,
+        true,
+        true,
+        "PO#: 20018",
+        "Packing: 20X50 CT"
+      ],
+      [
+        "Chartland - 9X9 Bagasse Clamshell Container - 200ct/CS",
+        "",
+        true,
+        true,
+        true,
+        "PO#: 20027",
+        "Packing: 4X50 CT"
+      ],
+      [
+        "Chartland - 9X9 - 3 Compartment Bagasse Clamshell Container - 200ct/CS",
+        "assets/images/sugarcane/5.png",
+        true,
+        true,
+        true,
+        "PO#: 20028",
+        "Packing: 4X50 CT"
+      ],
+      [
+        "Chartland - Bagasse Brown Container with plastic lid - 28oz - 1 Comb - 150ct/CS",
+        "assets/images/sugarcane/6.webp",
+        true,
+        true,
+        true,
+        "PO#: 20003",
+        "Packing: 3X50 CT"
+      ],
+      [
+        "Chartland - 8.5X8.5 Bagasse Clamshell Container - 200ct/CS",
+        "assets/images/sugarcane/7.png",
+        true,
+        true,
+        true,
+        "PO#: 20024",
+        "Packing: 4X50 CT"
+      ],
+      [
+        "Chartland - 9X6 - 2 Compartment Bagasse Light Brown Clamshell Container - 200ct/CS",
+        "",
+        true,
+        true,
+        true,
+        "PO#:20026H",
+        "Packing: 4X50 CT"
+      ],
       ["", "", true, true, true, "", ""],
       ["", "", true, true, true, "", ""],
       ["", "", true, true, true, "", ""],
@@ -181,7 +214,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Chartland - Full Size Lid For Aluminium Steam Pan - Little Packing - 100ct/CS",
-        "",
+        "assets/images/alumnum/1.webp",
         true,
         true,
         true,
@@ -190,7 +223,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Chartland - Half Size Lid For Aluminium Steam Pan - Little Packing - 400ct/CS",
-        "",
+        "assets/images/alumnum/1.webp",
         true,
         true,
         true,
@@ -207,16 +240,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 10X10ct",
         "PO#:: 10039"
       ],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
     ],
     catImage: [
       ["assets/images/alumnum/0.webp", "Foil Container and Lid"]
@@ -259,12 +282,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Golden Maple - Plastic Lid for 4 oz Paper Soup Container"
       ],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
     ],
     catImage: [
       ["assets/images/paperSoupCup/0.webp", "Paper Soup Cups and Lid"]
@@ -308,21 +325,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "PO#: 30010",
         "Packing: 20X50 CT"
       ],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
     ],
     catImage: [
       ["assets/images/paperCoffeeCup/0.webp", "Paper Coffee Cup and Lid"]
@@ -366,203 +368,9 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "PO#: PB009W",
         "Packing: 250ct/CS"
       ],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
     ],
     catImage: [
       ["assets/images/paperShoppingBag/0.webp", ""]
-    ]
-  },
-  "Category seven": {
-    data: [
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
-    ],
-    catImage: [
-      ["catImage", ""]
-    ]
-  },
-  "Category eight": {
-    data: [
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
-    ],
-    catImage: [
-      ["catImage", ""]
-    ]
-  },
-  "Category nine": {
-    data: [
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ],
-      [
-        "Product Name!",
-        "https://fastly.picsum.photos/id/459/200/300.jpg?hmac=4Cn5sZqOdpuzOwSTs65XA75xvN-quC4t9rfYYyoTCEI",
-        true,
-        true,
-        true,
-        "PO#: 20042",
-        "Anothr detail"
-      ]
-    ],
-    catImage: [
-      ["catImage", ""]
     ]
   },
 };

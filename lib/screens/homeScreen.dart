@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
-import 'package:restrosupply/screens/contacts.dart';
+import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/home/banner.dart';
 import 'package:restrosupply/widgets/home/catergoryProduct.dart';
 import 'package:restrosupply/widgets/home/commitment.dart';

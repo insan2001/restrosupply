@@ -26,7 +26,8 @@ class ThreeWidget extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount:
-                MediaQuery.of(context).size.width > mobileWidth ? 3 : 1),
+                MediaQuery.of(context).size.width > mobileWidth ? 3 : 1,
+            childAspectRatio: 2),
         itemBuilder: (context, index) => Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,

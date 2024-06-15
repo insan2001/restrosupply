@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:restrosupply/modules/adaptive.dart';
 
 final List<String> addr = [
   "349 Bowes Rd #21,",
@@ -24,10 +25,10 @@ class ContactDetails extends StatelessWidget {
       color: Colors.grey,
       padding: EdgeInsets.all(10),
       width: MediaQuery.of(context).size.width,
-      height: 200,
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               width: MediaQuery.of(context).size.width / 5,
@@ -88,8 +89,10 @@ class ContactDetails extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width / 5,
+            isDevice(
+              desktop: SizedBox(
+                width: MediaQuery.of(context).size.width / 5,
+              ),
             )
           ],
         ),

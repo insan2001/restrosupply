@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 
 class ProductImageWidget extends StatelessWidget {
   final String path;
@@ -14,12 +15,14 @@ class ProductImageWidget extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      child: Image.asset(
-        path,
+      child: CustomImageWidget(
+        path: path,
         width: MediaQuery.of(context).size.width > mobileWidth
-            ? MediaQuery.of(context).size.width * 0.27
-            : MediaQuery.of(context).size.width * 0.8,
-        fit: BoxFit.fitWidth,
+            ? MediaQuery.of(context).size.width * 0.25
+            : MediaQuery.of(context).size.width * 0.6,
+        height: MediaQuery.of(context).size.width > mobileWidth
+            ? MediaQuery.of(context).size.width * 0.25
+            : MediaQuery.of(context).size.width * 0.6,
       ),
     );
   }

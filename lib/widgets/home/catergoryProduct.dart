@@ -4,6 +4,7 @@ import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/screens/allProduct.dart';
 import 'package:restrosupply/screens/singleProduct.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 
 class CatergoryproductWidget extends StatelessWidget {
   final List<String> keys;
@@ -18,7 +19,8 @@ class CatergoryproductWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(
             5,
-            (index) => SizedBox(
+            (index) => Container(
+              color: Colors.white,
               height: mobileWidth * 0.5,
               width: MediaQuery.of(context).size.width * 0.8,
               child: Row(
@@ -34,9 +36,8 @@ class CatergoryproductWidget extends StatelessWidget {
                         Stack(
                           children: [
                             Center(
-                              child: Image.asset(
-                                dataList[keys[index]]![catImage]![0][0],
-                                fit: BoxFit.cover,
+                              child: CustomImageWidget(
+                                path: dataList[keys[index]]![catImage]![0][0],
                                 width: 250,
                                 height: 250,
                               ),
@@ -114,20 +115,15 @@ class CatergoryproductWidget extends StatelessWidget {
                                   height: MediaQuery.of(context).size.width / 5,
                                   child: Column(
                                     children: [
-                                      Container(
-                                        child: Image.asset(
-                                          dataList[keys[index]]![data]![_index]
-                                              [imageIndex],
-                                          fit: BoxFit.fitWidth,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .width /
-                                              8,
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width /
-                                              8,
-                                        ),
+                                      CustomImageWidget(
+                                        path: dataList[keys[index]]![data]![
+                                            _index][imageIndex],
+                                        height:
+                                            MediaQuery.of(context).size.width /
+                                                8,
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                8,
                                       ),
                                       SizedBox(
                                         height: 8,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restrosupply/constants.dart';
 
 class isDevice extends StatelessWidget {
   final Widget mobile;
@@ -13,7 +14,7 @@ class isDevice extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth >= 750) {
+        if (MediaQuery.of(context).size.width > mobileWidth) {
           return desktop;
         } else {
           return mobile;

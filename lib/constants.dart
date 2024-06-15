@@ -22,3 +22,6 @@ const int shippingIndex = 4;
 const int detailsIndex = 5;
 
 const String all = "All Products";
+
+const String emptyImage = "assets/images/empty.jpg";
+const String logoImage = "";
