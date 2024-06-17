@@ -15,7 +15,6 @@ Future<Map<String, dynamic>> fetchUsers() async {
   return jsonDecode(result.body);
 }
 
-// random
 void main() async {
   runApp(const MainApp());
 }
