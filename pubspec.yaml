@@ -1,0 +1,38 @@
+name: restrosupply
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  go_router: ^14.1.4
+  google_maps_flutter: ^2.7.0
+  flutter_config: ^2.0.2
+  http: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/images/sugarcane/
+    - assets/images/kraftPaper/
+    - assets/images/alumnum/
+    - assets/images/paperSoupCup/
+    - assets/images/paperCoffeeCup/
+    - assets/images/paperShoppingBag/
+    - assets/FoilContainerandLid/
+    - assets/PaperCoffeeCupandLid/
+    - assets/PaperSoupCupsandLid/
+    - assets/PlasticBag/
+    - assets/BondorThermalPaperRoll/
+    
+  uses-material-design: true
