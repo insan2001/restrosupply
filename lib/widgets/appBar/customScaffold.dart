@@ -21,7 +21,7 @@ class CustomScaffold extends StatelessWidget {
                 children: List.generate(
                     appbarNameList.length,
                     (index) => InkWell(
-                        onTap: () => Navigator.push(
+                        onTap: () => Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => appbarNameList[index][1],

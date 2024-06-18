@@ -37,7 +37,7 @@ class _SuggestGridWidgetState extends State<SuggestGridWidget> {
                 MediaQuery.of(context).size.width > mobileWidth ? 4 : 1,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
-            childAspectRatio: 1),
+            childAspectRatio: 0.8),
         shrinkWrap: true,
         itemCount: productsData.length,
         itemBuilder: (context, index) => InkWell(

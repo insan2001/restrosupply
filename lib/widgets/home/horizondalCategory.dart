@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
 import 'package:restrosupply/screens/allProduct.dart';
 import 'package:restrosupply/widgets/body/producs.dart';
+
+List<String> display = [
+  "baggage",
+  "kraft",
+  "aluminum",
+  "shopping",
+  "soup",
+  "coffee"
+];
 
 class HorizondalWidget extends StatelessWidget {
   final List<String> keys;
@@ -29,15 +37,18 @@ class HorizondalWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: List.generate(
-                  6,
+                  display.length,
                   (index) => InkWell(
                       splashColor: null,
                       highlightColor: null,
                       onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
+                            context,
+                            MaterialPageRoute(
                               builder: (context) => AllProducts(
-                                  category: dataList.keys.toList()[index]))),
+                                category: keys[index],
+                              ),
+                            ),
+                          ),
                       child: ProductsInfo(keys: keys, index: index)),
                 ),
               )
@@ -52,8 +63,8 @@ class HorizondalWidget extends StatelessWidget {
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => AllProducts(
-                                  category: dataList.keys.toList()[index]))),
+                              builder: (context) =>
+                                  AllProducts(category: keys[index]))),
                       child: ProductsInfo(keys: keys, index: index)),
                 ),
               ),

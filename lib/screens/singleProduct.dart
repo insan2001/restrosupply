@@ -44,12 +44,15 @@ class _SingleProductState extends State<SingleProduct> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 100,
+            ),
             Row(
               children: [
                 Spacer(
                   flex: 1,
                 ),
-                isDevice(desktop: LocationWidget(category: widget.category)),
+                LocationWidget(category: widget.category),
                 Spacer(
                   flex: 6,
                 ),
@@ -60,20 +63,17 @@ class _SingleProductState extends State<SingleProduct> {
             ),
             isDevice(
               desktop: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(
-                    flex: 2,
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.12,
                   ),
                   ProductImageWidget(path: productData[imageIndex]),
-                  Spacer(
-                    flex: 1,
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.01,
                   ),
                   InformationWidget(productData: productData),
-                  Spacer(
-                    flex: 5,
-                  ),
                 ],
               ),
               mobile: Column(

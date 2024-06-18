@@ -23,16 +23,17 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
-    - assets/images/sugarcane/
-    - assets/images/kraftPaper/
-    - assets/images/alumnum/
-    - assets/images/paperSoupCup/
-    - assets/images/paperCoffeeCup/
-    - assets/images/paperShoppingBag/
     - assets/FoilContainerandLid/
     - assets/PaperCoffeeCupandLid/
     - assets/PaperSoupCupsandLid/
     - assets/PlasticBag/
     - assets/BondorThermalPaperRoll/
-    
+    - assets/WoodTableware/
+    - assets/PlasticPortionCups/
+    - assets/PlasticBag/
+    - assets/PaperCoffeeCupandLid/
+    - assets/PaperShoppingBag/
+    - assets/SugarcaneCompostableProducts/
+    - assets/category/
+
   uses-material-design: true

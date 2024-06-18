@@ -5,7 +5,7 @@ import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/screens/singleProduct.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
-import 'package:restrosupply/widgets/circleImage.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 import 'package:restrosupply/widgets/singleProduct/moreImage.dart';
 
 class AllProducts extends StatefulWidget {
@@ -18,10 +18,15 @@ class AllProducts extends StatefulWidget {
 }
 
 class _AllProductsState extends State<AllProducts> {
-  late final List<List<dynamic>> selectedData;
-  @override
-  void initState() {
-    if (widget.category == all) {
+  late List<List<dynamic>> selectedData;
+  late String category;
+  late final List<String> keyList;
+
+  setCategory(String cat) {
+    setState(() {
+      category = cat;
+    });
+    if (cat == all) {
       List<List<dynamic>> tempData = [];
       String key;
       for (key in dataList.keys) {
@@ -29,11 +34,21 @@ class _AllProductsState extends State<AllProducts> {
           tempData.add(i);
         }
       }
-      selectedData = tempData;
+      setState(() {
+        selectedData = tempData;
+      });
     } else {
-      selectedData = dataList[widget.category]![data]!;
+      setState(() {
+        selectedData = dataList[category]![data]!;
+      });
     }
+  }
 
+  @override
+  void initState() {
+    setCategory(widget.category);
+    keyList = dataList.keys.toList();
+    keyList.insert(0, "All Products");
     super.initState();
   }
 
@@ -45,9 +60,9 @@ class _AllProductsState extends State<AllProducts> {
           children: [
             Center(
               child: Text(
-                  widget.category == all
+                  category == all
                       ? "All Products"
-                      : dataList[widget.category]![catImage]![0][1],
+                      : dataList[category]![catImage]![0][1],
                   style: Theme.of(context).textTheme.displayLarge),
             ),
             SizedBox(
@@ -59,6 +74,36 @@ class _AllProductsState extends State<AllProducts> {
                 style: Theme.of(context).textTheme.labelMedium,
               ),
             ),
+            Row(
+              children: [
+                Spacer(
+                  flex: 1,
+                ),
+                DropdownButton<String>(
+                  dropdownColor: Colors.white,
+                  icon: Icon(
+                    Icons.arrow_drop_down,
+                    color: Colors.black,
+                  ),
+                  hint: Text(
+                    category,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  items: keyList.map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  onChanged: (item) {
+                    setCategory(item ?? all);
+                  },
+                ),
+                Spacer(
+                  flex: 3,
+                ),
+              ],
+            ),
             isDevice(
               desktop: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
@@ -69,17 +114,17 @@ class _AllProductsState extends State<AllProducts> {
                 ),
                 itemCount: selectedData.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                ),
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 0.8),
                 shrinkWrap: true,
                 itemBuilder: (context, index) => InkWell(
                   splashColor: null,
                   highlightColor: null,
                   onTap: () {
-                    String cat = widget.category;
-                    if (widget.category == all) {
+                    String cat = category;
+                    if (category == all) {
                       for (String key in dataList.keys) {
                         if (index <= dataList[key]![data]!.length - 1) {
                           cat = key;
@@ -111,9 +156,11 @@ class _AllProductsState extends State<AllProducts> {
                 ),
                 shrinkWrap: true,
                 itemBuilder: (context, index) => ListTile(
+                  minTileHeight: MediaQuery.of(context).size.width * 0.4,
+                  hoverColor: Colors.amber,
                   onTap: () {
-                    String cat = widget.category;
-                    if (widget.category == all) {
+                    String cat = category;
+                    if (category == all) {
                       for (String key in dataList.keys) {
                         if (index <= dataList[key]![data]!.length) {
                           cat = key;
@@ -131,11 +178,10 @@ class _AllProductsState extends State<AllProducts> {
                       ),
                     );
                   },
-                  leading: CircleImage(
-                    path: selectedData[index][imageIndex] == ""
-                        ? emptyImage
-                        : selectedData[index][imageIndex],
-                    size: 40,
+                  leading: CustomImageWidget(
+                    path: selectedData[index][imageIndex],
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.width * 0.4,
                   ),
                   title: Text(
                     selectedData[index][textIndex],

@@ -2,155 +2,329 @@ import 'package:restrosupply/constants.dart';
 
 final Map<String, Map<String, List<List<dynamic>>>> dataList = {
   "Bagasse Products": {
-    data: [
+    "data": [
       [
-        "Golden Maple - Clear Lid For 48oz Bagasse Round Bowl - 300ct/CS",
-        "assets/images/sugarcane/1.png",
+        " Chartland - 6\" - Bagasse Square Plate ",
+        "",
         true,
         true,
         true,
-        "PO#: 20042",
-        "Packing: 6X50 CT"
+        "Chartland - 6\" - Bagasse Square Plate",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Golden Maple - Clear Lid For 24/32oz Bagasse Round Bowl - 600ct/CS",
-        "assets/images/sugarcane/1.png",
+        " Chartland - 8X8-3 Compartment Bagasse Brown Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/hi.png",
         true,
         true,
         true,
-        "PO#: 20039",
-        "Packing: 12X50 CT"
+        "Chartland - 8X8-3 Compartment Bagasse Brown Clamshell Container",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Golden Maple - Clear Lid For 12/16oz Bagasse Round Bowl - 600ct/CS",
-        "assets/images/sugarcane/1.png",
+        " Chartland - Bagasse Brown Container with plastic lid - 32oz - 1 Comb ",
+        "assets/SugarcaneCompostableProducts/3.png",
         true,
         true,
         true,
-        "PO#: 20035",
-        "Packing: 12X50 CT"
+        "Chartland - Bagasse Brown Container with plastic lid - 32oz - 1 Comb",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Golden Maple - 48oz Round Bowl - Bagasse - 300ct/CS",
-        "assets/images/sugarcane/2.png",
-        true,
-        true,
-        true,
-        "PO#: 20035",
-        "Packing: 12X50 CT"
-      ],
-      [
-        "Golden Maple - 32oz Round Bowl - Bagasse - 600ct/CS",
-        "assets/images/sugarcane/2.png",
-        true,
-        true,
-        true,
-        "PO#:20037",
-        "Pacing: 12X50 CT"
-      ],
-      [
-        "Golden Maple - 24oz Round Bowl - Bagasse - 600ct/CS",
-        "assets/images/sugarcane/2.png",
-        true,
-        true,
-        true,
-        "Golden Maple - 24oz Round Bowl - Bagasse - 6X100CT/CS",
-        "Packiong: 12X50 CT"
-      ],
-      [
-        "Golden Maple - 16oz Round Bowl - Bagasse - 600ct/CS",
-        "assets/images/sugarcane/3.png",
-        true,
-        true,
-        true,
-        "Golden Maple - 16oz Round Bowl - Bagasse - 6X100CT/CS",
-        "Packing: 12X50 CT"
-      ],
-      [
-        "Golden Maple - 12oz Round Bowl - Bagasse - 1000ct/CS",
-        "assets/images/sugarcane/3.png",
-        true,
-        true,
-        true,
-        "Golden Maple - 12oz Round Bowl - Bagasse - 10X100CT/CS",
-        "Packing: 10X100 CT"
-      ],
-      [
-        "Chartland - 9\"-3 Compartment Bagasse Plates - 500ct/CS",
-        "assets/images/sugarcane/4.webp",
+        " Chartland - 9\"-3 Compartment Bagasse Plates - 500ct/CS ",
+        "assets/SugarcaneCompostableProducts/4.png",
         true,
         true,
         true,
         "PO#: 20012",
-        "Pacing: 10X50 CT"
+        "Pacing: 10X50 CT",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Chartland - 8\"- Bagasse Square Plate - 1000ct/CS",
+        " Chartland - 9X9 - 3 Compartment Bagasse Light Brown Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/5.png",
+        true,
+        true,
+        true,
+        "Chartland - 9X9 - 3 Compartment Bagasse Light Brown Clamshell Container",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Golden Maple - Clear Lid For 24/32oz Bagasse Round Bowl - 600ct/CS ",
+        "assets/SugarcaneCompostableProducts/6.png",
+        true,
+        true,
+        true,
+        "PO#: 20039",
+        "Packing: 12X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9X6 Bagasse Clamshell Container - 200ct/CS ",
+        "assets/SugarcaneCompostableProducts/7.png",
+        true,
+        true,
+        true,
+        "PO#: 20025",
+        "Packing: 4X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 10\" - 3 Compartment Bagasse Plates ",
+        "assets/SugarcaneCompostableProducts/8.png",
+        true,
+        true,
+        true,
+        "Chartland - 10\" - 3 Compartment Bagasse Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - Bagasse Brown Container with plastic lid - 28oz - 1 Comb - 150ct/CS ",
+        "assets/SugarcaneCompostableProducts/9.png",
+        true,
+        true,
+        true,
+        "PO#: 20003",
+        "Packing: 3X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 10\" - 3 Compartment Bagasse Light Brown Plates - 200ct/CS ",
+        "",
+        true,
+        true,
+        true,
+        "PO#: 20014H",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9\" - 3 Compartment Bagasse Light Brown Plates ",
+        "",
+        true,
+        true,
+        true,
+        "Chartland - 9\" - 3 Compartment Bagasse Light Brown Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 12.5\" - Bagasse Oval Plate - 500ct/CS ",
+        "",
+        true,
+        true,
+        true,
+        "PO#: 20016",
+        "Packing: 10X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8X8 Bagasse Brown Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/13.png",
+        true,
+        true,
+        true,
+        "Chartland - 8X8 Bagasse Brown Clamshell Container",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8\"- Bagasse Square Plate - 1000ct/CS ",
         "",
         true,
         true,
         true,
         "PO#: 20018",
-        "Packing: 20X50 CT"
+        "Packing: 20X50 CT",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Chartland - 9X9 Bagasse Clamshell Container - 200ct/CS",
+        " Chartland - 7\" Bagasse Plates ",
+        "assets/SugarcaneCompostableProducts/15.png",
+        true,
+        true,
+        true,
+        "Chartland - 7\" Bagasse Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8.5X8.5 -1  Bagasse Light Brown Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/16.png",
+        true,
+        true,
+        true,
+        "Chartland - 8.5X8.5 -1\u00a0 Bagasse Light Brown Clamshell Container",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Golden Maple - 48oz Round Bowl - Bagasse - 300ct/CS ",
+        "assets/SugarcaneCompostableProducts/17.png",
+        true,
+        true,
+        true,
+        "PO#: 20041",
+        "Packing: 6X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - Bagasse Brown Container with plastic lid - 24 oz - 2 Comb - 150ct/CS ",
         "",
         true,
         true,
         true,
-        "PO#: 20027",
-        "Packing: 4X50 CT"
+        "PO#: 20002",
+        "Packing: 3X50 CT",
+        "Sugarcane Compostable Products"
       ],
       [
-        "Chartland - 9X9 - 3 Compartment Bagasse Clamshell Container - 200ct/CS",
-        "assets/images/sugarcane/5.png",
-        true,
-        true,
-        true,
-        "PO#: 20028",
-        "Packing: 4X50 CT"
-      ],
-      [
-        "Chartland - Bagasse Brown Container with plastic lid - 28oz - 1 Comb - 150ct/CS",
-        "assets/images/sugarcane/6.webp",
-        true,
-        true,
-        true,
-        "PO#: 20003",
-        "Packing: 3X50 CT"
-      ],
-      [
-        "Chartland - 8.5X8.5 Bagasse Clamshell Container - 200ct/CS",
-        "assets/images/sugarcane/7.png",
-        true,
-        true,
-        true,
-        "PO#: 20024",
-        "Packing: 4X50 CT"
-      ],
-      [
-        "Chartland - 9X6 - 2 Compartment Bagasse Light Brown Clamshell Container - 200ct/CS",
+        " Chartland - 9X6 - 2 Compartment Bagasse Light Brown Clamshell Container - 200ct/CS ",
         "",
         true,
         true,
         true,
         "PO#:20026H",
-        "Packing: 4X50 CT"
+        "Packing: 4X50 CT",
+        "Sugarcane Compostable Products"
       ],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
-      ["", "", true, true, true, "", ""],
+      [
+        " Chartland - Bagasse Brown Container with plastic lid - 28oz - 2 Comb ",
+        "assets/SugarcaneCompostableProducts/20.png",
+        true,
+        true,
+        true,
+        "Chartland - Bagasse Brown Container with plastic lid - 28oz - 2 Comb",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9X9 Bagasse Clamshell Container - 200ct/CS ",
+        "assets/SugarcaneCompostableProducts/21.png",
+        true,
+        true,
+        true,
+        "PO#: 20027",
+        "Packing: 4X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 10\" - Bagasse Square Plate - 500ct/CS ",
+        "",
+        true,
+        true,
+        true,
+        "PO#: 20019",
+        "Packing: 10X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9\" Bagasse Light Brown Plates ",
+        "assets/SugarcaneCompostableProducts/23.png",
+        true,
+        true,
+        true,
+        "Chartland - 9\" Bagasse Light Brown Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9X9 - 3 Compartment Bagasse Clamshell Container - 200ct/CS ",
+        "assets/SugarcaneCompostableProducts/24.png",
+        true,
+        true,
+        true,
+        "PO#: 20028",
+        "Packing: 4X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 9X6 - 2 Compartment Bagasse Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/25.png",
+        true,
+        true,
+        true,
+        "Chartland - 9X6 - 2 Compartment Bagasse Clamshell Container",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 10\" Bagasse Plates ",
+        "assets/SugarcaneCompostableProducts/26.png",
+        true,
+        true,
+        true,
+        "Chartland - 10\" Bagasse Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - Bagasse Brown Container with plastic lid - 32oz - 2 Comb - 150ct/CS ",
+        "assets/SugarcaneCompostableProducts/27.png",
+        true,
+        true,
+        true,
+        "PO#: 20006",
+        "Packing: 3X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 6\" Bagasse Plates ",
+        "assets/SugarcaneCompostableProducts/28.png",
+        true,
+        true,
+        true,
+        "Chartland - 6\" Bagasse Plates",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8\" - Bagasse Light Brown Square Plate ",
+        "",
+        true,
+        true,
+        true,
+        "Chartland - 8\" - Bagasse Light Brown Square Plate",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8.5X8.5 Bagasse Clamshell Container - 200ct/CS ",
+        "assets/SugarcaneCompostableProducts/30.png",
+        true,
+        true,
+        true,
+        "PO#: 20024",
+        "Packing: 4X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 7\"X5.5\"X2.8\" Bagasse Light Brown Clamshell Container ",
+        "",
+        true,
+        true,
+        true,
+        "Chartland - 7\"X5.5\"X2.8\" Bagasse Light Brown Clamshell Container",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Golden Maple - 16oz Round Bowl - Bagasse - 600ct/CS ",
+        "assets/SugarcaneCompostableProducts/32.png",
+        true,
+        true,
+        true,
+        "Golden Maple - 16oz Round Bowl - Bagasse - 6X100CT/CS",
+        "Packing: 12X50 CT",
+        "Sugarcane Compostable Products"
+      ],
+      [
+        " Chartland - 8X8 - 3 Compartment Bagasse Clamshell Container ",
+        "assets/SugarcaneCompostableProducts/33.png",
+        true,
+        true,
+        true,
+        "Chartland - 8X8 - 3 Compartment Bagasse Clamshell Container",
+        "Sugarcane Compostable Products"
+      ]
     ],
     catImage: [
-      ["assets/images/sugarcane/0.webp", "Sugarcane Compostable Products"]
+      ["assets/category/baggage.webp", "Sugarcane Compostable Products"]
     ]
   },
   "Kraft Paper Fold Box": {
     data: [
       [
         "Wisdom - #8 Kraft Paper Fold Box - 40X50ct/CS",
-        "assets/images/kraftPaper/0.webp",
+        "",
         true,
         true,
         true,
@@ -159,7 +333,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Wisdom - #1 Kraft Paper Fold Box - 40X50ct/CS",
-        "assets/images/kraftPaper/0.webp",
+        "",
         true,
         true,
         true,
@@ -168,7 +342,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Wisdom - #2 Kraft Paper Fold Box - 40X50ct/CS",
-        "assets/images/kraftPaper/0.webp",
+        "",
         true,
         true,
         true,
@@ -177,7 +351,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Wisdom - #4 Kraft Paper Fold Box - 40X40ct/CS",
-        "assets/images/kraftPaper/0.webp",
+        "",
         true,
         true,
         true,
@@ -186,7 +360,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         "Wisdom - #3 Kraft Paper Fold Box - 40X50ct/CS",
-        "assets/images/kraftPaper/0.webp",
+        "",
         true,
         true,
         true,
@@ -195,10 +369,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
     ],
     catImage: [
-      [
-        "assets/images/kraftPaper/0.webp",
-        "Kraft Paper Fold Box",
-      ]
+      ["assets/category/kraft.webp", "Kraft Paper Fold Box"]
     ]
   },
   "Aluminum Foil": {
@@ -214,193 +385,13 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Foil Container and Lid"
       ],
       [
-        " Chartland - Half Size Lid For Aluminium Steam Pan - Little Packing - 400ct/CS ",
-        "",
-        true,
-        true,
-        true,
-        "PO#  10044",
-        "Packing: 40X10ct",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Half Size Medium - Aluminium Steam Pan - Little Packing - 100ct/CS ",
-        "assets/FoilContainerandLid/5472468513865358023.png",
-        true,
-        true,
-        true,
-        "PO#  10040",
-        "Packing: 10X10ctPO#:: 10039",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Half Size Deep - Aluminium Steam Pan - Little Packing - 100ct/CS ",
-        "assets/FoilContainerandLid/-6109089530879734048.png",
-        true,
-        true,
-        true,
-        "PO#  10040",
-        "Packing: 10X10ct",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Full Size Deep - Aluminium Steam Pan - Little Packing -50ct/CS ",
-        "assets/FoilContainerandLid/2092562085299589936.png",
-        true,
-        true,
-        true,
-        "PO#  10043",
-        "Packing: 10X5ct",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Full Size Medium - Aluminium Steam Pan - Little Packing - 50ct/CS ",
-        "",
-        true,
-        true,
-        true,
-        "PO# : 10042",
-        "Packing: 10X5ct",
-        "Foil Container and Lid"
-      ],
-      [
-        " Roaster Pans/Oval Pan - HZJ - 4399 - 100ct/CS ",
-        "",
-        true,
-        true,
-        true,
-        "Roaster Pans/Oval Pan-HZJ-4399",
-        "Packing: 50ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Roaster Pans/Oval Pan - HZJ - 7500 - 50ct/CS ",
-        "assets/FoilContainerandLid/8947007543715341845.png",
-        true,
-        true,
-        true,
-        "PO# : 10047",
-        "Packing: 50ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Plastic Dome Lid For 1.5lb Oblong Container 500ps -HZJ310LD ",
-        "assets/FoilContainerandLid/-3002679085674920573.png",
-        true,
-        true,
-        true,
-        "PO# : 10019",
-        "Packing: 500ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Plastic Dome Lid For Half Size Foil Pan -100pcs - HZJ400LD ",
-        "assets/FoilContainerandLid/2902447806978067505.png",
-        true,
-        true,
-        true,
-        "PO#  10047",
-        "Packing: 100ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Full Size Medium - Aluminium Steam Pan - HZJ510 ",
-        "assets/FoilContainerandLid/-4500196639674879397.png",
-        true,
-        true,
-        true,
-        "PO#  10029",
-        "Packing: 50ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil - 7 '- Heavy-'Round - Aluminium Foil Container - HZJ207H ",
-        "assets/FoilContainerandLid/3996725390460646488.png",
-        true,
-        true,
-        true,
-        "PO#  10002",
-        "Packing: 500ct/cs",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil -12\" Aluminum Foil Roll - Standard - 12\"X200M - HZJ1220 ",
-        "",
-        true,
-        true,
-        true,
-        "PO#  10034",
-        "Packing: 6 Rolls/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil - 8\" Round - Plastic Dome  Lid - HZJ208LD ",
-        "assets/FoilContainerandLid/-211806971462013436.png",
-        true,
-        true,
-        true,
-        "PO#  10010",
-        "Packing: 500ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Full Size Lid For Aluminium Steam Pan - HZJ500L ",
-        "assets/FoilContainerandLid/452735009445000207.png",
-        true,
-        true,
-        true,
-        "PO#  10031",
-        "Packing: 50ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil - 9' Heavy Round - Aluminium Foil Container - HZJ209H ",
-        "assets/FoilContainerandLid/2538429122435449628.png",
-        true,
-        true,
-        true,
-        "PO#  10011",
-        "Packing: 500ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil -18\" Aluminum Foil Roll - Heave -18\"X100M - HZJ1810H ",
-        "",
-        true,
-        true,
-        true,
-        "PO#  10037",
-        "Packing: 6 Rolls/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil Half Size Shallow - Aluminium Steam Pan - HZJ400 ",
-        "assets/FoilContainerandLid/-249417970706165275.png",
-        true,
-        true,
-        true,
-        "PO#  10024",
-        "Packing: 100ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Foil - 1.5 lb Oblong - Aluminium Foil Container - HZJ310 ",
-        "assets/FoilContainerandLid/-1027191170826474963.png",
-        true,
-        true,
-        true,
-        "PO#  10018",
-        "Packing: 500ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
         " Chartland - Foil Laminated Lid for 1.5 LB Oblong - HZJ310LH ",
         "assets/FoilContainerandLid/-5067629789285023182.png",
         true,
         true,
         true,
         "PO#  10020",
-        "NoSpecs",
+        "",
         "Foil Container and Lid"
       ],
       [
@@ -460,7 +451,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland-Foil-12\" Aluminum Foil-Heave-200M",
-        "NoSpecs",
+        "",
         "Foil Container and Lid"
       ],
       [
@@ -591,16 +582,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 10046",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
-      ],
-      [
-        " Chartland - Full Size Lid For Aluminium Steam Pan - Little Packing - 100ct/CS ",
-        "",
-        true,
-        true,
-        true,
-        "PO#  10045",
-        "Packing: 20X5ct",
         "Foil Container and Lid"
       ],
       [
@@ -795,138 +776,127 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/images/alumnum/0.webp", "Foil Container and Lid"]
-    ]
-  },
-  "Paper Soup Cups": {
-    data: [
-      [
-        "Golden Maple - 8 oz Paper Soup Container - Printed - 1000ct/CS",
-        "assets/images/paperSoupCup/1.png",
-        true,
-        true,
-        true,
-        "PO#: 40006",
-        "Packing: 20X50CT"
-      ],
-      [
-        "Golden Maple - 32 oz Paper Soup Container - White - 500ct/CS",
-        "assets/images/paperSoupCup/2.webp",
-        true,
-        true,
-        true,
-        "PO#: 40005",
-        "Packing: 20X25CT"
-      ],
-      [
-        "Golden Maple - 8 oz Paper Soup Container - Printed - 1000ct/CS",
-        "assets/images/paperSoupCup/3.png",
-        true,
-        true,
-        true,
-        "PO#: 40006",
-        "Packing: 20X50CT"
-      ],
-      [
-        "Golden Maple - Plastic Lid for 4 oz Paper Soup Container",
-        "assets/images/paperSoupCup/4.webp",
-        true,
-        true,
-        true,
-        "Golden Maple - Plastic Lid for 4 oz Paper Soup Container"
-      ],
-    ],
-    catImage: [
-      ["assets/images/paperSoupCup/0.webp", "Paper Soup Cups and Lid"]
-    ]
-  },
-  "Paper Coffe Cup": {
-    data: [
-      [
-        "Golden Maple - Black Dome Tear Lid for 10-20oz Paper Cup - 1000ct/CS",
-        "assets/images/paperCoffeeCup/1.webp",
-        true,
-        true,
-        true,
-        "PO#: 30020",
-        "Packing: 20X50 CT"
-      ],
-      [
-        "Golden Maple-10 oz White Paper Cup - 1000ct/CS",
-        "assets/images/paperCoffeeCup/2.webp",
-        true,
-        true,
-        true,
-        "PO#: 30003",
-        "Packing: 20X50 CT"
-      ],
-      [
-        "Golden Maple - White Dome Lid for 8oz Paper Cup - 1000ct/CS",
-        "assets/images/paperCoffeeCup/3.webp",
-        true,
-        true,
-        true,
-        "PO#: 30019",
-        "Packing: 20X50 CT"
-      ],
-      [
-        "Golden Maple - 16oz Paper Cup - Printed - 1000ct/CS",
-        "assets/images/paperCoffeeCup/4.webp",
-        true,
-        true,
-        true,
-        "PO#: 30010",
-        "Packing: 20X50 CT"
-      ],
-    ],
-    catImage: [
-      ["assets/images/paperCoffeeCup/0.webp", "Paper Coffee Cup and Lid"]
+      ["assets/category/aluminum.webp", "Foil Container and Lid"]
     ]
   },
   "Paper Shopping Bag": {
     data: [
       [
-        "Golden Maple - Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS",
-        "assets/images/paperShoppingBag/1.webp",
+        " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
+        "assets/PaperBags/-1918688910506603471.png",
         true,
         true,
         true,
-        "PO#: PB003",
-        "Packing: 250ct/CS"
+        "Golden Maple - (Super Strong)\u00a0Kraft Paper Handle Bag -10\"X6.5\"X12\"-250 ct",
+        "Packing: 250ct/CS",
+        "Paper Bags"
       ],
       [
-        "Golden Maple - Kraft Paper Bags with Twisted Handles - 13X8.5X13 - 250ct/CS",
-        "assets/images/paperShoppingBag/2.webp",
+        " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X17 - 200ct/CS ",
+        "assets/PaperBags/6792400537161498743.png",
         true,
         true,
         true,
-        "PO# PB004",
-        "Packing: 250ct/CS"
+        "Golden Maple - (Super Strong)\u00a0Kraft Paper Bags with Twisted Handles - 13X7X17",
+        "Packing: 200ct/CS",
+        "Paper Bags"
       ],
       [
-        "Golden Maple - Kraft Paper Bags with Twisted Handles - 13X7X17 - 250ct/CS",
-        "assets/images/paperShoppingBag/3.png",
-        true,
-        true,
-        true,
-        "PO#: PB006",
-        "Packing: 250ct/CS"
-      ],
-      [
-        "Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS",
-        "assets/images/paperShoppingBag/4.png",
+        " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
+        "assets/PaperBags/-9004487357085058787.png",
         true,
         true,
         true,
         "PO#: PB009W",
-        "Packing: 250ct/CS"
+        "Packing: 250ct/CS",
+        "Paper Bags"
       ],
+      [
+        " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X13 - 200ct/CS ",
+        "assets/PaperBags/-3968352626926764221.png",
+        true,
+        true,
+        true,
+        "Golden Maple - (Super Strong)\u00a0Kraft Paper Bags with Twisted Handles - 13X7X13",
+        "Packing: 200ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple - (Super Strong)  Paper Bags with Twisted Handles -White - 13X7X17 - 200ct/CS ",
+        "assets/PaperBags/7645501136332211547.png",
+        true,
+        true,
+        true,
+        "PO#: PB011W",
+        "Packing: 200ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple -  Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
+        "assets/PaperBags/-7672088551004513088.png",
+        true,
+        true,
+        true,
+        "PO#: PB003",
+        "Packing: 250ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
+        "assets/PaperBags/8546618619284421840.png",
+        true,
+        true,
+        true,
+        "PO#: PB008W",
+        "Packing: 250ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple -  Kraft Paper Bags with Twisted Handles - 13X8.5X13 - 250ct/CS ",
+        "assets/PaperBags/2708982093779888984.png",
+        true,
+        true,
+        true,
+        "PO# PB004",
+        "Packing: 250ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
+        "assets/PaperBags/6651280695903989693.png",
+        true,
+        true,
+        true,
+        "PO#: PB001S",
+        "Packing: 250ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple -  Kraft Paper Bags with Twisted Handles - 13X7X17 - 250ct/CS ",
+        "assets/PaperBags/-8047310861267980810.png",
+        true,
+        true,
+        true,
+        "PO#: PB006",
+        "Packing: 250ct/CS",
+        "Paper Bags"
+      ],
+      [
+        " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 13X7X13 -200ct/CS ",
+        "assets/PaperBags/9164454087588030262.png",
+        true,
+        true,
+        true,
+        "PO#: PB010W",
+        "Packing: 200ct/CS",
+        "Paper Bags"
+      ]
     ],
     catImage: [
-      ["assets/images/paperShoppingBag/0.webp", ""]
+      ["assets/category/shopping.webp", "Paper Shopping Bag"]
     ]
   },
-  "Paper Coffee cup and Lid": {
+  "Paper Coffee cup": {
     data: [
       [
         " Golden Maple - 8oz Ripple Wall Paper Cups - 1000ct/CS ",
@@ -995,7 +965,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#: 30001",
-        "NoSpecs",
+        "",
         "Paper Coffee  Cup and Lid"
       ],
       [
@@ -1148,9 +1118,12 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 20X50 CT",
         "Paper Coffee  Cup and Lid"
       ]
+    ],
+    catImage: [
+      ["assets/category/coffee.webp", "Paper Coffee cup and Lid"]
     ]
   },
-  "Paper Soup cup and lid": {
+  "Paper Soup cup": {
     data: [
       [
         " Golden Maple - 24 oz Paper Soup Container - Printed - 500ct/CS ",
@@ -1229,7 +1202,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Plastic Lid for 4 oz Paper Soup Container",
-        "NoSpecs",
+        "",
         "Paper Soup Cups and Lid"
       ],
       [
@@ -1289,12 +1262,12 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - 4 oz Paper Soup Container - White",
-        "NoSpecs",
+        "",
         "Paper Soup Cups and Lid"
       ]
     ],
     catImage: [
-      ["assets/images/paperShoppingBag/0.webp", ""]
+      ["assets/category/soup.webp", "Paper Soup cup and lid"]
     ]
   },
   "Plastic Bags": {
@@ -1306,7 +1279,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 1 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1316,7 +1289,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 7 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1326,7 +1299,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 6 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1336,7 +1309,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1346,7 +1319,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Clear 11\"X17\" - Convenient Plastic Rolls - 6X800/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1356,7 +1329,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S4 - 1000/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1366,7 +1339,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 2 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1376,7 +1349,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1386,7 +1359,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -10.5\"X15.5\" - Medium Produce Rolls",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1396,7 +1369,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1406,7 +1379,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -12\"X20\" -\u00a0 Produce Rolls - Extra Large",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1416,7 +1389,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 30\" X 38\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1426,7 +1399,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S3 - 1000/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1436,7 +1409,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S2 - 2000/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1446,7 +1419,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 3 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1456,7 +1429,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 26\" X 36\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1466,7 +1439,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 26\" X 36\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1476,7 +1449,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 30\" X 38\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1486,7 +1459,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 5 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1496,7 +1469,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 4 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1506,7 +1479,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Clear T - Shirt Rolls (8.25X5X19) - 6X600/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1516,7 +1489,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 9 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1526,7 +1499,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -10.5\"X15.5\" -\u00a0 Large Produce Rolls",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1536,7 +1509,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 35\" X 47 \"- Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1546,7 +1519,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland\u00a0 - Garbage Bags - Strong - 35\" X 47\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1556,7 +1529,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 30\" X 38\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1566,7 +1539,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ragular - 24 \"X 22\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1576,7 +1549,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 42\" X 48\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1586,7 +1559,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S5 - 1000/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1596,7 +1569,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ragular - 26\" X 36 \"- Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1606,7 +1579,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 8 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1616,7 +1589,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S57- 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1626,7 +1599,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1636,7 +1609,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - 14\"X20\" Produce Rolls - Extra Jumbo",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1646,7 +1619,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 11 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1656,7 +1629,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 42\" X 48\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1666,7 +1639,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 0.5 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1676,7 +1649,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Clear",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1686,7 +1659,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S1 - 2000/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1696,7 +1669,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 12 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1706,7 +1679,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Black",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ],
       [
@@ -1716,12 +1689,12 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 10 lb - 500/Cs",
-        "NoSpecs",
+        "",
         "Plastic Bag"
       ]
     ],
     catImage: [
-      ["assets/images/paperShoppingBag/0.webp", ""]
+      ["assets/PaperShoppingBag/0.webp", "Plastic Bags"]
     ]
   },
   "Bond or Thermal Paper Roll": {
@@ -1858,7 +1831,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/images/paperShoppingBag/0.webp", ""]
+      ["assets/PaperShoppingBag/0.webp", "Bond or Thermal Paper Roll"]
     ]
   },
   "Napkin": {
@@ -1925,7 +1898,185 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/images/paperShoppingBag/0.webp", ""]
+      ["assets/PaperShoppingBag/0.webp", "Napkin"]
+    ]
+  },
+  "Plastic Portion cups": {
+    "data": [
+      [
+        " Golden Maple - Plastic Portion Cups - 4oz ",
+        "assets/PlasticPortionCups/5900997769936160053.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80009",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Lid for Plastic Portion Cups - 0.5oz/1oz ",
+        "assets/PlasticPortionCups/1246712881998783149.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80010",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 0.5oz ",
+        "assets/PlasticPortionCups/-587523794375723107.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80001",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 0.75oz ",
+        "assets/PlasticPortionCups/-3484373478168624402.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80002",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 2oz - Black ",
+        "",
+        true,
+        true,
+        true,
+        "Golden Maple - Plastic Portion Cups - 2oz - Black",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 2.5oz ",
+        "assets/PlasticPortionCups/4113997935533645608.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80007",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Lid for Plastic Portion Cups - 3.25/4oz ",
+        "assets/PlasticPortionCups/6864164283713699191.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80012",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 1oz ",
+        "assets/PlasticPortionCups/-8694861303300993203.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80003",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 3.25oz ",
+        "assets/PlasticPortionCups/-3375063255935120218.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80008",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 2oz ",
+        "assets/PlasticPortionCups/-7684952520311844163.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80005",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Plastic Portion Cups - 1.5oz ",
+        "assets/PlasticPortionCups/1967517160198381660.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80004",
+        "",
+        "Plastic Portion Cups"
+      ],
+      [
+        " Golden Maple - Lid for Plastic Portion Cups - 1.5/2 oz ",
+        "assets/PlasticPortionCups/-4955330323063573151.png",
+        true,
+        true,
+        true,
+        "PO#\uff1a80011",
+        "",
+        "Plastic Portion Cups"
+      ]
+    ],
+    catImage: [
+      ["assets/images/sugarcane/0.webp", "Plastic Portion cups"]
+    ]
+  },
+  "Wood Tableware": {
+    data: [
+      [
+        " Golden Maple-Wood Spoon-20X100 ct ",
+        "assets/WoodTableware/5359981813800257678.png",
+        true,
+        true,
+        true,
+        "Golden Maple-Wood Spoon-20X100 ct",
+        "",
+        "Wood Tableware"
+      ],
+      [
+        " Golden Maple-Wood Knife-20X100 ct ",
+        "assets/WoodTableware/-7800244617556071764.png",
+        true,
+        true,
+        true,
+        "Golden Maple-Wood Knife-20X100 ct",
+        "",
+        "Wood Tableware"
+      ],
+      [
+        " Golden Maple-Wood Fork 20X100 ct ",
+        "assets/WoodTableware/4680064143321107524.png",
+        true,
+        true,
+        true,
+        "Golden Maple-Wood Fork 20X100 ct",
+        "",
+        "Wood Tableware"
+      ]
+    ],
+    catImage: [
+      ["assets/images/sugarcane/0.webp", "Wood Tableware"]
     ]
   }
+};
+
+Map<String, String> categoryId = {
+  "baggage": "Bagasse Products",
+  "kraft": "Kraft Paper Fold Box",
+  "aluminum": "Kraft Paper Fold Box",
+  "shopping": "Paper Shopping Bag",
+  "soup": "Paper Soup cup and lid",
+  "coffee": "Paper Coffee cup and Lid",
+  "plastic": "Plastic Bags",
+  "thermal": "Bond or Thermal Paper Roll",
+  "napkin": "Napkin",
+  "portion": "Plastic Portion cups",
+  "wood": "Wood Tableware",
 };

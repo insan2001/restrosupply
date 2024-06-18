@@ -11,6 +11,8 @@ class SuggestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width * 0.2 * 0.8,
+      height: MediaQuery.of(context).size.width * 0.2,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -18,33 +20,31 @@ class SuggestWidget extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      child: Stack(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: CustomImageWidget(
               path: productsData[index][imageIndex],
               height: MediaQuery.of(context).size.width > mobileWidth
-                  ? MediaQuery.of(context).size.width * 0.5
+                  ? MediaQuery.of(context).size.width * 0.2
                   : MediaQuery.of(context).size.width * 0.8,
               width: MediaQuery.of(context).size.width > mobileWidth
-                  ? MediaQuery.of(context).size.width * 0.5
+                  ? MediaQuery.of(context).size.width * 0.2
                   : MediaQuery.of(context).size.width * 0.8,
             ),
           ),
-          Positioned(
-            bottom: 10,
-            right: 10,
-            left: 10,
-            child: Text(
-              productsData[index][textIndex],
-              maxLines: 2,
-              overflow: TextOverflow.fade,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelMedium!
-                  .copyWith(fontWeight: FontWeight.bold),
-            ),
+          Spacer(),
+          Text(
+            productsData[index][textIndex],
+            maxLines: 2,
+            overflow: TextOverflow.fade,
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium!
+                .copyWith(fontWeight: FontWeight.bold),
           ),
+          Spacer(),
         ],
       ),
     );
