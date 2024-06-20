@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:restrosupply/screens/allProduct.dart';
-import 'package:restrosupply/screens/homeScreen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:restrosupply/data.dart';
+import 'package:restrosupply/routeConstants.dart';
 
 class LocationWidget extends StatefulWidget {
   final String category;
@@ -12,47 +13,51 @@ class LocationWidget extends StatefulWidget {
 }
 
 class _LocationWidgetState extends State<LocationWidget> {
-  bool underLine = false;
+  bool homeUnderLine = false;
+  bool categoryUnderline = false;
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (event) => setState(() {
-        underLine = true;
-      }),
-      onExit: (_) => setState(() {
-        underLine = false;
-      }),
-      child: RichText(
-        text: TextSpan(
-          style: Theme.of(context).textTheme.labelLarge!.copyWith(
-              fontWeight: FontWeight.bold,
-              decoration: underLine ? TextDecoration.underline : null),
-          children: <TextSpan>[
-            TextSpan(
-                text: 'Home',
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+    return RichText(
+      text: TextSpan(
+        children: [
+          TextSpan(
+              text: 'Home',
+              onEnter: (event) => setState(() {
+                    homeUnderLine = true;
                   }),
-            TextSpan(
-              text: " > ",
-            ),
-            TextSpan(
-              text: widget.category,
+              onExit: (event) => setState(() {
+                    homeUnderLine = false;
+                  }),
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  fontWeight: FontWeight.bold,
+                  decoration: homeUnderLine ? TextDecoration.underline : null),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => AllProducts(
-                                category: widget.category,
-                              )));
-                },
-            ),
-          ],
-        ),
+                  context.go(RouteConstants().home);
+                }),
+          const TextSpan(
+            text: "   >   ",
+          ),
+          TextSpan(
+            text: widget.category,
+            onEnter: (event) => setState(() {
+              categoryUnderline = true;
+            }),
+            onExit: (event) => setState(() {
+              categoryUnderline = false;
+            }),
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                fontWeight: FontWeight.bold,
+                decoration:
+                    categoryUnderline ? TextDecoration.underline : null),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                String? category = valueToID(widget.category);
+                context.go("${RouteConstants().category}/$category");
+              },
+          ),
+        ],
       ),
     );
   }

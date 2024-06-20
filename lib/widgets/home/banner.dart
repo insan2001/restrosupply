@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/screens/allProduct.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
+import 'package:restrosupply/widgets/customBtn.dart';
 
 class BannerWidget extends StatelessWidget {
   const BannerWidget({super.key});
@@ -18,14 +19,14 @@ class BannerWidget extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
           ),
           Align(
-            alignment: Alignment(-0.75, 0),
+            alignment: const Alignment(-0.75, 0),
             child: SizedBox(
               height: 450,
               child: Wrap(children: [
                 Padding(
                   padding: MediaQuery.of(context).size.width > mobileWidth
-                      ? EdgeInsets.all(0)
-                      : EdgeInsets.all(10),
+                      ? const EdgeInsets.all(0)
+                      : const EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,31 +43,12 @@ class BannerWidget extends StatelessWidget {
                               .copyWith(color: Theme.of(context).primaryColor),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      InkWell(
-                        splashColor: null,
-                        highlightColor: null,
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    AllProducts(category: all))),
-                        child: Container(
-                          width: 180,
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              "All categories",
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                          ),
-                        ),
-                      )
+                      CustomButtonWidget(
+                          navPath: "${RouteConstants().category}/$all",
+                          text: all)
                     ],
                   ),
                 ),

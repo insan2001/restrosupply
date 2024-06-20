@@ -22,8 +22,8 @@ class ThreeWidget extends StatelessWidget {
     return GridView.builder(
         shrinkWrap: true,
         itemCount: 3,
-        padding: EdgeInsets.only(right: 50, left: 50),
-        physics: NeverScrollableScrollPhysics(),
+        padding: const EdgeInsets.only(right: 50, left: 50),
+        physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount:
                 MediaQuery.of(context).size.width > mobileWidth ? 3 : 1,

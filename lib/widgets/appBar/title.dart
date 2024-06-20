@@ -8,11 +8,9 @@ class TitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Text(
-        "    ${name}    ",
-        style: Theme.of(context)
-            .textTheme
-            .labelMedium!
-            .copyWith(fontWeight: FontWeight.bold),
+        "    $name    ",
+        style: Theme.of(context).textTheme.labelMedium!.copyWith(
+            fontWeight: FontWeight.w700, color: Theme.of(context).primaryColor),
       ),
     );
   }

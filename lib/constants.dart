@@ -1,11 +1,9 @@
-import 'package:restrosupply/screens/allProduct.dart';
-import 'package:restrosupply/screens/contactUs.dart';
-import 'package:restrosupply/screens/homeScreen.dart';
+import 'package:restrosupply/routeConstants.dart';
 
 final List<List<dynamic>> appbarNameList = [
-  ["Home", HomeScreen()],
-  ["Products", AllProducts(category: all)],
-  ["Contact Us", ContactUsScreen()],
+  ["Home", RouteConstants().home],
+  ["Products", "${RouteConstants().category}/$all"],
+  ["Contact Us", RouteConstants().contactUs],
 ];
 
 const String data = "data";
@@ -24,4 +22,9 @@ const int detailsIndex = 5;
 const String all = "All Products";
 
 const String emptyImage = "assets/images/empty.jpg";
-const String logoImage = "";
+const String logoImage = "assets/images/logo.jpg";
+
+const String url = "https://www.restrosupplyhub.com/";
+
+const String companyName = "Restro Supply Hub";
+const String suggestText = "You might also like these";

@@ -1,5 +1,18 @@
 import 'package:restrosupply/constants.dart';
 
+// these names will show in category page
+const String baggage = "Sugarcane Compostable Products";
+const String kraft = "Kraft Paper Fold Box";
+const String aluminum = "Foil Container and Lid";
+const String shopping = "Paper Shopping Bag";
+const String coffee = "Paper Coffee cup and Lid";
+const String soup = "Paper Soup cup and lid";
+const String plastic = "Plastic Bags";
+const String thermal = "Bond or Thermal Paper Roll";
+const String napkin = "Napkin";
+const String portion = "Plastic Portion cups";
+const String wood = "Wood Tableware";
+
 final Map<String, Map<String, List<List<dynamic>>>> dataList = {
   "Bagasse Products": {
     "data": [
@@ -10,7 +23,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 6\" - Bagasse Square Plate",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8X8-3 Compartment Bagasse Brown Clamshell Container ",
@@ -19,7 +31,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 8X8-3 Compartment Bagasse Brown Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - Bagasse Brown Container with plastic lid - 32oz - 1 Comb ",
@@ -28,7 +39,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Bagasse Brown Container with plastic lid - 32oz - 1 Comb",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9\"-3 Compartment Bagasse Plates - 500ct/CS ",
@@ -38,7 +48,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20012",
         "Pacing: 10X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X9 - 3 Compartment Bagasse Light Brown Clamshell Container ",
@@ -47,7 +56,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 9X9 - 3 Compartment Bagasse Light Brown Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Golden Maple - Clear Lid For 24/32oz Bagasse Round Bowl - 600ct/CS ",
@@ -57,7 +65,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20039",
         "Packing: 12X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X6 Bagasse Clamshell Container - 200ct/CS ",
@@ -67,7 +74,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20025",
         "Packing: 4X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 10\" - 3 Compartment Bagasse Plates ",
@@ -76,7 +82,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 10\" - 3 Compartment Bagasse Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - Bagasse Brown Container with plastic lid - 28oz - 1 Comb - 150ct/CS ",
@@ -86,7 +91,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20003",
         "Packing: 3X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 10\" - 3 Compartment Bagasse Light Brown Plates - 200ct/CS ",
@@ -95,7 +99,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#: 20014H",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9\" - 3 Compartment Bagasse Light Brown Plates ",
@@ -104,7 +107,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 9\" - 3 Compartment Bagasse Light Brown Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 12.5\" - Bagasse Oval Plate - 500ct/CS ",
@@ -114,7 +116,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20016",
         "Packing: 10X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8X8 Bagasse Brown Clamshell Container ",
@@ -123,7 +124,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 8X8 Bagasse Brown Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8\"- Bagasse Square Plate - 1000ct/CS ",
@@ -133,7 +133,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20018",
         "Packing: 20X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 7\" Bagasse Plates ",
@@ -142,7 +141,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 7\" Bagasse Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8.5X8.5 -1  Bagasse Light Brown Clamshell Container ",
@@ -151,7 +149,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 8.5X8.5 -1\u00a0 Bagasse Light Brown Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Golden Maple - 48oz Round Bowl - Bagasse - 300ct/CS ",
@@ -161,7 +158,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20041",
         "Packing: 6X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - Bagasse Brown Container with plastic lid - 24 oz - 2 Comb - 150ct/CS ",
@@ -171,7 +167,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20002",
         "Packing: 3X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X6 - 2 Compartment Bagasse Light Brown Clamshell Container - 200ct/CS ",
@@ -181,7 +176,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#:20026H",
         "Packing: 4X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - Bagasse Brown Container with plastic lid - 28oz - 2 Comb ",
@@ -190,7 +184,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Bagasse Brown Container with plastic lid - 28oz - 2 Comb",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X9 Bagasse Clamshell Container - 200ct/CS ",
@@ -200,7 +193,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20027",
         "Packing: 4X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 10\" - Bagasse Square Plate - 500ct/CS ",
@@ -210,7 +202,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20019",
         "Packing: 10X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9\" Bagasse Light Brown Plates ",
@@ -219,7 +210,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 9\" Bagasse Light Brown Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X9 - 3 Compartment Bagasse Clamshell Container - 200ct/CS ",
@@ -229,7 +219,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20028",
         "Packing: 4X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 9X6 - 2 Compartment Bagasse Clamshell Container ",
@@ -238,7 +227,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 9X6 - 2 Compartment Bagasse Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 10\" Bagasse Plates ",
@@ -247,7 +235,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 10\" Bagasse Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - Bagasse Brown Container with plastic lid - 32oz - 2 Comb - 150ct/CS ",
@@ -257,7 +244,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20006",
         "Packing: 3X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 6\" Bagasse Plates ",
@@ -266,7 +252,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 6\" Bagasse Plates",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8\" - Bagasse Light Brown Square Plate ",
@@ -275,7 +260,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 8\" - Bagasse Light Brown Square Plate",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8.5X8.5 Bagasse Clamshell Container - 200ct/CS ",
@@ -285,7 +269,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 20024",
         "Packing: 4X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 7\"X5.5\"X2.8\" Bagasse Light Brown Clamshell Container ",
@@ -294,7 +277,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 7\"X5.5\"X2.8\" Bagasse Light Brown Clamshell Container",
-        "Sugarcane Compostable Products"
       ],
       [
         " Golden Maple - 16oz Round Bowl - Bagasse - 600ct/CS ",
@@ -304,7 +286,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Golden Maple - 16oz Round Bowl - Bagasse - 6X100CT/CS",
         "Packing: 12X50 CT",
-        "Sugarcane Compostable Products"
       ],
       [
         " Chartland - 8X8 - 3 Compartment Bagasse Clamshell Container ",
@@ -313,11 +294,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - 8X8 - 3 Compartment Bagasse Clamshell Container",
-        "Sugarcane Compostable Products"
       ]
     ],
     catImage: [
-      ["assets/category/baggage.webp", "Sugarcane Compostable Products"]
+      ["assets/category/baggage.webp", baggage]
     ]
   },
   "Kraft Paper Fold Box": {
@@ -369,7 +349,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
     ],
     catImage: [
-      ["assets/category/kraft.webp", "Kraft Paper Fold Box"]
+      ["assets/category/kraft.webp", kraft]
     ]
   },
   "Aluminum Foil": {
@@ -382,7 +362,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10045",
         "Packing: 20X5ct",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Laminated Lid for 1.5 LB Oblong - HZJ310LH ",
@@ -392,7 +371,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10020",
         "",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Plastic Dome Lid For 1 lb Oblong Container 500ps -HZJ300LD ",
@@ -402,7 +380,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10016",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Laminated Lid for 2.5 LB Oblong - HZJ320LH ",
@@ -412,7 +389,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10023",
         "Packing: 500ct/cs",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 8''  Heavy Round  - Aluminium Foil Container - HZJ208H ",
@@ -422,7 +398,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10007",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Full Size Deep - Aluminium Steam Pan - HZJ520 ",
@@ -432,7 +407,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10030",
         "Packing: 50ct/cs",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 2.5 lb Oblong - Aluminium Foil Container - HZJ320 ",
@@ -442,7 +416,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10021",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil -12\" Aluminum Foil Roll  -Heave - 200M - HZJ1220H ",
@@ -452,7 +425,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Chartland-Foil-12\" Aluminum Foil-Heave-200M",
         "",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Half Size Medium - Aluminium Steam Pan - HZJ410 ",
@@ -462,7 +434,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Chartland - Foil Half Size Medium - Aluminium Steam Pan - HZJ410",
         "Packing: 100ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Laminated Lid for 1 LB Oblong - HZJ300LH ",
@@ -472,7 +443,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Chartland - Foil Laminated Lid for 1 LB Oblong - HZJ300LH",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Full Size Shallow - Aluminium Steam Pan - HZJ500 ",
@@ -482,7 +452,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Chartland - Foil Full Size Shallow - Aluminium Steam Pan - HZJ500",
         "PO#: 10028Packing: 50 CtCs / Skids For 53\" Trailer: 70 Cs",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Plastic Dome Lid For 2.25 lb Oblong Container 500ps - HZJ320LD ",
@@ -492,7 +461,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Chartland-Dome Lids for 1.5 lb Oblong Pan - Clear",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Half Size Lid For Aluminium Steam Pan - HZJ400L ",
@@ -502,7 +470,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10027",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Half Size Deep - Aluminium Steam Pan - HZJ420 ",
@@ -512,7 +479,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10026",
         "Packing: 100ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 9\" Round - Plastic Dome  Lid - HZJ209LD ",
@@ -522,7 +488,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#:10014",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 7\" Foil Laminated Board Lid - HZJ207LH ",
@@ -532,7 +497,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10005",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 1 lb Oblong-Aluminium Foil Container - HZJ300 ",
@@ -542,7 +506,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10015",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foi l-18\" Aluminum Foil Roll - Standard -18\"X100M - HZJ1810 ",
@@ -552,7 +515,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10036",
         "Packing: 6 Rolls/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 9\" Foil Laminated Board Lid - HZJ209LH ",
@@ -562,7 +524,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10013",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 8\"Round Foil Laminated Board Lid - HZJ208LH ",
@@ -572,7 +533,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10009",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Aluminium Rectangle Steam Pan - 4332 - 50ct/CS ",
@@ -582,7 +542,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 10046",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Half Size Lid For Aluminium Steam Pan - Little Packing - 400ct/CS ",
@@ -592,7 +551,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10044",
         "Packing: 40X10ct",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Half Size Medium - Aluminium Steam Pan - Little Packing - 100ct/CS ",
@@ -602,7 +560,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10040",
         "Packing: 10X10ctPO#:: 10039",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Half Size Deep - Aluminium Steam Pan - Little Packing - 100ct/CS ",
@@ -612,7 +569,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10040",
         "Packing: 10X10ct",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Full Size Deep - Aluminium Steam Pan - Little Packing -50ct/CS ",
@@ -622,7 +578,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10043",
         "Packing: 10X5ct",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Full Size Medium - Aluminium Steam Pan - Little Packing - 50ct/CS ",
@@ -632,7 +587,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO# : 10042",
         "Packing: 10X5ct",
-        "Foil Container and Lid"
       ],
       [
         " Roaster Pans/Oval Pan - HZJ - 4399 - 100ct/CS ",
@@ -642,7 +596,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Roaster Pans/Oval Pan-HZJ-4399",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Roaster Pans/Oval Pan - HZJ - 7500 - 50ct/CS ",
@@ -652,7 +605,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO# : 10047",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Plastic Dome Lid For 1.5lb Oblong Container 500ps -HZJ310LD ",
@@ -662,7 +614,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO# : 10019",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Plastic Dome Lid For Half Size Foil Pan -100pcs - HZJ400LD ",
@@ -672,7 +623,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10047",
         "Packing: 100ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Full Size Medium - Aluminium Steam Pan - HZJ510 ",
@@ -682,7 +632,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10029",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 7 '- Heavy-'Round - Aluminium Foil Container - HZJ207H ",
@@ -692,7 +641,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10002",
         "Packing: 500ct/cs",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil -12\" Aluminum Foil Roll - Standard - 12\"X200M - HZJ1220 ",
@@ -702,7 +650,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10034",
         "Packing: 6 Rolls/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 8\" Round - Plastic Dome  Lid - HZJ208LD ",
@@ -712,7 +659,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10010",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Full Size Lid For Aluminium Steam Pan - HZJ500L ",
@@ -722,7 +668,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10031",
         "Packing: 50ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 7 '- Standard Round - Aluminium Foil Container - HZJ207 ",
@@ -732,7 +677,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10002",
         "Packing: 500ct/CsWeight: 7.5g",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 9' Heavy Round - Aluminium Foil Container - HZJ209H ",
@@ -742,7 +686,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10011",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil -18\" Aluminum Foil Roll - Heave -18\"X100M - HZJ1810H ",
@@ -752,7 +695,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10037",
         "Packing: 6 Rolls/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil Half Size Shallow - Aluminium Steam Pan - HZJ400 ",
@@ -762,7 +704,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10024",
         "Packing: 100ct/CS",
-        "Foil Container and Lid"
       ],
       [
         " Chartland - Foil - 1.5 lb Oblong - Aluminium Foil Container - HZJ310 ",
@@ -772,18 +713,17 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#  10018",
         "Packing: 500ct/CS",
-        "Foil Container and Lid"
       ]
     ],
     catImage: [
-      ["assets/category/aluminum.webp", "Foil Container and Lid"]
+      ["assets/category/aluminum.webp", aluminum]
     ]
   },
   "Paper Shopping Bag": {
     data: [
       [
         " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
-        "assets/PaperBags/-1918688910506603471.png",
+        "assets/PaperShoppingBag/-1918688910506603471.png",
         true,
         true,
         true,
@@ -793,7 +733,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X17 - 200ct/CS ",
-        "assets/PaperBags/6792400537161498743.png",
+        "assets/PaperShoppingBag/6792400537161498743.png",
         true,
         true,
         true,
@@ -803,7 +743,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
-        "assets/PaperBags/-9004487357085058787.png",
+        "assets/PaperShoppingBag/-9004487357085058787.png",
         true,
         true,
         true,
@@ -813,7 +753,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X13 - 200ct/CS ",
-        "assets/PaperBags/-3968352626926764221.png",
+        "assets/PaperShoppingBag/-3968352626926764221.png",
         true,
         true,
         true,
@@ -823,7 +763,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong)  Paper Bags with Twisted Handles -White - 13X7X17 - 200ct/CS ",
-        "assets/PaperBags/7645501136332211547.png",
+        "assets/PaperShoppingBag/7645501136332211547.png",
         true,
         true,
         true,
@@ -833,7 +773,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple -  Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
-        "assets/PaperBags/-7672088551004513088.png",
+        "assets/PaperShoppingBag/-7672088551004513088.png",
         true,
         true,
         true,
@@ -843,7 +783,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
-        "assets/PaperBags/8546618619284421840.png",
+        "assets/PaperShoppingBag/8546618619284421840.png",
         true,
         true,
         true,
@@ -853,7 +793,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple -  Kraft Paper Bags with Twisted Handles - 13X8.5X13 - 250ct/CS ",
-        "assets/PaperBags/2708982093779888984.png",
+        "assets/PaperShoppingBag/2708982093779888984.png",
         true,
         true,
         true,
@@ -863,7 +803,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) Kraft Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
-        "assets/PaperBags/6651280695903989693.png",
+        "assets/PaperShoppingBag/6651280695903989693.png",
         true,
         true,
         true,
@@ -873,7 +813,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple -  Kraft Paper Bags with Twisted Handles - 13X7X17 - 250ct/CS ",
-        "assets/PaperBags/-8047310861267980810.png",
+        "assets/PaperShoppingBag/-8047310861267980810.png",
         true,
         true,
         true,
@@ -883,7 +823,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ],
       [
         " Golden Maple - (Super Strong) White Paper Bags with Twisted Handles - 13X7X13 -200ct/CS ",
-        "assets/PaperBags/9164454087588030262.png",
+        "assets/PaperShoppingBag/9164454087588030262.png",
         true,
         true,
         true,
@@ -893,7 +833,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/category/shopping.webp", "Paper Shopping Bag"]
+      ["assets/category/shopping.webp", shopping]
     ]
   },
   "Paper Coffee cup": {
@@ -906,7 +846,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30014",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 10 - 24 oz Kraft Sleeve For Hot Paper Cups - 1000ct/cs ",
@@ -916,7 +855,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30012",
         "Packing: 1000 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 10oz Ripple Wall Paper Cups - 500ct/CS ",
@@ -926,7 +864,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30015",
         "Packing: 20X25 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 7 oz Paper Cup - Printed - 3000ct/CS ",
@@ -936,7 +873,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30023",
         "Packing:: 60X50CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 20 oz White  Paper Cups - 1000ct/CS ",
@@ -946,7 +882,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30024",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 4oz Paper Cup - Printed - 1000ct/CS ",
@@ -956,7 +891,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30006",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 4oz White Hot Paper Cups - 1000ct/CS ",
@@ -966,7 +900,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30001",
         "",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 10oz Paper Cups - Printed - 1000ct/CS ",
@@ -976,7 +909,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30008",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 12oz Ripple Wall Paper Cups - 500ct/CS ",
@@ -986,7 +918,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30016",
         "Packing: 20X25ct",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - White Flat Lid for 10-20oz Cup - 1000ct/CS ",
@@ -996,7 +927,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30022",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 8oz Paper Cups - Printed - 1000ct/CS ",
@@ -1006,7 +936,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30007",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple -16oz Paper Cup - White - 1000ct/CS ",
@@ -1016,7 +945,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#30005",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - Black Dome Tear Lid for 10-20oz Paper Cup - 1000ct/CS ",
@@ -1026,7 +954,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30020",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple-10 oz White Paper Cup - 1000ct/CS ",
@@ -1036,7 +963,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30003",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - White Dome Lid for 8oz Paper Cup - 1000ct/CS ",
@@ -1046,7 +972,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30019",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 16oz Paper Cup - Printed - 1000ct/CS ",
@@ -1056,7 +981,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30010",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple-Rapple 16oz Hot Paper Cups - 500ct/CS ",
@@ -1066,7 +990,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30017",
         "Packing: 20X25CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 12 oz White Paper Cup - 1000ct/CS ",
@@ -1076,7 +999,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30004",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 12oz Paper Cups - Printed - 1000ct/CS ",
@@ -1086,7 +1008,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30009",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - White Dome  Lid for 4oz Paper Cup - 1000ct/CS ",
@@ -1096,7 +1017,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30018",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - 8oz White Paper Cup - 1000ct/CS ",
@@ -1106,7 +1026,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30002",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ],
       [
         " Golden Maple - White Flat Lid for 8 oz Cup - 1000ct/CS ",
@@ -1116,11 +1035,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 30021",
         "Packing: 20X50 CT",
-        "Paper Coffee  Cup and Lid"
       ]
     ],
     catImage: [
-      ["assets/category/coffee.webp", "Paper Coffee cup and Lid"]
+      ["assets/category/coffee.webp", coffee]
     ]
   },
   "Paper Soup cup": {
@@ -1133,7 +1051,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40009",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - Plastic Lid for 8 oz Paper Soup Container - 1000ct/CS ",
@@ -1143,7 +1060,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40013",
         "Packing: 20X50ct",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 8 oz Paper Soup Container - White - 500ct/CS ",
@@ -1153,7 +1069,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40001",
         "Packing: 20X50CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - Plastic Lid for 12 - 32 oz Paper Soup Container - 500ct/CS ",
@@ -1163,7 +1078,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40014",
         "Packing: 20X25ct",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 16 oz Paper Soup Container - White - 500ct/CS ",
@@ -1173,7 +1087,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40003",
         "Packing: 20X25ct",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 12 oz Paper Soup Container - Printed - 500ct/CS ",
@@ -1183,7 +1096,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40007",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 12 oz Paper Soup Container - White - 500ct/CS ",
@@ -1193,7 +1105,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#40002",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - Plastic Lid for 4 oz Paper Soup Container ",
@@ -1203,7 +1114,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Golden Maple - Plastic Lid for 4 oz Paper Soup Container",
         "",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 8 oz Paper Soup Container - Printed - 1000ct/CS ",
@@ -1213,7 +1123,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40006",
         "Packing: 20X50CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 24 oz Paper Soup Container - White - 500ct/CS ",
@@ -1223,7 +1132,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#40004",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 16 oz Paper Soup Container - Printed - 500ct/CS ",
@@ -1233,7 +1141,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40008",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 32 oz Paper Soup Container - White - 500ct/CS ",
@@ -1243,7 +1150,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40005",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple -32 oz Paper Soup Container - Printed - 500ct/CS ",
@@ -1253,7 +1159,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#: 40010",
         "Packing: 20X25CT",
-        "Paper Soup Cups and Lid"
       ],
       [
         " Golden Maple - 4 oz Paper Soup Container - White ",
@@ -1263,11 +1168,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Golden Maple - 4 oz Paper Soup Container - White",
         "",
-        "Paper Soup Cups and Lid"
       ]
     ],
     catImage: [
-      ["assets/category/soup.webp", "Paper Soup cup and lid"]
+      ["assets/category/soup.webp", soup]
     ]
   },
   "Plastic Bags": {
@@ -1279,8 +1183,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 1 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 7 lb - 500/Cs ",
@@ -1289,8 +1191,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 7 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 6 lb - 500/Cs ",
@@ -1299,8 +1199,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 6 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Black ",
@@ -1309,8 +1207,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Clear 11\"X17\" - Convenient Plastic Rolls - 6X800/Cs ",
@@ -1319,8 +1215,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Clear 11\"X17\" - Convenient Plastic Rolls - 6X800/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S4 - 1000/Cs ",
@@ -1329,8 +1223,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S4 - 1000/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 2 lb - 500/Cs ",
@@ -1339,8 +1231,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 2 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Clear ",
@@ -1349,8 +1239,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 42\" X 48\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple -10.5\"X15.5\" -  Medium Produce Rolls ",
@@ -1359,8 +1247,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -10.5\"X15.5\" - Medium Produce Rolls",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Clear ",
@@ -1369,8 +1255,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple -12\"X20\" -  Produce Rolls - Extra Large ",
@@ -1379,8 +1263,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -12\"X20\" -\u00a0 Produce Rolls - Extra Large",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 30\" X 38\" - Clear ",
@@ -1389,8 +1271,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 30\" X 38\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S3 - 1000/Cs ",
@@ -1399,8 +1279,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S3 - 1000/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S2 - 2000/Cs ",
@@ -1409,8 +1287,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S2 - 2000/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 3 lb - 500/Cs ",
@@ -1419,8 +1295,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 3 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 26\" X 36\" - Black ",
@@ -1429,8 +1303,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 26\" X 36\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 26\" X 36\" - Clear ",
@@ -1439,8 +1311,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 26\" X 36\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 30\" X 38\" - Clear ",
@@ -1449,8 +1319,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 30\" X 38\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 5 lb - 500/Cs ",
@@ -1459,8 +1327,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 5 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 4 lb - 500/Cs ",
@@ -1469,8 +1335,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 4 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Clear T - Shirt Rolls (8.25X5X19) - 6X600/Cs ",
@@ -1479,8 +1343,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Clear T - Shirt Rolls (8.25X5X19) - 6X600/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 9 lb - 500/Cs ",
@@ -1489,8 +1351,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 9 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple -10.5\"X20\" -  Large Produce Rolls ",
@@ -1499,8 +1359,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple -10.5\"X15.5\" -\u00a0 Large Produce Rolls",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 35\" X 47 \"- Black ",
@@ -1509,8 +1367,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 35\" X 47 \"- Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland  - Garbage Bags - Strong - 35\" X 47\" - Clear ",
@@ -1519,8 +1375,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland\u00a0 - Garbage Bags - Strong - 35\" X 47\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 30\" X 38\" - Black ",
@@ -1529,8 +1383,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 30\" X 38\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ragular - 24\" X 22\" - Clear ",
@@ -1539,8 +1391,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ragular - 24 \"X 22\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 42\" X 48\" - Clear ",
@@ -1549,8 +1399,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 42\" X 48\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S5 - 1000/Cs ",
@@ -1559,8 +1407,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S5 - 1000/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ragular - 26\" X 36 \"- Clear ",
@@ -1569,8 +1415,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ragular - 26\" X 36 \"- Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 8 lb - 500/Cs ",
@@ -1579,8 +1423,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 8 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S57- 500/Cs ",
@@ -1589,8 +1431,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S57- 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Black ",
@@ -1599,8 +1439,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 35\" X 47\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - 14\"X20\" Produce Rolls - Extra Jumbo ",
@@ -1609,8 +1447,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - 14\"X20\" Produce Rolls - Extra Jumbo",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 11 lb - 500/Cs ",
@@ -1619,8 +1455,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 11 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Strong - 42\" X 48\" - Black ",
@@ -1629,8 +1463,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Strong - 42\" X 48\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 0.5 lb - 500/Cs ",
@@ -1639,8 +1471,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 0.5 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Clear ",
@@ -1649,8 +1479,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Clear",
-        "",
-        "Plastic Bag"
       ],
       [
         " Golden Maple - Low Density T - Shirt Bag - White - S1 - 2000/Cs ",
@@ -1659,8 +1487,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Low Density T - Shirt Bag - White - S1 - 2000/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 12 lb - 500/Cs ",
@@ -1669,8 +1495,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 12 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ],
       [
         " Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Black ",
@@ -1679,8 +1503,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Chartland - Garbage Bags - Ex - Strong - 26\" X 36\" - Black",
-        "",
-        "Plastic Bag"
       ],
       [
         " Poly Bag - 10 lb - 500/Cs ",
@@ -1689,12 +1511,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Poly Bag - 10 lb - 500/Cs",
-        "",
-        "Plastic Bag"
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", "Plastic Bags"]
+      ["assets/PaperShoppingBag/0.webp", plastic]
     ]
   },
   "Bond or Thermal Paper Roll": {
@@ -1707,7 +1527,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR60",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR72 - 2 1/4\"\u217955' Paper Rolls - Thermal - 100 ct/CS ",
@@ -1717,7 +1536,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR72",
         "Packing: 100ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR90 - 3 1/8\"\u2179180' Paper Rolls - Thermal - 50 ct/CS ",
@@ -1727,7 +1545,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR90",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR40 - 3\" x 3\" -  2 Ply Yellow/White  - Bond Paper  - 50 ct/CS ",
@@ -1737,7 +1554,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR40",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR71 - 2 1/4\"\u217975' Paper Rolls - Thermal - 100 ct/CS ",
@@ -1747,7 +1563,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR71",
         "Pacing: 100ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR30 - 3\"\u21793\"(150') - 1 ply - Bond Paper - 50 ct/CS ",
@@ -1757,7 +1572,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR30",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR20 - 1 7/16\"\u21793\" - Bond Paper - 100ct/CS ",
@@ -1767,7 +1581,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR20",
         "Packing: 100ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR10 - 1.75\"\u21793\" - Bond Paper - 100 ct/CS ",
@@ -1777,7 +1590,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1a RR10",
         "Packing: 100ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR70 - 2 1/4\"\u217945'  Paper Rolls - Thermal - 100 ct/CS ",
@@ -1787,7 +1599,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR70",
         "Packing: 100 ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR73 - 2 1/4\"\u217930' Paper Rolls - Thermal - 100 ct/CS ",
@@ -1797,7 +1608,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR73",
         "Packing: 100ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR80 - 2.25\"\u21792.75\" Paper Rolls - Thermal - 50 ct/CS ",
@@ -1807,7 +1617,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR80",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR74 - 2 1/4\"\u217930' Paper Rolls - Thermal - 50 ct/CS ",
@@ -1817,7 +1626,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR74",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ],
       [
         " Chartland - RR50 - 3\"\u21793\" Thermal Rolls - 50 ct/CS ",
@@ -1827,11 +1635,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "PO#\uff1aRR50",
         "Packing: 50ct/CS",
-        "Bond or Thermal Paper Roll"
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", "Bond or Thermal Paper Roll"]
+      ["assets/PaperShoppingBag/0.webp", thermal]
     ]
   },
   "Napkin": {
@@ -1844,7 +1651,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN102 - 15\" X 16.5\"-1 Ply - 20 X 150ct.",
         "PO#:: DN102",
-        "Napkin"
       ],
       [
         " Napkin  -  DN401 - 9\" X 9\"-1 Ply - 8 X 500ct ",
@@ -1854,7 +1660,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN401 - 11\" X 11.4\"-1 Ply - 8 X 500ct",
         "PO#:: DN401",
-        "Napkin"
       ],
       [
         " Napkin  -  DN101 - 7\" X 13.5\"-1 Ply - 20 X 450ct ",
@@ -1864,7 +1669,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN101 - 7\" X 13.5\"-1 Ply - 20 X 450ct.",
         "PO#:: DN101",
-        "Napkin"
       ],
       [
         " Napkin  -  DN301 - 11\" X 11.4\"-1 Ply - 12 X 450ct ",
@@ -1874,7 +1678,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN301 - 11\" X 11.4\"-1 Ply - 12 X 450ct",
         "PO#:: DN301",
-        "Napkin"
       ],
       [
         " Napkin  -  DN202 - High Quality - 15\" X 16.5\"-2 Ply  - 20 X 150ct ",
@@ -1884,7 +1687,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN202 - High Quality - 15\" X 16.5\"-2 Ply\u00a0 - 20 X 150ct",
         "PO#:: DN202",
-        "Napkin"
       ],
       [
         " Napkin  -  DN201 - 15\" X 16.5\"-2 Ply - 20 X 150ct ",
@@ -1894,11 +1696,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         "Napkin\u00a0 -\u00a0 DN201 - 15\" X 16.5\"-2 Ply - 20 X 150ct",
         "PO#:: DN201",
-        "Napkin"
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", "Napkin"]
+      ["assets/PaperShoppingBag/0.webp", napkin]
     ]
   },
   "Plastic Portion cups": {
@@ -1910,8 +1711,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80009",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Lid for Plastic Portion Cups - 0.5oz/1oz ",
@@ -1920,8 +1719,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80010",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 0.5oz ",
@@ -1930,8 +1727,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80001",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 0.75oz ",
@@ -1940,8 +1735,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80002",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 2oz - Black ",
@@ -1950,8 +1743,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple - Plastic Portion Cups - 2oz - Black",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 2.5oz ",
@@ -1960,8 +1751,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80007",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Lid for Plastic Portion Cups - 3.25/4oz ",
@@ -1970,8 +1759,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80012",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 1oz ",
@@ -1980,8 +1767,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80003",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 3.25oz ",
@@ -1990,8 +1775,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80008",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 2oz ",
@@ -2000,8 +1783,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80005",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Plastic Portion Cups - 1.5oz ",
@@ -2010,8 +1791,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80004",
-        "",
-        "Plastic Portion Cups"
       ],
       [
         " Golden Maple - Lid for Plastic Portion Cups - 1.5/2 oz ",
@@ -2020,12 +1799,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "PO#\uff1a80011",
-        "",
-        "Plastic Portion Cups"
       ]
     ],
     catImage: [
-      ["assets/images/sugarcane/0.webp", "Plastic Portion cups"]
+      ["assets/images/sugarcane/0.webp", portion]
     ]
   },
   "Wood Tableware": {
@@ -2037,8 +1814,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple-Wood Spoon-20X100 ct",
-        "",
-        "Wood Tableware"
       ],
       [
         " Golden Maple-Wood Knife-20X100 ct ",
@@ -2047,8 +1822,6 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple-Wood Knife-20X100 ct",
-        "",
-        "Wood Tableware"
       ],
       [
         " Golden Maple-Wood Fork 20X100 ct ",
@@ -2057,12 +1830,10 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
         true,
         true,
         "Golden Maple-Wood Fork 20X100 ct",
-        "",
-        "Wood Tableware"
       ]
     ],
     catImage: [
-      ["assets/images/sugarcane/0.webp", "Wood Tableware"]
+      ["assets/images/sugarcane/0.webp", wood]
     ]
   }
 };
@@ -2070,13 +1841,22 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
 Map<String, String> categoryId = {
   "baggage": "Bagasse Products",
   "kraft": "Kraft Paper Fold Box",
-  "aluminum": "Kraft Paper Fold Box",
+  "aluminum": "Aluminum Foil",
   "shopping": "Paper Shopping Bag",
-  "soup": "Paper Soup cup and lid",
-  "coffee": "Paper Coffee cup and Lid",
+  "coffee": "Paper Coffee cup",
+  "soup": "Paper Soup cup",
   "plastic": "Plastic Bags",
   "thermal": "Bond or Thermal Paper Roll",
   "napkin": "Napkin",
   "portion": "Plastic Portion cups",
   "wood": "Wood Tableware",
 };
+
+String? valueToID(String value) {
+  for (String key in categoryId.keys) {
+    if (categoryId[key] == value) {
+      return key;
+    }
+  }
+  return null;
+}

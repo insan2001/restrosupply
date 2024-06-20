@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:restrosupply/widgets/body/customImage.dart';
 
 class CircleImage extends StatelessWidget {
   final String path;
@@ -10,11 +9,12 @@ class CircleImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(shape: BoxShape.circle),
-      child: CustomImageWidget(
-        path: path,
+      decoration: const BoxDecoration(shape: BoxShape.circle),
+      child: Image.asset(
+        path,
         height: size,
         width: size,
+        fit: BoxFit.contain,
       ),
     );
   }

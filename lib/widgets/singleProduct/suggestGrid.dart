@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
-import 'package:restrosupply/screens/singleProduct.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/singleProduct/moreImage.dart';
 
 class SuggestGridWidget extends StatefulWidget {
@@ -30,8 +31,8 @@ class _SuggestGridWidgetState extends State<SuggestGridWidget> {
           left: MediaQuery.of(context).size.width * 0.05,
           right: MediaQuery.of(context).size.width * 0.05),
       child: GridView.builder(
-        physics: NeverScrollableScrollPhysics(),
-        padding: EdgeInsets.all(20),
+        physics: const NeverScrollableScrollPhysics(),
+        padding: const EdgeInsets.all(20),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount:
                 MediaQuery.of(context).size.width > mobileWidth ? 4 : 1,
@@ -41,11 +42,12 @@ class _SuggestGridWidgetState extends State<SuggestGridWidget> {
         shrinkWrap: true,
         itemCount: productsData.length,
         itemBuilder: (context, index) => InkWell(
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) =>
-                      SingleProduct(index: index, category: widget.category))),
+          onTap: () {
+            String? category = valueToID(widget.category);
+
+            context.go("${RouteConstants().product}/$category-$index");
+            setState(() {});
+          },
           child: SuggestWidget(index: index, productsData: productsData),
         ),
       ),

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 
-class InformationWidget extends StatelessWidget {
+class InformationWidget extends StatefulWidget {
   final List<dynamic> productData;
   const InformationWidget({super.key, required this.productData});
 
+  @override
+  State<InformationWidget> createState() => _InformationWidgetState();
+}
+
+class _InformationWidgetState extends State<InformationWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,73 +20,99 @@ class InformationWidget extends StatelessWidget {
               ? MediaQuery.of(context).size.width * 0.5
               : MediaQuery.of(context).size.width * 0.8,
           child: Text(
-            productData[textIndex],
+            widget.productData[textIndex],
             maxLines: 2,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
+        SizedBox(height: 20),
         Row(
           children: [
-            Icon(
-              productData[stockIndex] ? Icons.check : Icons.close,
-              color: productData[stockIndex] ? Colors.green : Colors.red,
-            ),
             SizedBox(
+                width:
+                    MediaQuery.of(context).size.width <= mobileWidth ? 20 : 0),
+            Icon(
+              widget.productData[stockIndex] ? Icons.check : Icons.close,
+              color: widget.productData[stockIndex] ? Colors.green : Colors.red,
+            ),
+            const SizedBox(
               width: 10,
             ),
             Text(
-              productData[stockIndex] ? "In Stock" : "Out of stock",
-              style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    color: productData[stockIndex] ? Colors.green : Colors.red,
+              widget.productData[stockIndex] ? "In Stock" : "Out of stock",
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                    color: widget.productData[stockIndex]
+                        ? Colors.green
+                        : Colors.red,
                   ),
             ),
           ],
         ),
         Row(
           children: [
-            Icon(
-              productData[pickupIndex] ? Icons.check : Icons.close,
-              color: productData[pickupIndex] ? Colors.green : Colors.red,
-            ),
             SizedBox(
+                width:
+                    MediaQuery.of(context).size.width <= mobileWidth ? 20 : 0),
+            Icon(
+              widget.productData[pickupIndex] ? Icons.check : Icons.close,
+              color:
+                  widget.productData[pickupIndex] ? Colors.green : Colors.red,
+            ),
+            const SizedBox(
               width: 10,
             ),
             Text(
               "Pickup - In store",
-              style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    color: productData[pickupIndex] ? Colors.green : Colors.red,
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                    color: widget.productData[pickupIndex]
+                        ? Colors.green
+                        : Colors.red,
                   ),
             ),
           ],
         ),
         Row(
           children: [
-            Icon(
-              productData[shippingIndex] ? Icons.check : Icons.close,
-              color: productData[shippingIndex] ? Colors.green : Colors.red,
-            ),
             SizedBox(
+                width:
+                    MediaQuery.of(context).size.width <= mobileWidth ? 20 : 0),
+            Icon(
+              widget.productData[shippingIndex] ? Icons.check : Icons.close,
+              color:
+                  widget.productData[shippingIndex] ? Colors.green : Colors.red,
+            ),
+            const SizedBox(
               width: 10,
             ),
             Text(
               "Shinpping",
-              style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    color:
-                        productData[shippingIndex] ? Colors.green : Colors.red,
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                    color: widget.productData[shippingIndex]
+                        ? Colors.green
+                        : Colors.red,
                   ),
             ),
           ],
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: List.generate(
-              productData.length - detailsIndex,
-              (_index) => Column(
+              widget.productData.length - detailsIndex,
+              (index) => Column(
                     children: [
-                      Text(
-                        productData[detailsIndex + _index],
-                        style: Theme.of(context).textTheme.labelMedium,
+                      Row(
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width <=
+                                      mobileWidth
+                                  ? 20
+                                  : 0),
+                          Text(
+                            widget.productData[detailsIndex + index],
+                            style: Theme.of(context).textTheme.labelLarge,
+                          ),
+                        ],
                       ),
                     ],
                   )),

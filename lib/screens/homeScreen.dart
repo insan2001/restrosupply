@@ -11,7 +11,7 @@ import 'package:restrosupply/widgets/home/containerThree.dart';
 import 'package:restrosupply/widgets/home/horizondalCategory.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            BannerWidget(),
+            const BannerWidget(),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Theme.of(context).primaryColor,
               height: 2,
             ),
-            ThreeWidget(),
+            const ThreeWidget(),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,
@@ -52,37 +52,37 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Theme.of(context).primaryColor,
               height: 2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             isDevice(
               desktop: Row(
                 children: [
-                  Spacer(),
-                  CommitImageWidget(),
+                  const Spacer(),
+                  const CommitImageWidget(),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.03,
                     height: 20,
                   ),
-                  CommitTextWidget(),
-                  Spacer(),
+                  const CommitTextWidget(),
+                  const Spacer(),
                 ],
               ),
-              mobile: Column(
+              mobile: const Column(
                 children: [
                   CommitImageWidget(),
                   CommitTextWidget(),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,
             ),
-            ContactDetails()
+            const ContactDetails()
           ],
         ),
       ),

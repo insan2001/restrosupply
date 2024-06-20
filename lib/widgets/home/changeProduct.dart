@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
-import 'package:restrosupply/screens/singleProduct.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 
 class ProductSideviewWidget extends StatefulWidget {
@@ -34,22 +35,18 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
       ),
       ...List.generate(
         3,
-        (_index) => InkWell(
+        (index) => InkWell(
           splashColor: null,
           highlightColor: null,
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => SingleProduct(
-                index: _index,
-                category: widget.keys[widget.index],
-              ),
-            ),
-          ),
+          onTap: () {
+            String? category = valueToID(widget.keys[widget.index]);
+            context.go(
+                "${RouteConstants().product}/$category-${_productIndex + index}");
+          },
           child: Row(
             children: [
               Container(
-                padding: EdgeInsets.only(right: 10, left: 10, top: 15),
+                padding: const EdgeInsets.only(right: 10, left: 10, top: 15),
                 decoration: BoxDecoration(
                     border: Border.all(
                       width: 1,
@@ -62,15 +59,15 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                   children: [
                     CustomImageWidget(
                       path: dataList[widget.keys[widget.index]]![data]![
-                          _index + _productIndex][imageIndex],
+                          index + _productIndex][imageIndex],
                       height: MediaQuery.of(context).size.width / 8,
                       width: MediaQuery.of(context).size.width / 8,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Text(
-                      dataList[widget.keys[widget.index]]![data]![_index]
+                      dataList[widget.keys[widget.index]]![data]![index]
                           [textIndex],
                       style: Theme.of(context).textTheme.labelMedium,
                       maxLines: 2,
@@ -79,7 +76,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               )
             ],
@@ -90,8 +87,9 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
         onPressed: () {
           setState(() {
             if (_productIndex + 3 <
-                dataList[widget.keys[widget.index]]![data]!.length)
+                dataList[widget.keys[widget.index]]![data]!.length) {
               _productIndex += 1;
+            }
           });
         },
         icon: Icon(

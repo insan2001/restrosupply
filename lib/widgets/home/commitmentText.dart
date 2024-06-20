@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/screens/contactUs.dart';
+import 'package:restrosupply/routeConstants.dart';
 
 class CommitTextWidget extends StatelessWidget {
   const CommitTextWidget({super.key});
@@ -16,7 +17,10 @@ class CommitTextWidget extends StatelessWidget {
       children: [
         Text(
           "Our Commitment",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context)
+              .textTheme
+              .displaySmall!
+              .copyWith(color: Theme.of(context).primaryColor),
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width > mobileWidth
@@ -32,15 +36,10 @@ class CommitTextWidget extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ContactUsScreen(),
-            ),
-          ),
+          onTap: () => context.go(RouteConstants().contactUs),
           child: Container(
             width: 180,
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 border: Border.all(color: Theme.of(context).primaryColor),
                 borderRadius: BorderRadius.circular(20)),

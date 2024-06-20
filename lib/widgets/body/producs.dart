@@ -15,8 +15,8 @@ class ProductsInfo extends StatelessWidget {
           ? MediaQuery.of(context).size.width / 8
           : MediaQuery.of(context).size.width,
       padding: MediaQuery.of(context).size.width > mobileWidth
-          ? EdgeInsets.all(0)
-          : EdgeInsets.all(22),
+          ? const EdgeInsets.all(0)
+          : const EdgeInsets.all(22),
       child: Column(
         children: [
           Container(
@@ -31,7 +31,7 @@ class ProductsInfo extends StatelessWidget {
                   : MediaQuery.of(context).size.width,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           SizedBox(

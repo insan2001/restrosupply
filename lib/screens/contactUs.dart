@@ -34,7 +34,7 @@ class ContactUsScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.location_on,
                       size: 30,
                       color: Color.fromARGB(255, 2, 237, 10),
@@ -58,10 +58,10 @@ class ContactUsScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.labelLarge,
                           )),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.phone_android,
                       size: 30,
                       color: Color.fromARGB(255, 2, 237, 10),
@@ -85,10 +85,10 @@ class ContactUsScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.labelLarge,
                           )),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.work,
                       size: 30,
                       color: Color.fromARGB(255, 2, 237, 10),
@@ -112,10 +112,10 @@ class ContactUsScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.labelLarge,
                           )),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.email,
                       size: 25,
                       color: Color.fromARGB(255, 2, 237, 10),
@@ -126,10 +126,10 @@ class ContactUsScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.email,
                       size: 25,
                       color: Color.fromARGB(255, 2, 237, 10),

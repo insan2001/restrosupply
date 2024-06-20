@@ -1,12 +1,9 @@
 import 'dart:convert';
 
-// import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:restrosupply/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'package:restrosupply/screens/homeScreen.dart';
+import 'package:restrosupply/route.dart';
 
 Future<Map<String, dynamic>> fetchUsers() async {
   var result = await http.get(Uri.parse(
@@ -29,22 +26,23 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
-          primaryColor: Colors.green,
-          scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
-          textTheme: GoogleFonts.poppinsTextTheme(),
-          buttonTheme: const ButtonThemeData(
-            textTheme: ButtonTextTheme.accent,
-            buttonColor: Colors.greenAccent,
-          ),
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.green,
-            brightness: Brightness.dark,
-          ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: Colors.amber,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        buttonTheme: const ButtonThemeData(
+          textTheme: ButtonTextTheme.accent,
+          buttonColor: Colors.greenAccent,
         ),
-        home: HomeScreen());
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green,
+          brightness: Brightness.dark,
+        ),
+      ),
+      routerConfig: AppRouter().router,
+    );
   }
 }

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/singleProduct/information.dart';
 import 'package:restrosupply/widgets/singleProduct/location.dart';
 import 'package:restrosupply/widgets/singleProduct/productImage.dart';
 import 'package:restrosupply/widgets/singleProduct/suggestGrid.dart';
-import 'package:restrosupply/widgets/singleProduct/suggestText.dart';
 
 // name, imagepath, stock, pickup, shipping, details
 
@@ -16,7 +16,7 @@ class SingleProduct extends StatefulWidget {
   final int index;
   final String category;
 
-  SingleProduct({
+  const SingleProduct({
     super.key,
     required this.index,
     required this.category,
@@ -35,6 +35,7 @@ class _SingleProductState extends State<SingleProduct> {
   void initState() {
     productsData = dataList[widget.category]![data]!;
     productData = productsData[widget.index];
+
     super.initState();
   }
 
@@ -44,21 +45,21 @@ class _SingleProductState extends State<SingleProduct> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 100,
+            const SizedBox(
+              height: 40,
             ),
             Row(
               children: [
-                Spacer(
+                const Spacer(
                   flex: 1,
                 ),
                 LocationWidget(category: widget.category),
-                Spacer(
+                const Spacer(
                   flex: 6,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             isDevice(
@@ -69,7 +70,11 @@ class _SingleProductState extends State<SingleProduct> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.12,
                   ),
-                  ProductImageWidget(path: productData[imageIndex]),
+                  ProductImageWidget(
+                    path: productData[imageIndex],
+                    url:
+                        '$url${RouteConstants().product}${valueToID(widget.category)}-${widget.index}',
+                  ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
@@ -80,20 +85,29 @@ class _SingleProductState extends State<SingleProduct> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ProductImageWidget(path: productData[imageIndex]),
-                  SizedBox(height: 10),
+                  ProductImageWidget(
+                    path: productData[imageIndex],
+                    url:
+                        '$url${RouteConstants().product}/${valueToID(widget.category)}-${widget.index}',
+                  ),
+                  const SizedBox(height: 10),
                   InformationWidget(productData: productData),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            SuggestTextWidget(),
+            Text(
+              suggestText,
+              style: MediaQuery.of(context).size.width > mobileWidth
+                  ? Theme.of(context).textTheme.displayMedium
+                  : Theme.of(context).textTheme.displaySmall,
+            ),
             SuggestGridWidget(
               category: widget.category,
             ),
-            ContactDetails()
+            const ContactDetails()
           ],
         ),
       ),

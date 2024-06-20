@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
-import 'package:restrosupply/screens/allProduct.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 import 'package:restrosupply/widgets/home/changeProduct.dart';
 
@@ -18,7 +19,7 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
   @override
   Widget build(BuildContext context) {
     return isDevice(
-      desktop: Container(
+      desktop: SizedBox(
         height: ((mobileWidth * 0.5) + 20) * 5,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -55,16 +56,16 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                 child: InkWell(
                                   splashColor: null,
                                   highlightColor: null,
-                                  onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => AllProducts(
-                                              category: dataList.keys
-                                                  .toList()[index]))),
+                                  onTap: () {
+                                    String? category = valueToID(
+                                        dataList.keys.toList()[index]);
+                                    context.go(
+                                        "${RouteConstants().category}/$category");
+                                  },
                                   child: Container(
                                     width: 120,
                                     height: 50,
-                                    padding: EdgeInsets.all(10),
+                                    padding: const EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         color: Theme.of(context).primaryColor,
                                         borderRadius:

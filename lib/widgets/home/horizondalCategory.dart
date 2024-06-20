@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/screens/allProduct.dart';
+import 'package:restrosupply/data.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/producs.dart';
 
 List<String> display = [
@@ -22,14 +24,14 @@ class HorizondalWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
           "Shop By Category",
           style: Theme.of(context).textTheme.displayMedium,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         MediaQuery.of(context).size.width >= mobileWidth
@@ -41,14 +43,10 @@ class HorizondalWidget extends StatelessWidget {
                   (index) => InkWell(
                       splashColor: null,
                       highlightColor: null,
-                      onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AllProducts(
-                                category: keys[index],
-                              ),
-                            ),
-                          ),
+                      onTap: () {
+                        String? category = valueToID(keys[index]);
+                        context.go("${RouteConstants().category}/$category");
+                      },
                       child: ProductsInfo(keys: keys, index: index)),
                 ),
               )
@@ -60,11 +58,10 @@ class HorizondalWidget extends StatelessWidget {
                   (index) => InkWell(
                       splashColor: null,
                       highlightColor: null,
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  AllProducts(category: keys[index]))),
+                      onTap: () {
+                        String? category = valueToID(keys[index]);
+                        context.go("${RouteConstants().category}/$category");
+                      },
                       child: ProductsInfo(keys: keys, index: index)),
                 ),
               ),

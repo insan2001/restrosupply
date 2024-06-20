@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 
 final List<String> addr = [
@@ -23,7 +22,7 @@ class ContactDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       width: MediaQuery.of(context).size.width,
       child: Center(
         child: Row(
@@ -42,7 +41,7 @@ class ContactDetails extends StatelessWidget {
                         .labelLarge!
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   ...List.generate(
                       addr.length,
                       (index) => Text(addr[index],
@@ -62,7 +61,7 @@ class ContactDetails extends StatelessWidget {
                         .labelLarge!
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   ...List.generate(
                     contacts.length,
                     (index) => Text(contacts[index],
@@ -81,7 +80,7 @@ class ContactDetails extends StatelessWidget {
                           .textTheme
                           .labelLarge!
                           .copyWith(fontWeight: FontWeight.bold)),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text("Monday 09:00 AM",
                       style: Theme.of(context).textTheme.labelLarge),
                   Text("Friday 05:00 PM",
