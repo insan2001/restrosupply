@@ -20,6 +20,7 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
       front: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: Colors.black,
           ),

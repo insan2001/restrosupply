@@ -6,7 +6,7 @@ import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
-import 'package:restrosupply/widgets/singleProduct/moreImage.dart';
+import 'package:restrosupply/widgets/body/customImage.dart';
 
 class AllProducts extends StatefulWidget {
   final String category;
@@ -22,34 +22,28 @@ class _AllProductsState extends State<AllProducts> {
   late String category;
   late final List<String> keyList;
 
-  setCategory(String cat) {
+  void setCategory(String cat) {
     setState(() {
       category = cat;
-    });
-    if (cat == all) {
-      List<List<dynamic>> tempData = [];
-      String key;
-      for (key in dataList.keys) {
-        for (List<dynamic> i in dataList[key]![data]!) {
-          tempData.add(i);
+      selectedData = [];
+      if (cat == all) {
+        List<List<dynamic>> tempData = [];
+        for (String key in dataList.keys) {
+          tempData.addAll(dataList[key]![data]!);
         }
-      }
-      setState(() {
         selectedData = tempData;
-      });
-    } else {
-      setState(() {
+      } else {
         selectedData = dataList[category]![data]!;
-      });
-    }
+      }
+    });
   }
 
   @override
   void initState() {
+    super.initState();
     setCategory(widget.category);
     keyList = dataList.keys.toList();
     keyList.insert(0, all);
-    super.initState();
   }
 
   @override
@@ -60,8 +54,9 @@ class _AllProductsState extends State<AllProducts> {
           children: [
             Center(
               child: Text(
-                  category == all ? all : dataList[category]![catImage]![0][1],
-                  style: Theme.of(context).textTheme.displayLarge),
+                category == all ? all : dataList[category]![catImage]![0][1],
+                style: Theme.of(context).textTheme.displayLarge,
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -74,15 +69,10 @@ class _AllProductsState extends State<AllProducts> {
             ),
             Row(
               children: [
-                const Spacer(
-                  flex: 1,
-                ),
+                const Spacer(flex: 1),
                 DropdownButton<String>(
                   dropdownColor: Colors.white,
-                  icon: const Icon(
-                    Icons.arrow_drop_down,
-                    color: Colors.black,
-                  ),
+                  icon: const Icon(Icons.arrow_drop_down, color: Colors.black),
                   hint: Text(
                     category,
                     style: const TextStyle(color: Colors.black),
@@ -100,25 +90,20 @@ class _AllProductsState extends State<AllProducts> {
                     setCategory(item!);
                   },
                 ),
-                const Spacer(
-                  flex: 3,
-                ),
+                const Spacer(flex: 3),
               ],
             ),
             isDevice(
               desktop: GridView.builder(
                 physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.only(
-                  left: 100,
-                  right: 100,
-                  top: 20,
-                ),
+                padding: const EdgeInsets.only(left: 100, right: 100, top: 20),
                 itemCount: selectedData.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
-                    childAspectRatio: 0.8),
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 0.8,
+                ),
                 shrinkWrap: true,
                 itemBuilder: (context, index) => InkWell(
                   splashColor: null,
@@ -126,17 +111,17 @@ class _AllProductsState extends State<AllProducts> {
                   onTap: () {
                     if (widget.category == all) {
                       int flag = index;
-                      late final String category;
+                      late final String selectedCategory;
                       for (String key in dataList.keys) {
                         if (dataList[key]![data]!.length > flag) {
-                          category = valueToID(key)!;
+                          selectedCategory = valueToID(key)!;
                           break;
                         } else {
                           flag -= dataList[key]![data]!.length;
                         }
                       }
                       context.go(
-                        "${RouteConstants().product}/$category-$flag",
+                        "${RouteConstants().product}/$selectedCategory-$flag",
                       );
                     } else {
                       context.go(
@@ -144,8 +129,47 @@ class _AllProductsState extends State<AllProducts> {
                       );
                     }
                   },
-                  child:
-                      SuggestWidget(index: index, productsData: selectedData),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.2 * 0.8,
+                    height: MediaQuery.of(context).size.width * 0.2,
+                    padding:
+                        const EdgeInsets.only(left: 10, right: 10, top: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: Colors.black,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: CustomImageWidget(
+                            path: selectedData[index][imageIndex],
+                            height:
+                                MediaQuery.of(context).size.width > mobileWidth
+                                    ? MediaQuery.of(context).size.width * 0.2
+                                    : MediaQuery.of(context).size.width * 0.8,
+                            width:
+                                MediaQuery.of(context).size.width > mobileWidth
+                                    ? MediaQuery.of(context).size.width * 0.2
+                                    : MediaQuery.of(context).size.width * 0.8,
+                          ),
+                        ),
+                        const Spacer(),
+                        Text(
+                          selectedData[index][textIndex],
+                          maxLines: 2,
+                          overflow: TextOverflow.fade,
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        const Spacer(),
+                      ],
+                    ),
+                  ),
                 ),
               ),
               mobile: ListView.separated(
@@ -162,17 +186,17 @@ class _AllProductsState extends State<AllProducts> {
                   onTap: () {
                     if (widget.category == all) {
                       int flag = index;
-                      late final String category;
+                      late final String selectedCategory;
                       for (String key in dataList.keys) {
                         if (dataList[key]![data]!.length > flag) {
-                          category = valueToID(key)!;
+                          selectedCategory = valueToID(key)!;
                           break;
                         } else {
                           flag -= dataList[key]![data]!.length;
                         }
                       }
                       context.go(
-                        "${RouteConstants().product}/$category-$flag",
+                        "${RouteConstants().product}/$selectedCategory-$flag",
                       );
                     } else {
                       context.go(
@@ -182,8 +206,9 @@ class _AllProductsState extends State<AllProducts> {
                   },
                   leading: ConstrainedBox(
                     constraints: BoxConstraints(
-                        minWidth: MediaQuery.of(context).size.height * 0.1,
-                        minHeight: MediaQuery.of(context).size.height * 0.1),
+                      minWidth: MediaQuery.of(context).size.height * 0.1,
+                      minHeight: MediaQuery.of(context).size.height * 0.1,
+                    ),
                     child: Image.asset(
                       selectedData[index][imageIndex] == ""
                           ? emptyImage
@@ -201,9 +226,7 @@ class _AllProductsState extends State<AllProducts> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const ContactDetails(),
           ],
         ),
