@@ -5,6 +5,7 @@ import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
+import 'package:restrosupply/widgets/listViewProducts.dart';
 import 'package:restrosupply/widgets/singleProduct/information.dart';
 import 'package:restrosupply/widgets/singleProduct/location.dart';
 import 'package:restrosupply/widgets/singleProduct/productImage.dart';
@@ -104,8 +105,15 @@ class _SingleProductState extends State<SingleProduct> {
                   ? Theme.of(context).textTheme.displayMedium
                   : Theme.of(context).textTheme.displaySmall,
             ),
-            SuggestGridWidget(
-              category: widget.category,
+            isDevice(
+              desktop: SuggestGridWidget(
+                category: widget.category,
+              ),
+              mobile: MyCustomListView(
+                selectedData:
+                    dataList[widget.category]![data]!.take(8).toList(),
+                category: widget.category,
+              ),
             ),
             const ContactDetails()
           ],

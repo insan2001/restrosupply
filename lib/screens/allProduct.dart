@@ -7,6 +7,7 @@ import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
+import 'package:restrosupply/widgets/listViewProducts.dart';
 
 class AllProducts extends StatefulWidget {
   final String category;
@@ -94,138 +95,87 @@ class _AllProductsState extends State<AllProducts> {
               ],
             ),
             isDevice(
-              desktop: GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.only(left: 100, right: 100, top: 20),
-                itemCount: selectedData.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 0.8,
-                ),
-                shrinkWrap: true,
-                itemBuilder: (context, index) => InkWell(
-                  splashColor: null,
-                  highlightColor: null,
-                  onTap: () {
-                    if (widget.category == all) {
-                      int flag = index;
-                      late final String selectedCategory;
-                      for (String key in dataList.keys) {
-                        if (dataList[key]![data]!.length > flag) {
-                          selectedCategory = valueToID(key)!;
-                          break;
-                        } else {
-                          flag -= dataList[key]![data]!.length;
+                desktop: GridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  padding:
+                      const EdgeInsets.only(left: 100, right: 100, top: 20),
+                  itemCount: selectedData.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 0.8,
+                  ),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => InkWell(
+                    splashColor: null,
+                    highlightColor: null,
+                    onTap: () {
+                      if (widget.category == all) {
+                        int flag = index;
+                        late final String selectedCategory;
+                        for (String key in dataList.keys) {
+                          if (dataList[key]![data]!.length > flag) {
+                            selectedCategory = valueToID(key)!;
+                            break;
+                          } else {
+                            flag -= dataList[key]![data]!.length;
+                          }
                         }
+                        context.go(
+                          "${RouteConstants().product}/$selectedCategory-$flag",
+                        );
+                      } else {
+                        context.go(
+                          "${RouteConstants().product}/${valueToID(category)}-$index",
+                        );
                       }
-                      context.go(
-                        "${RouteConstants().product}/$selectedCategory-$flag",
-                      );
-                    } else {
-                      context.go(
-                        "${RouteConstants().product}/${valueToID(category)}-$index",
-                      );
-                    }
-                  },
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.2 * 0.8,
-                    height: MediaQuery.of(context).size.width * 0.2,
-                    padding:
-                        const EdgeInsets.only(left: 10, right: 10, top: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Colors.black,
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.2 * 0.8,
+                      height: MediaQuery.of(context).size.width * 0.2,
+                      padding:
+                          const EdgeInsets.only(left: 10, right: 10, top: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: Colors.black,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: CustomImageWidget(
+                              path: selectedData[index][imageIndex],
+                              height: MediaQuery.of(context).size.width >
+                                      mobileWidth
+                                  ? MediaQuery.of(context).size.width * 0.2
+                                  : MediaQuery.of(context).size.width * 0.8,
+                              width: MediaQuery.of(context).size.width >
+                                      mobileWidth
+                                  ? MediaQuery.of(context).size.width * 0.2
+                                  : MediaQuery.of(context).size.width * 0.8,
+                            ),
+                          ),
+                          const Spacer(),
+                          Text(
+                            selectedData[index][textIndex],
+                            maxLines: 2,
+                            overflow: TextOverflow.fade,
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          const Spacer(),
+                        ],
                       ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Center(
-                          child: CustomImageWidget(
-                            path: selectedData[index][imageIndex],
-                            height:
-                                MediaQuery.of(context).size.width > mobileWidth
-                                    ? MediaQuery.of(context).size.width * 0.2
-                                    : MediaQuery.of(context).size.width * 0.8,
-                            width:
-                                MediaQuery.of(context).size.width > mobileWidth
-                                    ? MediaQuery.of(context).size.width * 0.2
-                                    : MediaQuery.of(context).size.width * 0.8,
-                          ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          selectedData[index][textIndex],
-                          maxLines: 2,
-                          overflow: TextOverflow.fade,
-                          style: Theme.of(context)
-                              .textTheme
-                              .labelMedium!
-                              .copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const Spacer(),
-                      ],
-                    ),
                   ),
                 ),
-              ),
-              mobile: ListView.separated(
-                padding: const EdgeInsets.only(left: 10, right: 10),
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: selectedData.length,
-                separatorBuilder: (context, index) => Container(
-                  height: 0.5,
-                  color: Theme.of(context).primaryColor,
-                ),
-                shrinkWrap: true,
-                itemBuilder: (context, index) => ListTile(
-                  hoverColor: Colors.amber,
-                  onTap: () {
-                    if (widget.category == all) {
-                      int flag = index;
-                      late final String selectedCategory;
-                      for (String key in dataList.keys) {
-                        if (dataList[key]![data]!.length > flag) {
-                          selectedCategory = valueToID(key)!;
-                          break;
-                        } else {
-                          flag -= dataList[key]![data]!.length;
-                        }
-                      }
-                      context.go(
-                        "${RouteConstants().product}/$selectedCategory-$flag",
-                      );
-                    } else {
-                      context.go(
-                        "${RouteConstants().product}/${valueToID(category)}-$index",
-                      );
-                    }
-                  },
-                  leading: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minWidth: MediaQuery.of(context).size.height * 0.1,
-                      minHeight: MediaQuery.of(context).size.height * 0.1,
-                    ),
-                    child: Image.asset(
-                      selectedData[index][imageIndex] == ""
-                          ? emptyImage
-                          : selectedData[index][imageIndex],
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  title: Text(
-                    selectedData[index][textIndex],
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelLarge!
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-            ),
+                mobile: MyCustomListView(
+                    selectedData: selectedData, category: category)),
             const SizedBox(height: 20),
             const ContactDetails(),
           ],

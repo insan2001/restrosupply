@@ -22,31 +22,38 @@ class ThreeWidget extends StatelessWidget {
     return GridView.builder(
         shrinkWrap: true,
         itemCount: 3,
-        padding: const EdgeInsets.only(right: 50, left: 50),
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount:
-                MediaQuery.of(context).size.width > mobileWidth ? 3 : 1,
-            childAspectRatio: 2),
+            crossAxisCount: 3,
+            childAspectRatio:
+                MediaQuery.of(context).size.width > mobileWidth ? 2.2 : 1),
         itemBuilder: (context, index) => Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(
                   _icon[index],
-                  size: 70,
+                  size: MediaQuery.of(context).size.width * 0.05,
                   color: Theme.of(context).primaryColor,
                 ),
-                Text(
-                  _title[index],
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium!
-                      .copyWith(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  _description[index],
-                  style: Theme.of(context).textTheme.labelSmall,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      _title[index],
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium!
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      child: Text(
+                        _description[index],
+                        style: Theme.of(context).textTheme.labelSmall,
+                      ),
+                    )
+                  ],
                 )
               ],
             ));

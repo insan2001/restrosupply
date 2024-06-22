@@ -3,5 +3,6 @@ class RouteConstants {
   final String category = '/category';
   final String product = '/product';
   final String contactUs = '/contact-us';
+  final String login = "/login";
   final String error = '/error';
 }

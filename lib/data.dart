@@ -1514,7 +1514,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", plastic]
+      ["assets/PlasticBag/4521788198660704861.png", plastic]
     ]
   },
   "Bond or Thermal Paper Roll": {
@@ -1638,7 +1638,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", thermal]
+      ["assets/BondorThermalPaperRoll/8243204453815857561.png", thermal]
     ]
   },
   "Napkin": {
@@ -1699,7 +1699,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/PaperShoppingBag/0.webp", napkin]
+      ["assets/PlasticPortionCups/-3375063255935120218.png", napkin]
     ]
   },
   "Plastic Portion cups": {
@@ -1802,7 +1802,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/images/sugarcane/0.webp", portion]
+      ["assets/PlasticPortionCups/-3375063255935120218.png", portion]
     ]
   },
   "Wood Tableware": {
@@ -1833,7 +1833,7 @@ final Map<String, Map<String, List<List<dynamic>>>> dataList = {
       ]
     ],
     catImage: [
-      ["assets/images/sugarcane/0.webp", wood]
+      ["assets/WoodTableware/4680064143321107524.png", wood]
     ]
   }
 };

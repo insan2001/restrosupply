@@ -20,7 +20,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       IconButton(
         onPressed: () {
           setState(() {
@@ -30,7 +30,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
         icon: Icon(
           Icons.arrow_back_ios,
           color: _productIndex == 0 ? Colors.grey : Colors.red,
-          size: 50,
+          size: MediaQuery.of(context).size.width * 0.05,
         ),
       ),
       ...List.generate(
@@ -46,7 +46,8 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
           child: Row(
             children: [
               Container(
-                padding: const EdgeInsets.only(right: 10, left: 10, top: 15),
+                padding: const EdgeInsets.only(
+                    right: 10, left: 10, top: 15, bottom: 15),
                 decoration: BoxDecoration(
                     border: Border.all(
                       width: 1,
@@ -54,14 +55,15 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                     ),
                     borderRadius: BorderRadius.circular(20)),
                 width: MediaQuery.of(context).size.width / 8,
-                height: MediaQuery.of(context).size.width / 5,
+                height: MediaQuery.of(context).size.width / 4.5,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomImageWidget(
                       path: dataList[widget.keys[widget.index]]![data]![
                           index + _productIndex][imageIndex],
-                      height: MediaQuery.of(context).size.width / 8,
-                      width: MediaQuery.of(context).size.width / 8,
+                      height: MediaQuery.of(context).size.width / 9,
+                      width: MediaQuery.of(context).size.width / 9,
                     ),
                     const SizedBox(
                       height: 8,
@@ -76,9 +78,6 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                   ],
                 ),
               ),
-              const SizedBox(
-                width: 10,
-              )
             ],
           ),
         ),
@@ -98,7 +97,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                   dataList[widget.keys[widget.index]]![data]!.length
               ? Colors.grey
               : Colors.red,
-          size: 50,
+          size: MediaQuery.of(context).size.width * 0.05,
         ),
       ),
     ]);

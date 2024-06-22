@@ -1,0 +1,8 @@
+location for gather data
+
+CollectionReference myDataCollection =
+        FirebaseFirestore.instance.collection('mydata');
+await myDataCollection
+            .doc("${valueToID(key)}$firebasePrefix")
+            .collection(valueToID(key)!)
+            .doc("${valueToID(key)}-$index")

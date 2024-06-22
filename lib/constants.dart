@@ -28,3 +28,8 @@ const String url = "https://www.restrosupplyhub.com/";
 
 const String companyName = "Restro Supply Hub";
 const String suggestText = "You might also like these";
+
+bool isAdmin = false;
+
+String mail = "restro@mail.com";
+String password = "123456";

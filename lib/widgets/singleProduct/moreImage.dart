@@ -54,10 +54,9 @@ class _SuggestWidgetState extends State<SuggestWidget> {
             title,
             maxLines: 2,
             overflow: TextOverflow.fade,
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium!
-                .copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: MediaQuery.of(context).size.width * 0.01),
           ),
           const Spacer(),
         ],

@@ -13,10 +13,7 @@ class ProductsInfo extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width > mobileWidth
           ? MediaQuery.of(context).size.width / 8
-          : MediaQuery.of(context).size.width,
-      padding: MediaQuery.of(context).size.width > mobileWidth
-          ? const EdgeInsets.all(0)
-          : const EdgeInsets.all(22),
+          : MediaQuery.of(context).size.width * 0.4,
       child: Column(
         children: [
           Container(
@@ -25,10 +22,10 @@ class ProductsInfo extends StatelessWidget {
               path: dataList[keys[index]]![catImage]![0][0],
               width: MediaQuery.of(context).size.width >= mobileWidth
                   ? MediaQuery.of(context).size.width / 7.5
-                  : MediaQuery.of(context).size.width,
+                  : MediaQuery.of(context).size.width * 0.4,
               height: MediaQuery.of(context).size.width >= mobileWidth
                   ? MediaQuery.of(context).size.width / 7.5
-                  : MediaQuery.of(context).size.width,
+                  : MediaQuery.of(context).size.width * 0.4,
             ),
           ),
           const SizedBox(
@@ -40,7 +37,10 @@ class ProductsInfo extends StatelessWidget {
               keys[index],
               style: MediaQuery.of(context).size.width >= mobileWidth
                   ? Theme.of(context).textTheme.labelMedium
-                  : Theme.of(context).textTheme.displaySmall,
+                  : Theme.of(context)
+                      .textTheme
+                      .displaySmall!
+                      .copyWith(fontSize: 20),
               maxLines: 3,
             ),
           ),

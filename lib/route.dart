@@ -7,6 +7,7 @@ import 'package:restrosupply/screens/allProduct.dart';
 import 'package:restrosupply/screens/contactUs.dart';
 import 'package:restrosupply/screens/error.dart';
 import 'package:restrosupply/screens/homeScreen.dart';
+import 'package:restrosupply/screens/login.dart';
 import 'package:restrosupply/screens/singleProduct.dart';
 
 class AppRouter {
@@ -49,6 +50,13 @@ class AppRouter {
         pageBuilder: ((context, state) {
           return MaterialPage(
               key: state.pageKey, child: const ContactUsScreen());
+        }),
+      ),
+      GoRoute(
+        name: RouteConstants().login,
+        path: RouteConstants().login,
+        pageBuilder: ((context, state) {
+          return MaterialPage(key: state.pageKey, child: LoginScreen());
         }),
       ),
     ],

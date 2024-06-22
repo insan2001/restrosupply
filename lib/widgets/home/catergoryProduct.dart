@@ -20,24 +20,29 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
   Widget build(BuildContext context) {
     return isDevice(
       desktop: SizedBox(
-        height: ((mobileWidth * 0.5) + 20) * 5,
+        height: ((MediaQuery.of(context).size.width * 0.25) + 20) * 5,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(
             5,
             (index) => Container(
               color: Colors.white,
-              height: mobileWidth * 0.5,
-              width: MediaQuery.of(context).size.width * 0.8,
+              height: MediaQuery.of(context).size.width * 0.25,
+              width: MediaQuery.of(context).size.width * 0.85,
               child: Row(
                 children: [
                   SizedBox(
-                    width: mobileWidth * 0.5,
+                    width: MediaQuery.of(context).size.width * 0.25,
                     child: Column(
                       children: [
                         Text(
                           widget.keys[index],
-                          style: Theme.of(context).textTheme.headlineMedium,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(
+                                  fontSize:
+                                      MediaQuery.of(context).size.width * 0.02),
                         ),
                         Stack(
                           children: [
@@ -46,8 +51,8 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                 path:
                                     dataList[widget.keys[index]]![catImage]![0]
                                         [0],
-                                width: 250,
-                                height: 250,
+                                width: MediaQuery.of(context).size.width * 0.2,
+                                height: MediaQuery.of(context).size.width * 0.2,
                               ),
                             ),
                             Positioned.fill(
@@ -63,8 +68,10 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                         "${RouteConstants().category}/$category");
                                   },
                                   child: Container(
-                                    width: 120,
-                                    height: 50,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.08,
+                                    height: MediaQuery.of(context).size.width *
+                                        0.04,
                                     padding: const EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         color: Theme.of(context).primaryColor,
@@ -75,7 +82,12 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                         "View More",
                                         style: Theme.of(context)
                                             .textTheme
-                                            .titleMedium,
+                                            .titleMedium!
+                                            .copyWith(
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.01),
                                       ),
                                     ),
                                   ),
@@ -89,7 +101,7 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                   ),
                   SizedBox(
                     width: (MediaQuery.of(context).size.width * 0.8) -
-                        (mobileWidth * 0.5),
+                        (MediaQuery.of(context).size.width * 0.25),
                     child: ProductSideviewWidget(
                       index: index,
                       keys: widget.keys,
