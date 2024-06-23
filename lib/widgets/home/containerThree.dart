@@ -52,7 +52,9 @@ class ThreeWidget extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.25,
+                      width: MediaQuery.of(context).size.width > mobileWidth
+                          ? MediaQuery.of(context).size.width * 0.25
+                          : MediaQuery.of(context).size.width * 0.9,
                       child: Text(
                         _description[index],
                         style: Theme.of(context).textTheme.labelSmall,

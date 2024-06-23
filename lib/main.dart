@@ -9,6 +9,7 @@ import 'package:restrosupply/firebase_options.dart';
 import 'package:restrosupply/route.dart';
 import 'package:http/http.dart' as http;
 import 'package:restrosupply/screens/error.dart';
+import 'dart:html' as html;
 
 final ref = FirebaseStorage.instance.ref().child('/data/data.json');
 
@@ -37,6 +38,7 @@ Future<Map<String, Map<String, List<List<dynamic>>>>?> readJsonFile() async {
       return null;
     }
   } catch (e) {
+    print(e);
     return null;
   }
 }
@@ -44,9 +46,7 @@ Future<Map<String, Map<String, List<List<dynamic>>>>?> readJsonFile() async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
-  // downloadJsonFile();
-  // fetchUsers("https://httpbin.org/");
-  // fetchUsers("https://dictionary.cambridge.org/dictionary/english/hi");
+  myWebsiteURL = html.window.location.href;
   runApp(const MainApp());
 }
 
@@ -80,7 +80,7 @@ class _MainAppState extends State<MainApp> {
               ),
               colorScheme: ColorScheme.fromSeed(
                 seedColor: Colors.green,
-                brightness: Brightness.dark,
+                brightness: Brightness.light,
               ),
             ),
             routerConfig: AppRouter().router,

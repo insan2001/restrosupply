@@ -54,28 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
             fontWeight: FontWeight.bold,
             fontSize: 24,
           ),
-          inputTheme: InputDecorationTheme(
-            filled: true,
-            fillColor: Colors.blue,
-            labelStyle: TextStyle(
-                color: Theme.of(context).primaryColor), // Label text color
-            errorStyle: const TextStyle(color: Colors.red), // Error text color
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-            errorBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red),
-            ),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red),
-            ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red),
-            ),
-            border: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
-          ),
-          textFieldStyle: const TextStyle(color: Colors.white), // Input text color
+
+          textFieldStyle:
+              const TextStyle(color: Colors.white), // Input text color
         ),
       ),
     );

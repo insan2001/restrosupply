@@ -24,7 +24,7 @@ const String all = "All Products";
 const String emptyImage = "assets/images/empty.jpg";
 const String logoImage = "assets/images/logo.jpg";
 
-const String url = "https://www.restrosupplyhub.com/";
+late final String myWebsiteURL;
 
 const String companyName = "Restro Supply Hub";
 const String suggestText = "You might also like these";

@@ -3,7 +3,6 @@ import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 
 class InformationWidget extends StatefulWidget {
-  // final List<dynamic> productData;
   final int index;
   final String category;
   const InformationWidget({
@@ -25,19 +24,9 @@ class _InformationWidgetState extends State<InformationWidget> {
   @override
   void initState() {
     title.text = dataList[widget.category]![data]![widget.index][textIndex];
-    int flag = 0;
-    String description = "";
-    while (dataList[widget.category]![data]![widget.index].length -
-            detailsIndex +
-            flag -
-            1 <
-        (dataList[widget.category]![data]![widget.index].length -
-            detailsIndex)) {
-      description +=
-          "${dataList[widget.category]![data]![widget.index][flag + detailsIndex]},";
-      flag += 1;
-    }
-    descriptionController.text = description;
+    descriptionController.text = dataList[widget.category]![data]![widget.index]
+        .sublist(detailsIndex)
+        .join(", ");
     super.initState();
   }
 
@@ -49,7 +38,7 @@ class _InformationWidgetState extends State<InformationWidget> {
         SizedBox(
           width: MediaQuery.of(context).size.width > mobileWidth
               ? MediaQuery.of(context).size.width * 0.5
-              : MediaQuery.of(context).size.width * 0.8,
+              : MediaQuery.of(context).size.width,
           child: GestureDetector(
             onTap: () {
               if (isAdmin) {
@@ -67,13 +56,20 @@ class _InformationWidgetState extends State<InformationWidget> {
                       setState(() {
                         isEditTitle = !isEditTitle;
                       });
-                      print("complete");
                     },
                   )
-                : Text(
-                    dataList[widget.category]![data]![widget.index][textIndex],
-                    maxLines: 2,
-                    style: Theme.of(context).textTheme.headlineMedium,
+                : Padding(
+                    padding: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width > mobileWidth
+                            ? 0
+                            : MediaQuery.of(context).size.width * 0.05),
+                    child: Text(
+                      dataList[widget.category]![data]![widget.index]
+                          [textIndex],
+                      style: MediaQuery.of(context).size.width > mobileWidth
+                          ? Theme.of(context).textTheme.headlineMedium
+                          : Theme.of(context).textTheme.headlineSmall,
+                    ),
                   ),
           ),
         ),
@@ -201,9 +197,9 @@ class _InformationWidgetState extends State<InformationWidget> {
           ),
         ),
         const SizedBox(height: 10),
-        isAdmin &&
+        (isAdmin &&
                 dataList[widget.category]![data]![widget.index][detailsIndex] ==
-                    ""
+                    "")
             ? InkWell(
                 onTap: () {
                   setState(() {
@@ -217,6 +213,7 @@ class _InformationWidgetState extends State<InformationWidget> {
             : SizedBox(),
         GestureDetector(
           onTap: () {
+            if (!isAdmin) return;
             setState(() {
               isEditDescription = true;
             });
@@ -257,10 +254,17 @@ class _InformationWidgetState extends State<InformationWidget> {
                                           mobileWidth
                                       ? 20
                                       : 0),
-                              Text(
-                                dataList[widget.category]![data]![widget.index]
-                                    [detailsIndex + index],
-                                style: Theme.of(context).textTheme.labelLarge,
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width >
+                                        mobileWidth
+                                    ? MediaQuery.of(context).size.width * 0.5
+                                    : MediaQuery.of(context).size.width * 0.9,
+                                child: Text(
+                                  dataList[widget.category]![data]![
+                                      widget.index][detailsIndex + index],
+                                  style: Theme.of(context).textTheme.labelLarge,
+                                  maxLines: 2,
+                                ),
                               ),
                             ],
                           )),
