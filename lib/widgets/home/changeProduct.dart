@@ -69,8 +69,8 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                       height: 8,
                     ),
                     Text(
-                      dataList[widget.keys[widget.index]]![data]![index]
-                          [textIndex],
+                      dataList[widget.keys[widget.index]]![data]![
+                          index + _productIndex][textIndex],
                       style: Theme.of(context).textTheme.labelMedium,
                       maxLines: 2,
                       overflow: TextOverflow.fade,

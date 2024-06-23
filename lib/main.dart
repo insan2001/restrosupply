@@ -1,50 +1,52 @@
 import 'dart:convert';
-import 'dart:io';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/firebase_options.dart';
 import 'package:restrosupply/route.dart';
+import 'package:http/http.dart' as http;
+import 'package:restrosupply/screens/error.dart';
 
-Future<Map<String, dynamic>> fetchUsers(String url) async {
-  var result = await http.get(Uri.parse(url));
-  print(result.body);
-  return jsonDecode(result.body);
-}
+final ref = FirebaseStorage.instance.ref().child('/data/data.json');
 
-Future<dynamic> downloadJsonFile() async {
+Future<Map<String, Map<String, List<List<dynamic>>>>?> readJsonFile() async {
   try {
-    // Get the download URL
-    // String downloadURL = await FirebaseStorage.instance
-    //     .refFromURL("gs://restrosupplyhub.appspot.com/data/data.json")
-    //     .getDownloadURL();
-    String urlWithToken =
-        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/data%2Fdata.json?alt=media&token=467e8ed1-17cc-4f5b-b389-6cf21c324929";
-    final response = await http.get(Uri.parse(urlWithToken));
+    final url = await ref.getDownloadURL();
+    final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
-      // Convert the JSON to a Dart map
-      print("object");
-      return jsonDecode(response.body);
+      final Map<String, dynamic> jsonData =
+          json.decode(response.body) as Map<String, dynamic>;
+      late Map<String, Map<String, List<List<dynamic>>>> myData = {};
+      for (String key1 in jsonData.keys) {
+        Map<String, List<List<dynamic>>> tempMap = {};
+        for (String key2 in jsonData[key1].keys) {
+          List<List<dynamic>> tempList = [];
+          for (var data in jsonData[key1][key2]) {
+            tempList.add(data);
+          }
+          tempMap[key2] = tempList;
+        }
+        myData[key1] = tempMap;
+      }
+      return myData;
     } else {
-      throw Exception('Failed to load JSON file');
+      return null;
     }
   } catch (e) {
-    print('Error: $e');
+    return null;
   }
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
   // downloadJsonFile();
-
+  // fetchUsers("https://httpbin.org/");
+  // fetchUsers("https://dictionary.cambridge.org/dictionary/english/hi");
   runApp(const MainApp());
 }
 
@@ -58,23 +60,34 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        primaryColor: Color.fromARGB(255, 14, 204, 52),
-        scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        buttonTheme: const ButtonThemeData(
-          textTheme: ButtonTextTheme.accent,
-          buttonColor: Colors.greenAccent,
-        ),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          brightness: Brightness.dark,
-        ),
-      ),
-      routerConfig: AppRouter().router,
+    return FutureBuilder(
+      future: readJsonFile(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Image.asset(logoImage);
+        } else if (snapshot.hasData) {
+          dataList = snapshot.data!;
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              useMaterial3: true,
+              primaryColor: const Color.fromARGB(255, 14, 204, 52),
+              scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
+              textTheme: GoogleFonts.robotoTextTheme(),
+              buttonTheme: const ButtonThemeData(
+                textTheme: ButtonTextTheme.accent,
+                buttonColor: Colors.greenAccent,
+              ),
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.green,
+                brightness: Brightness.dark,
+              ),
+            ),
+            routerConfig: AppRouter().router,
+          );
+        }
+        return const ErrorScreen();
+      },
     );
   }
 }

@@ -16,12 +16,12 @@ class ProductData {
 
   factory ProductData.create(int index, String name) {
     return ProductData(
-        name: "${name} ${index}",
+        name: "$name $index",
         imageUrl: "",
         stock: true,
         pickup: true,
         shipping: true,
-        details: ["PO box no : ${index}", "another data"]);
+        details: ["PO box no : $index", "another data"]);
   }
 
   factory ProductData.fromJson(Map<String, dynamic> json) {

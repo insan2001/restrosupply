@@ -1,9 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/data.dart';
+import 'package:restrosupply/main.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/title.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class CustomScaffold extends StatelessWidget {
   final Widget body;
@@ -23,7 +28,7 @@ class CustomScaffold extends StatelessWidget {
                 Icons.login,
                 color: Theme.of(context).primaryColor,
               )),
-          SizedBox(
+          const SizedBox(
             width: 20,
           )
         ],
@@ -55,7 +60,21 @@ class CustomScaffold extends StatelessWidget {
       ),
       body: body,
       floatingActionButton: InkWell(
-        onTap: () => context.go(RouteConstants().home),
+        onTap: () async {
+          if (!isAdmin) {
+            context.go(RouteConstants().home);
+          } else {
+            try {
+              await ref.putString(jsonEncode(dataList),
+                  format: firebase_storage.PutStringFormat.raw);
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text("Data Updated")));
+            } catch (e) {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(e.toString())));
+            }
+          }
+        },
         child: Container(
           decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
@@ -74,12 +93,12 @@ class CustomScaffold extends StatelessWidget {
                 ).image,
                 radius: 30,
               ),
-              Spacer(),
+              const Spacer(),
               Text(
-                "Home",
+                isAdmin ? "Save" : "Home",
                 style: TextStyle(fontSize: 32),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ),

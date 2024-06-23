@@ -24,16 +24,21 @@ class ThreeWidget extends StatelessWidget {
         itemCount: 3,
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
+            crossAxisCount:
+                MediaQuery.of(context).size.width > mobileWidth ? 3 : 1,
             childAspectRatio:
-                MediaQuery.of(context).size.width > mobileWidth ? 2.2 : 1),
+                MediaQuery.of(context).size.width > mobileWidth ? 2.2 : 3),
         itemBuilder: (context, index) => Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MediaQuery.of(context).size.width > mobileWidth
+                  ? MainAxisAlignment.spaceAround
+                  : MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(
                   _icon[index],
-                  size: MediaQuery.of(context).size.width * 0.05,
+                  size: MediaQuery.of(context).size.width > mobileWidth
+                      ? MediaQuery.of(context).size.width * 0.05
+                      : 50,
                   color: Theme.of(context).primaryColor,
                 ),
                 Column(

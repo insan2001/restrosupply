@@ -205,8 +205,51 @@
 
 import 'dart:convert';
 import 'dart:io';
-
+import 'package:http/http.dart' as http;
 import 'package:restrosupply/data.dart';
+// import 'package:restrosupply/main.dart';
+
+Future<Map<String, Map<String, List<List<dynamic>>>>?> readJsonFile() async {
+  try {
+    // final url = await ref.getDownloadURL();
+    final response = await http.get(Uri.parse(
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/data%2Fdata.json?alt=media&token=467e8ed1-17cc-4f5b-b389-6cf21c324929"));
+
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> jsonData =
+          json.decode(response.body) as Map<String, dynamic>;
+      late Map<String, Map<String, List<List<dynamic>>>> myData = {};
+      for (String key1 in jsonData.keys) {
+        Map<String, List<List<dynamic>>> tempMap = {};
+        for (String key2 in jsonData[key1].keys) {
+          List<List<dynamic>> tempList = [];
+          for (var data in jsonData[key1][key2]) {
+            tempList.add(data);
+          }
+          tempMap[key2] = tempList;
+        }
+        myData[key1] = tempMap;
+      }
+      // dataList = myData;
+      print(dataList.keys.toList());
+      print(myData.keys.toList());
+
+      File file = File('data1.json');
+      print("file readed");
+      await file.writeAsString(jsonEncode(dataList));
+      print("data written");
+      File file2 = File('data2.json');
+      print("file readed");
+      await file2.writeAsString(jsonEncode(myData));
+      print("data written");
+      return myData;
+    } else {
+      return null;
+    }
+  } catch (e) {
+    return null;
+  }
+}
 
 void main() async {
   // Example input data
@@ -224,8 +267,11 @@ void main() async {
   // });
 
   // print(transformedData);
-  File file = File('data.json');
-  print("file readed");
-  await file.writeAsString(jsonEncode(dataList));
-  print("data written");
+  // File file = File('data.json');
+  // print("file readed");
+  // await file.writeAsString(jsonEncode(dataList));
+  // print("data written");
+  print("start");
+  await readJsonFile();
+  print("end");
 }

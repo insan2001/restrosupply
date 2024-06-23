@@ -6,12 +6,14 @@ import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Duration get loginTime => Duration(milliseconds: 2250);
+  Duration get loginTime => const Duration(milliseconds: 2250);
 
   Future<String?> _authUser(LoginData data) async {
     if (data.name == mail && data.password == password) {
@@ -57,23 +59,23 @@ class _LoginScreenState extends State<LoginScreen> {
             fillColor: Colors.blue,
             labelStyle: TextStyle(
                 color: Theme.of(context).primaryColor), // Label text color
-            errorStyle: TextStyle(color: Colors.red), // Error text color
+            errorStyle: const TextStyle(color: Colors.red), // Error text color
             contentPadding:
-                EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-            errorBorder: OutlineInputBorder(
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+            errorBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.red),
             ),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.red),
             ),
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.red),
             ),
-            border: OutlineInputBorder(
+            border: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
             ),
           ),
-          textFieldStyle: TextStyle(color: Colors.white), // Input text color
+          textFieldStyle: const TextStyle(color: Colors.white), // Input text color
         ),
       ),
     );
@@ -81,13 +83,15 @@ class _LoginScreenState extends State<LoginScreen> {
 }
 
 class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: const Text('Dashboard'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Welcome!'),
       ),
     );

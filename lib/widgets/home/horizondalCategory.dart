@@ -32,8 +32,8 @@ class HorizondalWidget extends StatelessWidget {
           "Shop By Category",
           style: Theme.of(context).textTheme.displayMedium,
         ),
-        isDevice(
-          desktop: const SizedBox(
+        const isDevice(
+          desktop: SizedBox(
             height: 10,
           ),
           mobile: SizedBox(
@@ -59,8 +59,9 @@ class HorizondalWidget extends StatelessWidget {
             : SizedBox(
                 height: MediaQuery.of(context).size.width * 1.6,
                 child: GridView.builder(
-                  itemCount: categoryId.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  itemCount: 6,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, childAspectRatio: 0.9),
                   itemBuilder: (context, index) => SizedBox(
                     width: MediaQuery.of(context).size.width * 0.4,

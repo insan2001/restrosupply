@@ -13,7 +13,7 @@ const String napkin = "Napkin";
 const String portion = "Plastic Portion cups";
 const String wood = "Wood Tableware";
 
-final Map<String, Map<String, List<List<dynamic>>>> dataList = {
+Map<String, Map<String, List<List<dynamic>>>> dataList = {
   "Bagasse Products": {
     "data": [
       [

@@ -56,7 +56,7 @@ class AppRouter {
         name: RouteConstants().login,
         path: RouteConstants().login,
         pageBuilder: ((context, state) {
-          return MaterialPage(key: state.pageKey, child: LoginScreen());
+          return MaterialPage(key: state.pageKey, child: const LoginScreen());
         }),
       ),
     ],

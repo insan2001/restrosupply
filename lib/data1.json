@@ -2,7 +2,7 @@
     "Bagasse Products": {
         "data": [
             [
-                "First product ",
+                "My random name",
                 "",
                 true,
                 true,
@@ -953,7 +953,7 @@
                 "Packing: 20X50 CT"
             ],
             [
-                " 10 oz White Paper Cup - 1000ct/CS ",
+                " Golden Maple-10 oz White Paper Cup - 1000ct/CS ",
                 "assets/PaperCoffeeCupandLid/1360314386928355401.png",
                 true,
                 true,
@@ -980,7 +980,7 @@
                 "Packing: 20X50 CT"
             ],
             [
-                " Rapple 16oz Hot Paper Cups - 500ct/CS ",
+                " Golden Maple-Rapple 16oz Hot Paper Cups - 500ct/CS ",
                 "assets/PaperCoffeeCupandLid/8512632283701271388.png",
                 true,
                 true,
@@ -1518,7 +1518,7 @@
         ],
         "CategoryImage": [
             [
-                "assets/PaperShoppingBag/0.webp",
+                "assets/PlasticBag/4521788198660704861.png",
                 "Plastic Bags"
             ]
         ]
@@ -1645,7 +1645,7 @@
         ],
         "CategoryImage": [
             [
-                "assets/PaperShoppingBag/0.webp",
+                "assets/BondorThermalPaperRoll/8243204453815857561.png",
                 "Bond or Thermal Paper Roll"
             ]
         ]
@@ -1709,7 +1709,7 @@
         ],
         "CategoryImage": [
             [
-                "assets/PaperShoppingBag/0.webp",
+                "assets/PlasticPortionCups/-3375063255935120218.png",
                 "Napkin"
             ]
         ]
@@ -1815,7 +1815,7 @@
         ],
         "CategoryImage": [
             [
-                "assets/images/sugarcane/0.webp",
+                "assets/PlasticPortionCups/-3375063255935120218.png",
                 "Plastic Portion cups"
             ]
         ]
@@ -1823,33 +1823,33 @@
     "Wood Tableware": {
         "data": [
             [
-                " Wood Spoon-20X100 ct ",
+                " Golden Maple-Wood Spoon-20X100 ct ",
                 "assets/WoodTableware/5359981813800257678.png",
                 true,
                 true,
                 true,
-                "Wood Spoon-20X100 ct"
+                "Golden Maple-Wood Spoon-20X100 ct"
             ],
             [
-                " Wood Knife-20X100 ct ",
+                " Golden Maple-Wood Knife-20X100 ct ",
                 "assets/WoodTableware/-7800244617556071764.png",
                 true,
                 true,
                 true,
-                "Wood Knife-20X100 ct"
+                "Golden Maple-Wood Knife-20X100 ct"
             ],
             [
-                " Wood Fork 20X100 ct ",
+                " Golden Maple-Wood Fork 20X100 ct ",
                 "assets/WoodTableware/4680064143321107524.png",
                 true,
                 true,
                 true,
-                "Wood Fork 20X100 ct"
+                "Golden Maple-Wood Fork 20X100 ct"
             ]
         ],
         "CategoryImage": [
             [
-                "assets/images/sugarcane/0.webp",
+                "assets/WoodTableware/4680064143321107524.png",
                 "Wood Tableware"
             ]
         ]

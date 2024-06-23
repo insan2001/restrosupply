@@ -7,7 +7,7 @@ import 'package:restrosupply/routeConstants.dart';
 class MyCustomListView extends StatelessWidget {
   final List<List<dynamic>> selectedData;
   final String category;
-  MyCustomListView(
+  const MyCustomListView(
       {super.key, required this.selectedData, required this.category});
 
   @override

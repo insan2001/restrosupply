@@ -7,9 +7,9 @@ class ErrorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return MaterialApp(
       color: Colors.white,
-      child: Column(
+      home: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -20,7 +20,9 @@ class ErrorScreen extends StatelessWidget {
                 .displayMedium!
                 .copyWith(color: Theme.of(context).primaryColor),
           ),
-          CustomButtonWidget(navPath: RouteConstants().home, text: "Home")
+          Material(
+              child: CustomButtonWidget(
+                  navPath: RouteConstants().home, text: "Home"))
         ],
       ),
     );

@@ -79,7 +79,8 @@ class _SingleProductState extends State<SingleProduct> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
-                  InformationWidget(productData: productData),
+                  InformationWidget(
+                      index: widget.index, category: widget.category),
                 ],
               ),
               mobile: Column(
@@ -92,7 +93,8 @@ class _SingleProductState extends State<SingleProduct> {
                         '$url${RouteConstants().product}/${valueToID(widget.category)}-${widget.index}',
                   ),
                   const SizedBox(height: 10),
-                  InformationWidget(productData: productData),
+                  InformationWidget(
+                      index: widget.index, category: widget.category),
                 ],
               ),
             ),

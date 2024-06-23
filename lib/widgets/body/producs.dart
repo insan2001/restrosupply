@@ -10,7 +10,7 @@ class ProductsInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width > mobileWidth
           ? MediaQuery.of(context).size.width / 8
           : MediaQuery.of(context).size.width * 0.4,

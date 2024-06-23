@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/productData.dart';
+import 'package:restrosupply/data.dart';
 
 class InformationWidget extends StatefulWidget {
-  final List<dynamic> productData;
-  const InformationWidget({super.key, required this.productData});
+  // final List<dynamic> productData;
+  final int index;
+  final String category;
+  const InformationWidget({
+    super.key,
+    required this.index,
+    required this.category,
+  });
 
   @override
   State<InformationWidget> createState() => _InformationWidgetState();
@@ -18,12 +24,17 @@ class _InformationWidgetState extends State<InformationWidget> {
 
   @override
   void initState() {
-    title.text = widget.productData[textIndex];
+    title.text = dataList[widget.category]![data]![widget.index][textIndex];
     int flag = 0;
     String description = "";
-    while (widget.productData.length - detailsIndex + flag - 1 <
-        (widget.productData.length - detailsIndex)) {
-      description += "${widget.productData[flag + detailsIndex]},";
+    while (dataList[widget.category]![data]![widget.index].length -
+            detailsIndex +
+            flag -
+            1 <
+        (dataList[widget.category]![data]![widget.index].length -
+            detailsIndex)) {
+      description +=
+          "${dataList[widget.category]![data]![widget.index][flag + detailsIndex]},";
       flag += 1;
     }
     descriptionController.text = description;
@@ -51,7 +62,8 @@ class _InformationWidgetState extends State<InformationWidget> {
                 ? TextField(
                     controller: title,
                     onSubmitted: (String value) {
-                      widget.productData[textIndex] = title.text;
+                      dataList[widget.category]![data]![widget.index]
+                          [textIndex] = title.text;
                       setState(() {
                         isEditTitle = !isEditTitle;
                       });
@@ -59,19 +71,20 @@ class _InformationWidgetState extends State<InformationWidget> {
                     },
                   )
                 : Text(
-                    widget.productData[textIndex],
+                    dataList[widget.category]![data]![widget.index][textIndex],
                     maxLines: 2,
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         GestureDetector(
           onTap: () {
             if (isAdmin) {
               setState(() {
-                widget.productData[stockIndex] =
-                    !widget.productData[stockIndex];
+                dataList[widget.category]![data]![widget.index][stockIndex] =
+                    !dataList[widget.category]![data]![widget.index]
+                        [stockIndex];
               });
             }
           },
@@ -82,17 +95,24 @@ class _InformationWidgetState extends State<InformationWidget> {
                       ? 20
                       : 0),
               Icon(
-                widget.productData[stockIndex] ? Icons.check : Icons.close,
-                color:
-                    widget.productData[stockIndex] ? Colors.green : Colors.red,
+                dataList[widget.category]![data]![widget.index][stockIndex]
+                    ? Icons.check
+                    : Icons.close,
+                color: dataList[widget.category]![data]![widget.index]
+                        [stockIndex]
+                    ? Colors.green
+                    : Colors.red,
               ),
               const SizedBox(
                 width: 10,
               ),
               Text(
-                widget.productData[stockIndex] ? "In Stock" : "Out of stock",
+                dataList[widget.category]![data]![widget.index][stockIndex]
+                    ? "In Stock"
+                    : "Back order",
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                      color: widget.productData[stockIndex]
+                      color: dataList[widget.category]![data]![widget.index]
+                              [stockIndex]
                           ? Colors.green
                           : Colors.red,
                     ),
@@ -104,8 +124,9 @@ class _InformationWidgetState extends State<InformationWidget> {
           onTap: () {
             if (isAdmin) {
               setState(() {
-                widget.productData[pickupIndex] =
-                    !widget.productData[pickupIndex];
+                dataList[widget.category]![data]![widget.index][pickupIndex] =
+                    !dataList[widget.category]![data]![widget.index]
+                        [pickupIndex];
               });
             }
           },
@@ -116,9 +137,13 @@ class _InformationWidgetState extends State<InformationWidget> {
                       ? 20
                       : 0),
               Icon(
-                widget.productData[pickupIndex] ? Icons.check : Icons.close,
-                color:
-                    widget.productData[pickupIndex] ? Colors.green : Colors.red,
+                dataList[widget.category]![data]![widget.index][pickupIndex]
+                    ? Icons.check
+                    : Icons.close,
+                color: dataList[widget.category]![data]![widget.index]
+                        [pickupIndex]
+                    ? Colors.green
+                    : Colors.red,
               ),
               const SizedBox(
                 width: 10,
@@ -126,7 +151,8 @@ class _InformationWidgetState extends State<InformationWidget> {
               Text(
                 "Pickup - In store",
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                      color: widget.productData[pickupIndex]
+                      color: dataList[widget.category]![data]![widget.index]
+                              [pickupIndex]
                           ? Colors.green
                           : Colors.red,
                     ),
@@ -138,8 +164,9 @@ class _InformationWidgetState extends State<InformationWidget> {
           onTap: () {
             if (isAdmin) {
               setState(() {
-                widget.productData[shippingIndex] =
-                    !widget.productData[shippingIndex];
+                dataList[widget.category]![data]![widget.index][shippingIndex] =
+                    !dataList[widget.category]![data]![widget.index]
+                        [shippingIndex];
               });
             }
           },
@@ -150,8 +177,11 @@ class _InformationWidgetState extends State<InformationWidget> {
                       ? 20
                       : 0),
               Icon(
-                widget.productData[shippingIndex] ? Icons.check : Icons.close,
-                color: widget.productData[shippingIndex]
+                dataList[widget.category]![data]![widget.index][shippingIndex]
+                    ? Icons.check
+                    : Icons.close,
+                color: dataList[widget.category]![data]![widget.index]
+                        [shippingIndex]
                     ? Colors.green
                     : Colors.red,
               ),
@@ -161,7 +191,8 @@ class _InformationWidgetState extends State<InformationWidget> {
               Text(
                 "Shinpping",
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                      color: widget.productData[shippingIndex]
+                      color: dataList[widget.category]![data]![widget.index]
+                              [shippingIndex]
                           ? Colors.green
                           : Colors.red,
                     ),
@@ -170,6 +201,20 @@ class _InformationWidgetState extends State<InformationWidget> {
           ),
         ),
         const SizedBox(height: 10),
+        isAdmin &&
+                dataList[widget.category]![data]![widget.index][detailsIndex] ==
+                    ""
+            ? InkWell(
+                onTap: () {
+                  setState(() {
+                    isEditDescription = true;
+                  });
+                },
+                child: Container(
+                  height: 100,
+                  color: Colors.yellow,
+                ))
+            : SizedBox(),
         GestureDetector(
           onTap: () {
             setState(() {
@@ -185,21 +230,16 @@ class _InformationWidgetState extends State<InformationWidget> {
                   child: TextField(
                     controller: descriptionController,
                     onSubmitted: (value) {
-                      int flag = 0;
-                      print(value);
                       List<String> description = value.split(",");
-                      print(description);
-                      while (
-                          widget.productData.length - detailsIndex + flag - 1 <=
-                              (widget.productData.length - detailsIndex)) {
-                        print(description[flag]);
-                        widget.productData
-                            .insert((flag + detailsIndex), description[flag]);
-                        flag += 1;
-                      }
+
+                      dataList[widget.category]![data]![widget.index] = [
+                        ...dataList[widget.category]![data]![widget.index]
+                            .sublist(0, 5),
+                        ...description
+                      ];
 
                       setState(() {
-                        print(widget.productData);
+                        print(dataList[widget.category]![data]![widget.index]);
                         isEditDescription = false;
                       });
                     },
@@ -208,7 +248,8 @@ class _InformationWidgetState extends State<InformationWidget> {
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: List.generate(
-                      widget.productData.length - detailsIndex,
+                      dataList[widget.category]![data]![widget.index].length -
+                          detailsIndex,
                       (index) => Row(
                             children: [
                               SizedBox(
@@ -217,7 +258,8 @@ class _InformationWidgetState extends State<InformationWidget> {
                                       ? 20
                                       : 0),
                               Text(
-                                widget.productData[detailsIndex + index],
+                                dataList[widget.category]![data]![widget.index]
+                                    [detailsIndex + index],
                                 style: Theme.of(context).textTheme.labelLarge,
                               ),
                             ],
