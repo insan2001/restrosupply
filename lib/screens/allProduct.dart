@@ -160,7 +160,7 @@ class _AllProductsState extends State<AllProducts> {
                                       ? MediaQuery.of(context).size.width * 0.2
                                       : MediaQuery.of(context).size.width * 0.8,
                                 ),
-                                if (isAdmin)
+                                if (isAdmin && (category != all))
                                   Positioned(
                                     top: 0,
                                     right: 0,
@@ -168,6 +168,9 @@ class _AllProductsState extends State<AllProducts> {
                                       onPressed: () async {
                                         String text = await uploadFile(
                                             "${categoryId.keys.toList()[categoryId.values.toList().indexOf(category)]}-$index");
+                                        print(
+                                            "${dataList[category]![data]![index]}");
+                                        setState(() {});
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
                                                 SnackBar(content: Text(text)));
@@ -178,20 +181,21 @@ class _AllProductsState extends State<AllProducts> {
                                       ),
                                     ),
                                   ),
-                                Positioned(
-                                    top: 0,
-                                    left: 0,
-                                    child: IconButton(
-                                        onPressed: () {
-                                          setState(() {
-                                            dataList[category]![data]![index]
-                                                [imageIndex] = "";
-                                          });
-                                        },
-                                        icon: Icon(
-                                          Icons.delete,
-                                          size: 50,
-                                        )))
+                                if (isAdmin && (category != all))
+                                  Positioned(
+                                      top: 0,
+                                      left: 0,
+                                      child: IconButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              dataList[category]![data]![index]
+                                                  [imageIndex] = "";
+                                            });
+                                          },
+                                          icon: Icon(
+                                            Icons.delete,
+                                            size: 50,
+                                          )))
                               ],
                             ),
                           ),

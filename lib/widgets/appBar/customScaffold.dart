@@ -5,6 +5,8 @@ import 'package:restrosupply/functions/writeData.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/addDataPopup.dart';
+import 'package:restrosupply/widgets/appBar/addCategory.dart';
+import 'package:restrosupply/widgets/appBar/removeCategory.dart';
 import 'package:restrosupply/widgets/appBar/removeDataPopup.dart';
 import 'package:restrosupply/widgets/appBar/title.dart';
 
@@ -71,8 +73,8 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       ),
       body: widget.body,
       floatingActionButton: SizedBox(
-        height: 140,
-        width: 200,
+        height: 300,
+        width: 400,
         child: Column(
           mainAxisAlignment:
               isAdmin ? MainAxisAlignment.spaceBetween : MainAxisAlignment.end,
@@ -81,6 +83,26 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      Text(
+                        "Category",
+                        style: Theme.of(context).textTheme.displaySmall,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            shape: BoxShape.circle),
+                        child: IconButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AddCategoryPopup());
+                          },
+                          icon: Icon(
+                            Icons.add,
+                            size: 35,
+                          ),
+                        ),
+                      ),
                       Container(
                         decoration: BoxDecoration(
                             color: Theme.of(context).primaryColor,
@@ -89,8 +111,35 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                               context: context,
-                              builder: (context) => AddDataPopupWidget(),
+                              builder: (context) => RemoveCategoryPopup(),
                             );
+                          },
+                          icon: Icon(
+                            Icons.delete,
+                            size: 35,
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                : SizedBox(),
+            isAdmin
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "Product",
+                        style: Theme.of(context).textTheme.displaySmall,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            shape: BoxShape.circle),
+                        child: IconButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AddDataPopupWidget());
                           },
                           icon: Icon(
                             Icons.add,
@@ -127,6 +176,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                 }
               },
               child: Container(
+                width: 200,
                 decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(50),

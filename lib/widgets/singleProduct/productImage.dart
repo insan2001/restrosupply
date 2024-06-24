@@ -2,6 +2,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/data.dart';
 import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 
@@ -53,7 +54,7 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
               version: QrVersions.auto,
               backgroundColor: Colors.blueAccent,
             ),
-            autoFlipDuration: const Duration(seconds: 2),
+            autoFlipDuration: const Duration(seconds: 1),
             flipOnTouch: true,
           ),
           isAdmin
@@ -66,8 +67,16 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                     child: Center(
                       child: IconButton(
                           onPressed: () async {
-                            await uploadFile(widget.url.split("/").last)
-                                .then((String value) {
+                            String fileName = widget.url.split("/").last;
+                            List<String> productID = fileName.split("-");
+                            await uploadFile(fileName).then((String value) {
+                              setState(() {
+                                dataList[categoryId[productID[0]]]![data]![
+                                        int.parse(productID[1])][imageIndex] =
+                                    value;
+                                widget.path;
+                              });
+                              // writeData(context);
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(content: Text(value)));
                             });

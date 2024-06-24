@@ -32,4 +32,4 @@ const String suggestText = "You might also like these";
 bool isAdmin = false;
 
 String mail = "restro@mail.com";
-String password = "123456";
+String password = "pw123456";

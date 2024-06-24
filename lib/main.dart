@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/firebase_options.dart';
+import 'package:restrosupply/functions/readCategoryJson.dart';
 import 'package:restrosupply/functions/readJsonFile.dart';
 import 'package:restrosupply/route.dart';
 
@@ -17,6 +18,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
   myWebsiteURL = html.window.location.href;
+  categoryId = (await readCategoryJson())!;
 
   runApp(const MainApp());
 }
@@ -47,7 +49,7 @@ class _MainAppState extends State<MainApp> {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               useMaterial3: true,
-              primaryColor: Color.fromARGB(255, 7, 85, 11),
+              primaryColor: Color.fromARGB(255, 6, 154, 14),
               scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
               textTheme: GoogleFonts.robotoTextTheme(),
               buttonTheme: const ButtonThemeData(
