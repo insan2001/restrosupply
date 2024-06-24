@@ -1520,7 +1520,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
   "Bond or Thermal Paper Roll": {
     data: [
       [
-        " Chartland - RR60 - 2.25\"\u21792.7\" (150') - Bond Paper - 50 ct/CS ",
+        " Chartland - RR60 - 2.25\"2.7\" (150') - Bond Paper - 50 ct/CS ",
         "",
         true,
         true,
@@ -1529,7 +1529,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 50ct/CS",
       ],
       [
-        " Chartland - RR72 - 2 1/4\"\u217955' Paper Rolls - Thermal - 100 ct/CS ",
+        " Chartland - RR72 - 2 1/4\"55' Paper Rolls - Thermal - 100 ct/CS ",
         "assets/BondorThermalPaperRoll/8243204453815857561.png",
         true,
         true,
@@ -1538,7 +1538,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 100ct/CS",
       ],
       [
-        " Chartland - RR90 - 3 1/8\"\u2179180' Paper Rolls - Thermal - 50 ct/CS ",
+        " Chartland - RR90 - 3 1/8\"180' Paper Rolls - Thermal - 50 ct/CS ",
         "",
         true,
         true,
@@ -1556,7 +1556,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 50ct/CS",
       ],
       [
-        " Chartland - RR71 - 2 1/4\"\u217975' Paper Rolls - Thermal - 100 ct/CS ",
+        " Chartland - RR71 - 2 1/4\"75' Paper Rolls - Thermal - 100 ct/CS ",
         "",
         true,
         true,
@@ -1565,7 +1565,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Pacing: 100ct/CS",
       ],
       [
-        " Chartland - RR30 - 3\"\u21793\"(150') - 1 ply - Bond Paper - 50 ct/CS ",
+        " Chartland - RR30 - 3\"3\"(150') - 1 ply - Bond Paper - 50 ct/CS ",
         "",
         true,
         true,
@@ -1574,7 +1574,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 50ct/CS",
       ],
       [
-        " Chartland - RR20 - 1 7/16\"\u21793\" - Bond Paper - 100ct/CS ",
+        " Chartland - RR20 - 1 7/16\"3\" - Bond Paper - 100ct/CS ",
         "assets/BondorThermalPaperRoll/-8858133851337729496.png",
         true,
         true,
@@ -1583,7 +1583,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 100ct/CS",
       ],
       [
-        " Chartland - RR10 - 1.75\"\u21793\" - Bond Paper - 100 ct/CS ",
+        " Chartland - RR10 - 1.75\"3\" - Bond Paper - 100 ct/CS ",
         "",
         true,
         true,
@@ -1592,7 +1592,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 100ct/CS",
       ],
       [
-        " Chartland - RR70 - 2 1/4\"\u217945'  Paper Rolls - Thermal - 100 ct/CS ",
+        " Chartland - RR70 - 2 1/4\"45'  Paper Rolls - Thermal - 100 ct/CS ",
         "",
         true,
         true,
@@ -1601,7 +1601,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 100 ct/CS",
       ],
       [
-        " Chartland - RR73 - 2 1/4\"\u217930' Paper Rolls - Thermal - 100 ct/CS ",
+        " Chartland - RR73 - 2 1/4\"30' Paper Rolls - Thermal - 100 ct/CS ",
         "",
         true,
         true,
@@ -1610,7 +1610,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 100ct/CS",
       ],
       [
-        " Chartland - RR80 - 2.25\"\u21792.75\" Paper Rolls - Thermal - 50 ct/CS ",
+        " Chartland - RR80 - 2.25\"2.75\" Paper Rolls - Thermal - 50 ct/CS ",
         "",
         true,
         true,
@@ -1619,7 +1619,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 50ct/CS",
       ],
       [
-        " Chartland - RR74 - 2 1/4\"\u217930' Paper Rolls - Thermal - 50 ct/CS ",
+        " Chartland - RR74 - 2 1/4\"30' Paper Rolls - Thermal - 50 ct/CS ",
         "",
         true,
         true,
@@ -1628,7 +1628,7 @@ Map<String, Map<String, List<List<dynamic>>>> dataList = {
         "Packing: 50ct/CS",
       ],
       [
-        " Chartland - RR50 - 3\"\u21793\" Thermal Rolls - 50 ct/CS ",
+        " Chartland - RR50 - 3\"3\" Thermal Rolls - 50 ct/CS ",
         "",
         true,
         true,

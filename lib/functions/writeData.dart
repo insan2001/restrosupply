@@ -7,7 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 void writeData(BuildContext context) async {
   try {
-    await ref.putString(jsonEncode(dataList),
+    await storage.child("/data/data.json").putString(jsonEncode(dataList),
         format: firebase_storage.PutStringFormat.raw);
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text("Data Updated")));

@@ -49,7 +49,7 @@ class MyCustomListView extends StatelessWidget {
             minWidth: MediaQuery.of(context).size.height * 0.1,
             minHeight: MediaQuery.of(context).size.height * 0.1,
           ),
-          child: Image.asset(
+          child: Image.network(
             selectedData[index][imageIndex] == ""
                 ? emptyImage
                 : selectedData[index][imageIndex],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
+import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
@@ -146,16 +147,52 @@ class _AllProductsState extends State<AllProducts> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Center(
-                            child: CustomImageWidget(
-                              path: selectedData[index][imageIndex],
-                              height: MediaQuery.of(context).size.width >
-                                      mobileWidth
-                                  ? MediaQuery.of(context).size.width * 0.2
-                                  : MediaQuery.of(context).size.width * 0.8,
-                              width: MediaQuery.of(context).size.width >
-                                      mobileWidth
-                                  ? MediaQuery.of(context).size.width * 0.2
-                                  : MediaQuery.of(context).size.width * 0.8,
+                            child: Stack(
+                              children: [
+                                CustomImageWidget(
+                                  path: selectedData[index][imageIndex],
+                                  height: MediaQuery.of(context).size.width >
+                                          mobileWidth
+                                      ? MediaQuery.of(context).size.width * 0.2
+                                      : MediaQuery.of(context).size.width * 0.8,
+                                  width: MediaQuery.of(context).size.width >
+                                          mobileWidth
+                                      ? MediaQuery.of(context).size.width * 0.2
+                                      : MediaQuery.of(context).size.width * 0.8,
+                                ),
+                                if (isAdmin)
+                                  Positioned(
+                                    top: 0,
+                                    right: 0,
+                                    child: IconButton(
+                                      onPressed: () async {
+                                        String text = await uploadFile(
+                                            "${categoryId.keys.toList()[categoryId.values.toList().indexOf(category)]}-$index");
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                                SnackBar(content: Text(text)));
+                                      },
+                                      icon: Icon(
+                                        Icons.edit,
+                                        size: 50,
+                                      ),
+                                    ),
+                                  ),
+                                Positioned(
+                                    top: 0,
+                                    left: 0,
+                                    child: IconButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            dataList[category]![data]![index]
+                                                [imageIndex] = "";
+                                          });
+                                        },
+                                        icon: Icon(
+                                          Icons.delete,
+                                          size: 50,
+                                        )))
+                              ],
                             ),
                           ),
                           const Spacer(),

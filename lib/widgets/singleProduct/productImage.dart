@@ -2,6 +2,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 
 class ProductImageWidget extends StatefulWidget {
@@ -16,35 +17,72 @@ class ProductImageWidget extends StatefulWidget {
 class _ProductImageWidgetState extends State<ProductImageWidget> {
   @override
   Widget build(BuildContext context) {
-    return FlipCard(
-      front: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: Colors.black,
+    return SizedBox(
+      width: MediaQuery.of(context).size.width > mobileWidth
+          ? MediaQuery.of(context).size.width * 0.25
+          : MediaQuery.of(context).size.width * 0.6,
+      height: MediaQuery.of(context).size.width > mobileWidth
+          ? MediaQuery.of(context).size.width * 0.25
+          : MediaQuery.of(context).size.width * 0.6,
+      child: Stack(
+        children: [
+          FlipCard(
+            back: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.black,
+                ),
+              ),
+              child: CustomImageWidget(
+                path: widget.path,
+                width: MediaQuery.of(context).size.width > mobileWidth
+                    ? MediaQuery.of(context).size.width * 0.25
+                    : MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.width > mobileWidth
+                    ? MediaQuery.of(context).size.width * 0.25
+                    : MediaQuery.of(context).size.width * 0.6,
+              ),
+            ),
+            front: QrImageView(
+              data: widget.url,
+              size: MediaQuery.of(context).size.width > mobileWidth
+                  ? MediaQuery.of(context).size.width * 0.25
+                  : MediaQuery.of(context).size.width * 0.6,
+              version: QrVersions.auto,
+              backgroundColor: Colors.blueAccent,
+            ),
+            autoFlipDuration: const Duration(seconds: 2),
+            flipOnTouch: true,
           ),
-        ),
-        child: CustomImageWidget(
-          path: widget.path,
-          width: MediaQuery.of(context).size.width > mobileWidth
-              ? MediaQuery.of(context).size.width * 0.25
-              : MediaQuery.of(context).size.width * 0.6,
-          height: MediaQuery.of(context).size.width > mobileWidth
-              ? MediaQuery.of(context).size.width * 0.25
-              : MediaQuery.of(context).size.width * 0.6,
-        ),
+          isAdmin
+              ? Positioned(
+                  top: 0,
+                  right: 0,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.black),
+                    child: Center(
+                      child: IconButton(
+                          onPressed: () async {
+                            await uploadFile(widget.url.split("/").last)
+                                .then((String value) {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(content: Text(value)));
+                            });
+                          },
+                          icon: Icon(
+                            Icons.edit,
+                            color: Theme.of(context).primaryColor,
+                            size: 20,
+                          )),
+                    ),
+                  ),
+                )
+              : SizedBox(),
+        ],
       ),
-      back: QrImageView(
-        data: widget.url,
-        size: MediaQuery.of(context).size.width > mobileWidth
-            ? MediaQuery.of(context).size.width * 0.25
-            : MediaQuery.of(context).size.width * 0.6,
-        version: QrVersions.auto,
-        backgroundColor: Colors.blueAccent,
-      ),
-      autoFlipDuration: const Duration(seconds: 2),
-      flipOnTouch: true,
     );
   }
 }

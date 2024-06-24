@@ -135,7 +135,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     CircleAvatar(
-                      backgroundImage: Image.asset(
+                      backgroundImage: Image.network(
                         logoImage,
                         filterQuality: FilterQuality.high,
                         fit: BoxFit.contain,

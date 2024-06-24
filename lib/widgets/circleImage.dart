@@ -10,7 +10,7 @@ class CircleImage extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(shape: BoxShape.circle),
-      child: Image.asset(
+      child: Image.network(
         path,
         height: size,
         width: size,

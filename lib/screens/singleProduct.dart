@@ -36,7 +36,6 @@ class _SingleProductState extends State<SingleProduct> {
   void initState() {
     productsData = dataList[widget.category]![data]!;
     productData = productsData[widget.index];
-    print(productData);
 
     super.initState();
   }
@@ -75,7 +74,7 @@ class _SingleProductState extends State<SingleProduct> {
                   ProductImageWidget(
                     path: productData[imageIndex],
                     url:
-                        '$myWebsiteURL${RouteConstants().product.substring(1)}/${valueToID(widget.category)}-${widget.index}',
+                        '$myWebsiteURL#${RouteConstants().product}/${valueToID(widget.category)}-${widget.index}',
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
@@ -91,7 +90,7 @@ class _SingleProductState extends State<SingleProduct> {
                   ProductImageWidget(
                     path: productData[imageIndex],
                     url:
-                        '$myWebsiteURL${RouteConstants().product.substring(1)}/${valueToID(widget.category)}-${widget.index}',
+                        '$myWebsiteURL#${RouteConstants().product}/${valueToID(widget.category)}-${widget.index}',
                   ),
                   const SizedBox(height: 10),
                   InformationWidget(

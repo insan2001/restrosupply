@@ -47,8 +47,7 @@ class HorizondalWidget extends StatelessWidget {
                 children: List.generate(
                   display.length,
                   (index) => InkWell(
-                      splashColor: null,
-                      highlightColor: null,
+                      hoverColor: Theme.of(context).scaffoldBackgroundColor,
                       onTap: () {
                         String? category = valueToID(keys[index]);
                         context.go("${RouteConstants().category}/$category");
@@ -66,8 +65,7 @@ class HorizondalWidget extends StatelessWidget {
                   itemBuilder: (context, index) => SizedBox(
                     width: MediaQuery.of(context).size.width * 0.4,
                     child: InkWell(
-                        splashColor: null,
-                        highlightColor: null,
+                        hoverColor: Theme.of(context).scaffoldBackgroundColor,
                         onTap: () {
                           String? category = valueToID(keys[index]);
                           context.go("${RouteConstants().category}/$category");

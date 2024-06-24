@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
+import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/functions/writeData.dart';
 
 class AddDataPopupWidget extends StatefulWidget {
@@ -13,9 +14,10 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
   final TextEditingController _imageUrlController = TextEditingController();
   final TextEditingController _detailsController = TextEditingController();
 
-  bool _shipping = false;
-  bool _instore = false;
-  bool _instock = false;
+  bool _shipping = true;
+  bool _instore = true;
+  bool _instock = true;
+  late String imgUrl = "";
 
   late final List<String> _categories;
   late String _selectedCategory;
@@ -55,9 +57,27 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
               controller: _titleController,
               decoration: InputDecoration(labelText: 'Product name'),
             ),
-            TextField(
-              controller: _imageUrlController,
-              decoration: InputDecoration(labelText: 'Image URL'),
+            InkWell(
+              onTap: () async {
+                String fileName =
+                    "${categoryId.keys.toList()[categoryId.values.toList().indexOf(_selectedCategory)]}-${dataList[_selectedCategory]![data]!.length}";
+                imgUrl = await uploadFile(fileName);
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(SnackBar(content: Text(imgUrl)));
+                setState(() {
+                  print(imgUrl);
+                  imgUrl;
+                });
+              },
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: imgUrl != ""
+                    ? Image.network(imgUrl)
+                    : Center(
+                        child: Icon(Icons.add_a_photo),
+                      ),
+              ),
             ),
             CheckboxListTile(
               title: Text('Shipping'),

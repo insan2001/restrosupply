@@ -158,6 +158,9 @@ class _InformationWidgetState extends State<InformationWidget> {
         ),
         GestureDetector(
           onTap: () {
+            print(dataList[widget.category]![data]![widget.index]
+                    [detailsIndex] ==
+                "");
             if (isAdmin) {
               setState(() {
                 dataList[widget.category]![data]![widget.index][shippingIndex] =
@@ -207,7 +210,8 @@ class _InformationWidgetState extends State<InformationWidget> {
                   });
                 },
                 child: Container(
-                  height: 100,
+                  height: 50,
+                  width: 100,
                   color: Colors.yellow,
                 ))
             : SizedBox(),

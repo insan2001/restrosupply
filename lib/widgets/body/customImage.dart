@@ -13,7 +13,7 @@ class CustomImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
+    return Image.network(
       path == "" ? emptyImage : path,
       width: width,
       height: height,
