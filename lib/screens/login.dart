@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return CustomScaffold(
       body: FlutterLogin(
         title: companyName,
-        logo: logoImage,
+        logo: localLogoImage,
         onLogin: _authUser,
         onSubmitAnimationCompleted: () {
           setState(() {

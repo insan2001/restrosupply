@@ -89,33 +89,6 @@ class ContactUsScreen extends StatelessWidget {
                 Row(
                   children: [
                     const Icon(
-                      Icons.work,
-                      size: 30,
-                      color: Color.fromARGB(255, 2, 237, 10),
-                    ),
-                    Text(
-                      "Working hours",
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleLarge!
-                          .copyWith(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: List.generate(
-                      detail3.length,
-                      (index) => Text(
-                            detail3[index],
-                            style: Theme.of(context).textTheme.labelLarge,
-                          )),
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    const Icon(
                       Icons.email,
                       size: 25,
                       color: Color.fromARGB(255, 2, 237, 10),

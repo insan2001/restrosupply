@@ -175,7 +175,7 @@ class _AllProductsState extends State<AllProducts> {
                                             .showSnackBar(
                                                 SnackBar(content: Text(text)));
                                       },
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.edit,
                                         size: 50,
                                       ),
@@ -192,7 +192,7 @@ class _AllProductsState extends State<AllProducts> {
                                                   [imageIndex] = "";
                                             });
                                           },
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.delete,
                                             size: 50,
                                           )))

@@ -5,6 +5,8 @@ import 'package:restrosupply/data.dart';
 import 'package:restrosupply/functions/categoryUpload.dart';
 
 class AddCategoryPopup extends StatefulWidget {
+  const AddCategoryPopup({super.key});
+
   @override
   _AddCategoryPopupState createState() => _AddCategoryPopupState();
 }
@@ -18,7 +20,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Add New Category'),
+      title: const Text('Add New Category'),
       content: Form(
         key: _formKey,
         child: SingleChildScrollView(
@@ -26,7 +28,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
             mainAxisSize: MainAxisSize.min,
             children: [
               TextFormField(
-                decoration: InputDecoration(labelText: 'Category Name'),
+                decoration: const InputDecoration(labelText: 'Category Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a category name';
@@ -38,7 +40,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Full Name'),
+                decoration: const InputDecoration(labelText: 'Full Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a full name';
@@ -50,7 +52,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Short Name'),
+                decoration: const InputDecoration(labelText: 'Short Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a short name';
@@ -63,7 +65,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
                   shortName = value;
                 },
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
         ),
@@ -73,7 +75,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
         ),
         ElevatedButton(
           onPressed: () {
@@ -92,7 +94,7 @@ class _AddCategoryPopupState extends State<AddCategoryPopup> {
               Navigator.of(context).pop();
             }
           },
-          child: Text('Submit'),
+          child: const Text('Submit'),
         ),
       ],
     );

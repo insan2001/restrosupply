@@ -279,8 +279,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 Future<void> uploadImages(String jsonFilePath) async {
   final file = File(jsonFilePath);

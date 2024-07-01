@@ -12,7 +12,7 @@ void writeCategory(BuildContext context) async {
         format: firebase_storage.PutStringFormat.raw);
     writeData(context);
     ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text("Category Updated")));
+        .showSnackBar(const SnackBar(content: Text("Category Updated")));
   } catch (e) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(e.toString())));

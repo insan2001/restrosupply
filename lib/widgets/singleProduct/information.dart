@@ -214,7 +214,7 @@ class _InformationWidgetState extends State<InformationWidget> {
                   width: 100,
                   color: Colors.yellow,
                 ))
-            : SizedBox(),
+            : const SizedBox(),
         GestureDetector(
           onTap: () {
             if (!isAdmin) return;

@@ -95,9 +95,9 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                                 context: context,
-                                builder: (context) => AddCategoryPopup());
+                                builder: (context) => const AddCategoryPopup());
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add,
                             size: 35,
                           ),
@@ -111,10 +111,10 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                               context: context,
-                              builder: (context) => RemoveCategoryPopup(),
+                              builder: (context) => const RemoveCategoryPopup(),
                             );
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.delete,
                             size: 35,
                           ),
@@ -122,7 +122,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                       )
                     ],
                   )
-                : SizedBox(),
+                : const SizedBox(),
             isAdmin
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -139,9 +139,9 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                                 context: context,
-                                builder: (context) => AddDataPopupWidget());
+                                builder: (context) => const AddDataPopupWidget());
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add,
                             size: 35,
                           ),
@@ -155,10 +155,10 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                               context: context,
-                              builder: (context) => RemoveDataPopupWidget(),
+                              builder: (context) => const RemoveDataPopupWidget(),
                             );
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.remove,
                             size: 35,
                           ),
@@ -166,7 +166,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                       )
                     ],
                   )
-                : SizedBox(),
+                : const SizedBox(),
             InkWell(
               onTap: () async {
                 if (!isAdmin) {
@@ -195,7 +195,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                     const Spacer(),
                     Text(
                       isAdmin ? "Save" : "Home",
-                      style: TextStyle(fontSize: 32),
+                      style: const TextStyle(fontSize: 32),
                     ),
                     const Spacer(),
                   ],

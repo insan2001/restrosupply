@@ -15,6 +15,12 @@ class CircleImage extends StatelessWidget {
         height: size,
         width: size,
         fit: BoxFit.contain,
+        errorBuilder: (context, error, stackTrace) => Image.asset(
+          path,
+          height: size,
+          width: size,
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }

@@ -27,6 +27,7 @@ Future<Map<String, Map<String, List<List<dynamic>>>>?> readJsonFile() async {
       return null;
     }
   } catch (e) {
+    print(3);
     print(e);
     return null;
   }

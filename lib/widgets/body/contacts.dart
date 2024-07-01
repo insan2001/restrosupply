@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/modules/adaptive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final List<String> addr = [
   "349 Bowes Rd #21,",
@@ -70,24 +71,11 @@ class ContactDetails extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width / 5,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Working hours",
-                      style: Theme.of(context)
-                          .textTheme
-                          .labelLarge!
-                          .copyWith(fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 10),
-                  Text("Monday 09:00 AM",
-                      style: Theme.of(context).textTheme.labelLarge),
-                  Text("Friday 05:00 PM",
-                      style: Theme.of(context).textTheme.labelLarge),
-                ],
-              ),
-            ),
+            TextButton(
+                onPressed: () {
+                  launchUrl(Uri.parse("https://insan2001.github.io/"));
+                },
+                child: Text("<dev>")),
             isDevice(
               desktop: SizedBox(
                 width: MediaQuery.of(context).size.width / 5,

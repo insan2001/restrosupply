@@ -59,7 +59,7 @@ class HorizondalWidget extends StatelessWidget {
                 height: MediaQuery.of(context).size.width * 1.6,
                 child: GridView.builder(
                   itemCount: 6,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2, childAspectRatio: 0.9),
                   itemBuilder: (context, index) => SizedBox(

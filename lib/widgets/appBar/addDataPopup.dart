@@ -5,6 +5,8 @@ import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/functions/writeData.dart';
 
 class AddDataPopupWidget extends StatefulWidget {
+  const AddDataPopupWidget({super.key});
+
   @override
   AddDataPopupWidgetState createState() => AddDataPopupWidgetState();
 }
@@ -32,7 +34,7 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Enter Details'),
+      title: const Text('Enter Details'),
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -40,7 +42,7 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
             // Dropdown for category selection
             DropdownButtonFormField<String>(
               value: _selectedCategory,
-              decoration: InputDecoration(labelText: 'Category'),
+              decoration: const InputDecoration(labelText: 'Category'),
               onChanged: (String? newValue) {
                 setState(() {
                   _selectedCategory = newValue ?? _selectedCategory;
@@ -55,7 +57,7 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
             ),
             TextField(
               controller: _titleController,
-              decoration: InputDecoration(labelText: 'Product name'),
+              decoration: const InputDecoration(labelText: 'Product name'),
             ),
             InkWell(
               onTap: () async {
@@ -74,13 +76,13 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
                 width: 100,
                 child: imgUrl != ""
                     ? Image.network(imgUrl)
-                    : Center(
+                    : const Center(
                         child: Icon(Icons.add_a_photo),
                       ),
               ),
             ),
             CheckboxListTile(
-              title: Text('Shipping'),
+              title: const Text('Shipping'),
               value: _shipping,
               onChanged: (bool? value) {
                 setState(() {
@@ -89,7 +91,7 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
               },
             ),
             CheckboxListTile(
-              title: Text('In-store'),
+              title: const Text('In-store'),
               value: _instore,
               onChanged: (bool? value) {
                 setState(() {
@@ -98,7 +100,7 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
               },
             ),
             CheckboxListTile(
-              title: Text('In-stock'),
+              title: const Text('In-stock'),
               value: _instock,
               onChanged: (bool? value) {
                 setState(() {
@@ -108,20 +110,20 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
             ),
             TextField(
               controller: _detailsController,
-              decoration: InputDecoration(labelText: 'Details'),
+              decoration: const InputDecoration(labelText: 'Details'),
             ),
           ],
         ),
       ),
       actions: <Widget>[
         TextButton(
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
         TextButton(
-          child: Text('Add'),
+          child: const Text('Add'),
           onPressed: () {
             // Handle form submission
             String title = _titleController.text;

@@ -3,7 +3,7 @@ import 'package:restrosupply/data.dart';
 import 'package:restrosupply/functions/categoryUpload.dart';
 
 class RemoveCategoryPopup extends StatefulWidget {
-  RemoveCategoryPopup({super.key});
+  const RemoveCategoryPopup({super.key});
 
   @override
   State<RemoveCategoryPopup> createState() => _RemoveCategoryPopupState();
@@ -23,7 +23,7 @@ class _RemoveCategoryPopupState extends State<RemoveCategoryPopup> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
         ),
         ElevatedButton(
           onPressed: () {
@@ -42,7 +42,7 @@ class _RemoveCategoryPopupState extends State<RemoveCategoryPopup> {
               });
             }
           },
-          child: Text('Submit'),
+          child: const Text('Submit'),
         ),
       ],
     );

@@ -54,6 +54,12 @@ class MyCustomListView extends StatelessWidget {
                 ? emptyImage
                 : selectedData[index][imageIndex],
             fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) => Image.asset(
+              selectedData[index][imageIndex] == ""
+                  ? emptyImage
+                  : selectedData[index][imageIndex],
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         title: Text(

@@ -49,7 +49,7 @@ class _MainAppState extends State<MainApp> {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               useMaterial3: true,
-              primaryColor: Color.fromARGB(255, 6, 154, 14),
+              primaryColor: const Color.fromARGB(255, 6, 154, 14),
               scaffoldBackgroundColor: const Color.fromARGB(255, 248, 249, 250),
               textTheme: GoogleFonts.robotoTextTheme(),
               buttonTheme: const ButtonThemeData(

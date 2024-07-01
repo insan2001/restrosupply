@@ -18,6 +18,12 @@ class CustomImageWidget extends StatelessWidget {
       width: width,
       height: height,
       fit: BoxFit.cover,
+      errorBuilder: (context, error, stackTrace) => Image.asset(
+        path == "" ? emptyImage : path,
+        width: width,
+        height: height,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

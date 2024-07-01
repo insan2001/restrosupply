@@ -21,8 +21,12 @@ const int detailsIndex = 5;
 
 const String all = "All Products";
 
-const String emptyImage = "assets/images/empty.jpg";
-const String logoImage = "assets/images/logo.jpg";
+const String emptyImage =
+    "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fempty.jpg?alt=media&token=6376a7cd-3721-400b-a977-ed93da60b9ef";
+const String logoImage =
+    "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Flogo.jpg?alt=media&token=c6e4ceed-e1b9-41ed-8d46-b9549de98c9b";
+
+const String localLogoImage = "assets/images/logo.jpg";
 
 late final String myWebsiteURL;
 

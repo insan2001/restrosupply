@@ -10,7 +10,7 @@ void writeData(BuildContext context) async {
     await storage.child("/data/data.json").putString(jsonEncode(dataList),
         format: firebase_storage.PutStringFormat.raw);
     ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text("Data Updated")));
+        .showSnackBar(const SnackBar(content: Text("Data Updated")));
   } catch (e) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(e.toString())));

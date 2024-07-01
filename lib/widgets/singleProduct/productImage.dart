@@ -62,7 +62,7 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                   top: 0,
                   right: 0,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: Colors.black),
                     child: Center(
                       child: IconButton(
@@ -89,7 +89,7 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                     ),
                   ),
                 )
-              : SizedBox(),
+              : const SizedBox(),
         ],
       ),
     );

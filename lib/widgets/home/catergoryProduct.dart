@@ -99,7 +99,7 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   SizedBox(
                     width: (MediaQuery.of(context).size.width * 0.8) -
                         (MediaQuery.of(context).size.width * 0.25),
