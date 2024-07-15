@@ -8,8 +8,7 @@ import 'package:restrosupply/widgets/body/customImage.dart';
 
 class ProductImageWidget extends StatefulWidget {
   final String path;
-  final String url;
-  const ProductImageWidget({super.key, required this.path, required this.url});
+  const ProductImageWidget({super.key, required this.path});
 
   @override
   State<ProductImageWidget> createState() => _ProductImageWidgetState();
@@ -47,7 +46,8 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
               ),
             ),
             front: QrImageView(
-              data: widget.url,
+              // data: widget.url,
+              data: "",
               size: MediaQuery.of(context).size.width > mobileWidth
                   ? MediaQuery.of(context).size.width * 0.25
                   : MediaQuery.of(context).size.width * 0.6,
@@ -67,19 +67,19 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                     child: Center(
                       child: IconButton(
                           onPressed: () async {
-                            String fileName = widget.url.split("/").last;
-                            List<String> productID = fileName.split("-");
-                            await uploadFile(fileName).then((String value) {
-                              setState(() {
-                                dataList[categoryId[productID[0]]]![data]![
-                                        int.parse(productID[1])][imageIndex] =
-                                    value;
-                                widget.path;
-                              });
-                              // writeData(context);
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(content: Text(value)));
-                            });
+                            // String fileName = widget.url.split("/").last;
+                            // List<String> productID = fileName.split("-");
+                            // await uploadFile(fileName).then((String value) {
+                            //   setState(() {
+                            //     dataList[categoryId[productID[0]]]![data]![
+                            //             int.parse(productID[1])][imageIndex] =
+                            //         value;
+                            //     widget.path;
+                            //   });
+                            //   // writeData(context);
+                            //   ScaffoldMessenger.of(context)
+                            //       .showSnackBar(SnackBar(content: Text(value)));
+                            // });
                           },
                           icon: Icon(
                             Icons.edit,

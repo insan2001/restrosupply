@@ -30,10 +30,26 @@ const String localLogoImage = "assets/images/logo.jpg";
 
 late final String myWebsiteURL;
 
-const String companyName = "Restro Supply Hub";
+const String companyName = "Resto Supply Hub";
 const String suggestText = "You might also like these";
 
 bool isAdmin = false;
 
-String mail = "restro@mail.com";
+String mail = "resto@mail.com";
 String password = "pw123456";
+
+// product keywords
+const String titlee = "title";
+const String prices = "price";
+const String images = "images";
+const String detailss = "details";
+const String stocks = "stock";
+const String pickups = "pickup";
+const String shippings = "shipping";
+
+// category keywords
+const String category = "category";
+const String categoryProducts = "products";
+const String categoryImage = 'Image';
+const String categoryName = "name";
+const String keywordd = "keyword";

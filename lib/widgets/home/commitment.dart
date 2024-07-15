@@ -8,7 +8,7 @@ class CommitImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomImageWidget(
-      path: "assets/images/goal.webp",
+      path: "assets/images/commitment.jpg",
       width: MediaQuery.of(context).size.width >= mobileWidth
           ? MediaQuery.of(context).size.width / 2 <= 400
               ? MediaQuery.of(context).size.width / 2

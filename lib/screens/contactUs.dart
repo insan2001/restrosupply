@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 
-final List<String> detail1 = ["349 Bowes Rd #21,", "Concord,", "ON. L4K 1J3"];
+final List<String> detail1 = ["N/A,", "N/A,", "N/A"];
 final List<String> detail2 = [
-  "+1-905.761.1551",
-  "+1-647-762-2196",
-];
-final List<String> detail3 = [
-  "Monday 09:00 AM",
-  "Friday 05:00 PM",
+  "N/A",
+  "N/A",
 ];
 
 class ContactUsScreen extends StatelessWidget {
@@ -94,7 +90,7 @@ class ContactUsScreen extends StatelessWidget {
                       color: Color.fromARGB(255, 2, 237, 10),
                     ),
                     Text(
-                      "sales@safegreen.ca",
+                      "sales@restosupplyhub.com",
                       style: Theme.of(context).textTheme.labelLarge,
                     ),
                   ],
@@ -108,7 +104,7 @@ class ContactUsScreen extends StatelessWidget {
                       color: Color.fromARGB(255, 2, 237, 10),
                     ),
                     Text(
-                      "jay@safegreen.ca",
+                      "jay@restosupplyhub.com",
                       style: Theme.of(context).textTheme.labelLarge,
                     ),
                   ],

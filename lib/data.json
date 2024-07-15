@@ -1,36 +1,50 @@
-{
-    "Wood Tableware": {
-        "data": [
-            [
-                " od Spoon-20X100 ct ",
-                "assets/WoodTableware/5359981813800257678.png",
-                true,
-                true,
-                true,
-                "od Spoon-20X100 ct"
-            ],
-            [
-                " od Knife-20X100 ct ",
-                "assets/WoodTableware/-7800244617556071764.png",
-                true,
-                true,
-                true,
-                "od Knife-20X100 ct"
-            ],
-            [
-                " od Fork 20X100 ct ",
-                "assets/WoodTableware/4680064143321107524.png",
-                true,
-                true,
-                true,
-                "od Fork 20X100 ct"
-            ]
-        ],
-        "CategoryImage": [
-            [
-                "assets/images/sugarcane/0.webp",
-                "Wood Tableware"
-            ]
-        ]
-    }
-}
+// {products: [
+//         { Plastic Portion Cups - 4oz :  Plastic Portion Cups - 4oz , images: [assets/PlasticPortionCups/5900997769936160053.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80009
+//             ], price: null
+//         },
+//         { Lid for Plastic Portion Cups - 0.5oz/1oz :  Lid for Plastic Portion Cups - 0.5oz/1oz , images: [assets/PlasticPortionCups/1246712881998783149.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80010
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 0.5oz :  Plastic Portion Cups - 0.5oz , images: [assets/PlasticPortionCups/-587523794375723107.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80001
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 0.75oz :  Plastic Portion Cups - 0.75oz , images: [assets/PlasticPortionCups/-3484373478168624402.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80002
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 2oz - Black :  Plastic Portion Cups - 2oz - Black , images: [], stock: true, pickup: true, shipping: true, details: [Plastic Portion Cups - 2oz - Black
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 2.5oz :  Plastic Portion Cups - 2.5oz , images: [assets/PlasticPortionCups/4113997935533645608.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80007
+//             ], price: null
+//         },
+//         { Lid for Plastic Portion Cups - 3.25/4oz :  Lid for Plastic Portion Cups - 3.25/4oz , images: [assets/PlasticPortionCups/6864164283713699191.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80012
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 1oz :  Plastic Portion Cups - 1oz , images: [assets/PlasticPortionCups/-8694861303300993203.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80003
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 3.25oz :  Plastic Portion Cups - 3.25oz , images: [assets/PlasticPortionCups/-3375063255935120218.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80008
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 2oz :  Plastic Portion Cups - 2oz , images: [assets/PlasticPortionCups/-7684952520311844163.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80005
+//             ], price: null
+//         },
+//         { Plastic Portion Cups - 1.5oz :  Plastic Portion Cups - 1.5oz , images: [assets/PlasticPortionCups/1967517160198381660.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80004
+//             ], price: null
+//         },
+//         { Lid for Plastic Portion Cups - 1.5/2 oz :  Lid for Plastic Portion Cups - 1.5/2 oz , images: [assets/PlasticPortionCups/-4955330323063573151.png
+//             ], stock: true, pickup: true, shipping: true, details: [PO# 80011
+//             ], price: null
+//         }
+//     ], Image: , name: Plastic Portion cups, keyword: Plastic_Portion_cups
+// }

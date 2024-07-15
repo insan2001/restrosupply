@@ -168,8 +168,7 @@ class _AllProductsState extends State<AllProducts> {
                                       onPressed: () async {
                                         String text = await uploadFile(
                                             "${categoryId.keys.toList()[categoryId.values.toList().indexOf(category)]}-$index");
-                                        print(
-                                            "${dataList[category]![data]![index]}");
+
                                         setState(() {});
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(

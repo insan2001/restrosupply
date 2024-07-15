@@ -67,7 +67,6 @@ class AddDataPopupWidgetState extends State<AddDataPopupWidget> {
                 ScaffoldMessenger.of(context)
                     .showSnackBar(SnackBar(content: Text(imgUrl)));
                 setState(() {
-                  print(imgUrl);
                   imgUrl;
                 });
               },

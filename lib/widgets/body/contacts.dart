@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:restrosupply/modules/adaptive.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 final List<String> addr = [
-  "349 Bowes Rd #21,",
-  "Concord,",
-  "ON",
-  "L4K 1J3",
+  "N/A,",
+  "N/A,",
+  "N/A",
+  "N/A",
 ];
 
 final List<String> contacts = [
-  "Email: sales@safegreen.ca",
-  "             jay@safegreen.ca",
-  "Phone: +1-905.761.1551",
-  "             +1-647-762-2196",
+  "Email: sales@restosupplyhub.com",
+  "             jay@restosupplyhub.com",
+  "Phone: ",
+  "             ",
 ];
 
 class ContactDetails extends StatelessWidget {
@@ -71,11 +70,6 @@ class ContactDetails extends StatelessWidget {
                 ],
               ),
             ),
-            TextButton(
-                onPressed: () {
-                  launchUrl(Uri.parse("https://insan2001.github.io/"));
-                },
-                child: Text("<dev>")),
             isDevice(
               desktop: SizedBox(
                 width: MediaQuery.of(context).size.width / 5,

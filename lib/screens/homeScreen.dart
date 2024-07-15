@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Theme.of(context).primaryColor,
               height: 2,
             ),
-            HorizondalWidget(keys: keys),
+            HorizondalWidget(),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,

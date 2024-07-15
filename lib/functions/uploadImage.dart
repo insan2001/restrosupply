@@ -25,7 +25,7 @@ Future<String> uploadFile(String fileName) async {
       try {
         dataList[categoryId[details[0]]]![data]![int.parse(details[1])]
             [imageIndex] = downloadUrl;
-      } catch (e) {}
+      } catch (_) {}
       return downloadUrl;
     } catch (e) {
       return e.toString();

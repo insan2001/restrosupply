@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -7,19 +8,59 @@ import 'package:restrosupply/data.dart';
 import 'package:restrosupply/firebase_options.dart';
 import 'package:restrosupply/functions/readCategoryJson.dart';
 import 'package:restrosupply/functions/readJsonFile.dart';
+import 'package:restrosupply/functions/replace.dart';
+import 'package:restrosupply/modules/category.dart';
 import 'package:restrosupply/route.dart';
+import 'package:restrosupply/sample.dart';
 
 import 'package:restrosupply/screens/error.dart';
 import 'dart:html' as html;
 
 final storage = FirebaseStorage.instance.ref();
 
+writeeData() async {
+  for (String key in mapData.keys) {
+    CollectionReference collection =
+        FirebaseFirestore.instance.collection(category);
+    Map<String, dynamic> data = Category.fromMap(mapData[key]).toJson();
+    for (Map<String, dynamic> product in data[categoryProducts]) {
+      print(product);
+      try {
+        await collection
+            .doc(replaceEverything(key))
+            .collection(replaceEverything(key))
+            .doc(replaceEverything(product[titlee]))
+            .set({titlee: product[titlee], images: product[images]});
+      } catch (_) {
+        print(product[titlee]);
+      }
+      try {
+        await FirebaseFirestore.instance
+            .collection(categoryProducts)
+            .doc(replaceEverything(product[titlee]))
+            .set(product);
+      } catch (_) {
+        print(product[titlee]);
+      }
+    }
+    try {
+      await collection.doc(replaceEverything(key)).set({
+        categoryImage: data[categoryImage],
+        categoryName: data[categoryName],
+      });
+    } catch (e) {
+      print(key);
+    }
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
   myWebsiteURL = html.window.location.href;
   categoryId = (await readCategoryJson())!;
-
+  // await writeeData();
+  // print("data written");
   runApp(const MainApp());
 }
 

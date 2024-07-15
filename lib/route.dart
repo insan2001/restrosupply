@@ -5,6 +5,7 @@ import 'package:restrosupply/data.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/screens/allProduct.dart';
 import 'package:restrosupply/screens/contactUs.dart';
+import 'package:restrosupply/screens/dev.dart';
 import 'package:restrosupply/screens/error.dart';
 import 'package:restrosupply/screens/homeScreen.dart';
 import 'package:restrosupply/screens/login.dart';
@@ -33,15 +34,15 @@ class AppRouter {
       ),
       GoRoute(
         name: RouteConstants().product,
-        path: "${RouteConstants().product}/:category-:id",
+        path: "${RouteConstants().product}/:product",
         pageBuilder: ((context, state) {
-          final String cat = state.pathParameters["category"]!;
-          final String num = state.pathParameters["id"]!;
-          final String category = categoryId[cat]!;
+          final String product = state.pathParameters["product"]!;
           return MaterialPage(
               key: state.pageKey,
               child: SingleProduct(
-                  key: UniqueKey(), index: int.parse(num), category: category));
+                key: UniqueKey(),
+                productId: product,
+              ));
         }),
       ),
       GoRoute(
@@ -57,6 +58,13 @@ class AppRouter {
         path: RouteConstants().login,
         pageBuilder: ((context, state) {
           return MaterialPage(key: state.pageKey, child: const LoginScreen());
+        }),
+      ),
+      GoRoute(
+        name: RouteConstants().dev,
+        path: RouteConstants().dev,
+        pageBuilder: ((context, state) {
+          return MaterialPage(key: state.pageKey, child: const DevScreen());
         }),
       ),
     ],

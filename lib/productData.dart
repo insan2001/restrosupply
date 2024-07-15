@@ -25,26 +25,6 @@ class ProductData {
   }
 
   factory ProductData.fromJson(Map<String, dynamic> json) {
-    if (json['imageUrl'] == null) {
-      print(json.runtimeType);
-      print(json);
-    }
-    if (json['name'] == null) {
-      print("name null");
-    }
-    if (json['stock'] == null) {
-      print("stock null");
-    }
-    if (json['pickup'] == null) {
-      print("pickup null");
-    }
-    if (json['shipping'] == null) {
-      print("shipping null");
-    }
-    if (json['details'] == null) {
-      print("details null");
-    }
-
     return ProductData(
       name: json['name'],
       imageUrl: json['imageUrl'],

@@ -14,7 +14,7 @@ class BannerWidget extends StatelessWidget {
       child: Stack(
         children: [
           CustomImageWidget(
-            path: "assets/images/bg.png",
+            path: "assets/images/bg.jpg",
             height: mobileWidth,
             width: MediaQuery.of(context).size.width,
           ),
