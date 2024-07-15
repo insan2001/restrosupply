@@ -6,6 +6,7 @@ import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/addDataPopup.dart';
 import 'package:restrosupply/widgets/appBar/addCategory.dart';
+import 'package:restrosupply/widgets/appBar/cartButton.dart';
 import 'package:restrosupply/widgets/appBar/removeCategory.dart';
 import 'package:restrosupply/widgets/appBar/removeDataPopup.dart';
 import 'package:restrosupply/widgets/appBar/title.dart';
@@ -33,6 +34,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         actions: [
+          CartButton(),
           IconButton(
               onPressed: () {
                 context.go(RouteConstants().login);
@@ -139,7 +141,8 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                                 context: context,
-                                builder: (context) => const AddDataPopupWidget());
+                                builder: (context) =>
+                                    const AddDataPopupWidget());
                           },
                           icon: const Icon(
                             Icons.add,
@@ -155,7 +158,8 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                           onPressed: () {
                             showDialog(
                               context: context,
-                              builder: (context) => const RemoveDataPopupWidget(),
+                              builder: (context) =>
+                                  const RemoveDataPopupWidget(),
                             );
                           },
                           icon: const Icon(

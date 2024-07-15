@@ -24,12 +24,11 @@ class AppRouter {
       ),
       GoRoute(
         name: RouteConstants().category,
-        path: "${RouteConstants().category}/:category",
+        path: "${RouteConstants().category}/:categoryId",
         pageBuilder: ((context, state) {
-          final String category = state.pathParameters["category"]!;
-          String cat = categoryId[category] ?? all;
+          final String categoryId = state.pathParameters["categoryId"]!;
           return MaterialPage(
-              key: state.pageKey, child: AllProducts(category: cat));
+              key: state.pageKey, child: AllProducts(category: categoryId));
         }),
       ),
       GoRoute(

@@ -1,20 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/modules/product.dart';
-import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/common/error.dart';
 import 'package:restrosupply/widgets/common/waiting.dart';
-import 'package:restrosupply/widgets/listViewProducts.dart';
 import 'package:restrosupply/widgets/singleProduct/information.dart';
-import 'package:restrosupply/widgets/singleProduct/location.dart';
 import 'package:restrosupply/widgets/singleProduct/productImage.dart';
-import 'package:restrosupply/widgets/singleProduct/suggestGrid.dart';
 
 // name, imagepath, stock, pickup, shipping, details
 
@@ -31,11 +25,6 @@ class SingleProduct extends StatefulWidget {
 }
 
 class _SingleProductState extends State<SingleProduct> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
@@ -107,12 +96,12 @@ class _SingleProductState extends State<SingleProduct> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      suggestText,
-                      style: MediaQuery.of(context).size.width > mobileWidth
-                          ? Theme.of(context).textTheme.displayMedium
-                          : Theme.of(context).textTheme.displaySmall,
-                    ),
+                    // Text(
+                    //   suggestText,
+                    //   style: MediaQuery.of(context).size.width > mobileWidth
+                    //       ? Theme.of(context).textTheme.displayMedium
+                    //       : Theme.of(context).textTheme.displaySmall,
+                    // ),
                     // isDevice(
                     //   desktop: SuggestGridWidget(
                     //     category: widget.category,

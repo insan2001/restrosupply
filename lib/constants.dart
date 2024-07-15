@@ -38,6 +38,8 @@ bool isAdmin = false;
 String mail = "resto@mail.com";
 String password = "pw123456";
 
+const String verify = "isCategory";
+
 // product keywords
 const String titlee = "title";
 const String prices = "price";
@@ -53,3 +55,14 @@ const String categoryProducts = "products";
 const String categoryImage = 'Image';
 const String categoryName = "name";
 const String keywordd = "keyword";
+
+// auth keywords
+const String users = "users";
+const String position = "position";
+
+// roles
+
+int superUser = 0;
+int admin = 1;
+int editor = 2;
+int defaultUser = 3;

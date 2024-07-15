@@ -65,9 +65,8 @@ class HorizondalWidget extends StatelessWidget {
                               hoverColor:
                                   Theme.of(context).scaffoldBackgroundColor,
                               onTap: () {
-                                // String? category = valueToID(keys[index]);
                                 context.go(
-                                    "${RouteConstants().category}/$category");
+                                    "${RouteConstants().category}/${ids[index]}");
                               },
                               child: ProductsInfo(
                                 id: ids[index],

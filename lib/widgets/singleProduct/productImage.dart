@@ -2,8 +2,6 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
-import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 
 class ProductImageWidget extends StatefulWidget {

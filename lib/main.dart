@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/data.dart';
 import 'package:restrosupply/firebase_options.dart';
@@ -10,6 +12,7 @@ import 'package:restrosupply/functions/readCategoryJson.dart';
 import 'package:restrosupply/functions/readJsonFile.dart';
 import 'package:restrosupply/functions/replace.dart';
 import 'package:restrosupply/modules/category.dart';
+import 'package:restrosupply/modules/provider.dart';
 import 'package:restrosupply/route.dart';
 import 'package:restrosupply/sample.dart';
 
@@ -17,6 +20,9 @@ import 'package:restrosupply/screens/error.dart';
 import 'dart:html' as html;
 
 final storage = FirebaseStorage.instance.ref();
+
+FirebaseAuth auth = FirebaseAuth.instance;
+CollectionReference userStore = FirebaseFirestore.instance.collection(users);
 
 writeeData() async {
   for (String key in mapData.keys) {
@@ -61,7 +67,12 @@ void main() async {
   categoryId = (await readCategoryJson())!;
   // await writeeData();
   // print("data written");
-  runApp(const MainApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => UserProvider())],
+      child: MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatefulWidget {

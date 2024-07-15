@@ -20,14 +20,24 @@ class Product {
     required this.shipping,
   });
 
-  factory Product.fromMap(Map<String, dynamic> data) => Product(
-      title: data[titlee],
-      img: data[images],
-      price: data[prices],
-      details: data[detailss],
-      stock: data[stocks],
-      pickup: data[pickups],
-      shipping: data[shippings]);
+  factory Product.fromMap(Map<String, dynamic> data) {
+    List<String> imgs = [];
+    for (String img in data[images]) {
+      imgs.add(img);
+    }
+    List<String> details = [];
+    for (String detail in data[detailss]) {
+      details.add(detail);
+    }
+    return Product(
+        title: data[titlee],
+        img: imgs,
+        price: data[prices],
+        details: details,
+        stock: data[stocks],
+        pickup: data[pickups],
+        shipping: data[shippings]);
+  }
 
   factory Product.fromList(List<dynamic> data) {
     int priceInt = data.length - 2;

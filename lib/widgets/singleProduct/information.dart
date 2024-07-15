@@ -71,7 +71,28 @@ class _InformationWidgetState extends State<InformationWidget> {
                   ),
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
+        Text(
+          widget.product.price == null
+              ? "N/A"
+              : "\$ ${widget.product.price.toString()}",
+          style: Theme.of(context)
+              .textTheme
+              .displayMedium!
+              .copyWith(color: Theme.of(context).primaryColor),
+        ),
+
+        const SizedBox(height: 10),
+        widget.product.details != null
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: List.generate(widget.product.details!.length,
+                    (index) => Text(widget.product.details![index])),
+              )
+            : SizedBox(),
+
+        const SizedBox(height: 10),
         GestureDetector(
           onTap: () {
             // if (isAdmin) {
@@ -161,7 +182,6 @@ class _InformationWidgetState extends State<InformationWidget> {
             ],
           ),
         ),
-        const SizedBox(height: 10),
         // (isAdmin &&
         //         dataList[widget.category]![data]![widget.index][detailsIndex] ==
         //             "")
