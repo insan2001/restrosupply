@@ -6,4 +6,8 @@ class RouteConstants {
   final String login = "/login";
   final String error = '/error';
   final String dev = "/dev";
+  final String edit = "/edit";
+  final String cart = "/mycart";
+  final String payment = "/pay";
+  final String profile = "/profile";
 }

@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
-import 'package:restrosupply/functions/uploadImage.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
@@ -23,34 +21,6 @@ class AllProducts extends StatefulWidget {
 }
 
 class _AllProductsState extends State<AllProducts> {
-  // late List<List<dynamic>> productIds;
-  // late String category;
-  // late final List<String> keyList;
-
-  // void setCategory(String cat) {
-  //   setState(() {
-  //     category = cat;
-  //     productIds = [];
-  //     if (cat == all) {
-  //       List<List<dynamic>> tempData = [];
-  //       for (String key in dataList.keys) {
-  //         tempData.addAll(dataList[key]![data]!);
-  //       }
-  //       productIds = tempData;
-  //     } else {
-  //       productIds = dataList[category]![data]!;
-  //     }
-  //   });
-  // }
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   setCategory(widget.category);
-  //   keyList = dataList.keys.toList();
-  //   keyList.insert(0, all);
-  // }
-
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
@@ -113,8 +83,10 @@ class _AllProductsState extends State<AllProducts> {
                     isDevice(
                       desktop: GridView.builder(
                         physics: const NeverScrollableScrollPhysics(),
-                        padding: const EdgeInsets.only(
-                            left: 100, right: 100, top: 20),
+                        padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width * 0.07,
+                            right: MediaQuery.of(context).size.width * 0.07,
+                            top: 20),
                         itemCount: productIds.length,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
@@ -145,6 +117,11 @@ class _AllProductsState extends State<AllProducts> {
                               } else {
                                 Map<String, dynamic> productData =
                                     snapshot.data!.data()!;
+                                String _productImg = widget.category != all
+                                    ? productData[images]
+                                    : productData[images].length == 0
+                                        ? ""
+                                        : productData[images][0][images];
                                 return GestureDetector(
                                   onTap: () {
                                     context.go(
@@ -156,8 +133,15 @@ class _AllProductsState extends State<AllProducts> {
                                         0.8,
                                     height:
                                         MediaQuery.of(context).size.width * 0.2,
-                                    padding: const EdgeInsets.only(
-                                        left: 10, right: 10, top: 10),
+                                    padding: EdgeInsets.only(
+                                        left:
+                                            MediaQuery.of(context).size.width *
+                                                0.007,
+                                        right:
+                                            MediaQuery.of(context).size.width *
+                                                0.007,
+                                        top: MediaQuery.of(context).size.width *
+                                            0.007),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                       border: Border.all(
@@ -172,7 +156,7 @@ class _AllProductsState extends State<AllProducts> {
                                           child: Stack(
                                             children: [
                                               CustomImageWidget(
-                                                path: productData[images][0],
+                                                path: _productImg,
                                                 height: MediaQuery.of(context)
                                                             .size
                                                             .width >
@@ -198,47 +182,6 @@ class _AllProductsState extends State<AllProducts> {
                                                             .width *
                                                         0.8,
                                               ),
-                                              // if (isAdmin && (category != all))
-                                              //   Positioned(
-                                              //     top: 0,
-                                              //     right: 0,
-                                              //     child: IconButton(
-                                              //       onPressed: () async {
-                                              //         String text =
-                                              //             await uploadFile(
-                                              //                 "${categoryId.keys.toList()[categoryId.values.toList().indexOf(category)]}-$index");
-
-                                              //         setState(() {});
-                                              //         ScaffoldMessenger.of(
-                                              //                 context)
-                                              //             .showSnackBar(
-                                              //                 SnackBar(
-                                              //                     content: Text(
-                                              //                         text)));
-                                              //       },
-                                              //       icon: const Icon(
-                                              //         Icons.edit,
-                                              //         size: 50,
-                                              //       ),
-                                              //     ),
-                                              //   ),
-                                              // if (isAdmin && (category != all))
-                                              //   Positioned(
-                                              //       top: 0,
-                                              //       left: 0,
-                                              //       child: IconButton(
-                                              //           onPressed: () {
-                                              //             setState(() {
-                                              //               dataList[category]![
-                                              //                           data]![
-                                              //                       index][
-                                              //                   imageIndex] = "";
-                                              //             });
-                                              //           },
-                                              //           icon: const Icon(
-                                              //             Icons.delete,
-                                              //             size: 50,
-                                              //           )))
                                             ],
                                           ),
                                         ),
@@ -271,7 +214,7 @@ class _AllProductsState extends State<AllProducts> {
                         ),
                         shrinkWrap: true,
                         itemBuilder: (context, index) => FutureBuilder(
-                            future: widget.category == all
+                            future: widget.category != all
                                 ? FirebaseFirestore.instance
                                     .collection(category)
                                     .doc(widget.category)
@@ -291,23 +234,23 @@ class _AllProductsState extends State<AllProducts> {
                               } else {
                                 Map<String, dynamic> productData =
                                     snapshot.data!.data()!;
+
+                                String productImg = widget.category != all
+                                    ? productData[images]
+                                    : productData[images].length == 0
+                                        ? ""
+                                        : productData[images][0][images];
                                 return ListTile(
-                                  hoverColor: Theme.of(context).primaryColor,
                                   onTap: () {
                                     context.go(
                                         "${RouteConstants().product}/${productIds[index]}");
                                   },
-                                  leading: ConstrainedBox(
-                                    constraints: BoxConstraints(
-                                      minWidth:
-                                          MediaQuery.of(context).size.height *
-                                              0.1,
-                                      minHeight:
-                                          MediaQuery.of(context).size.height *
-                                              0.1,
-                                    ),
-                                    child: CustomImageWidget(
-                                        path: productData[images][0]),
+                                  leading: CustomImageWidget(
+                                    path: productImg,
+                                    width: MediaQuery.of(context).size.height *
+                                        0.1,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.1,
                                   ),
                                   title: Text(
                                     productData[titlee],

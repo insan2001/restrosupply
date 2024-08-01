@@ -17,6 +17,7 @@ class BannerWidget extends StatelessWidget {
             path: "assets/images/bg.jpg",
             height: mobileWidth,
             width: MediaQuery.of(context).size.width,
+            fit: BoxFit.cover,
           ),
           Align(
             alignment: const Alignment(-0.75, 0),
@@ -36,7 +37,7 @@ class BannerWidget extends StatelessWidget {
                             ? MediaQuery.of(context).size.width * 0.5
                             : MediaQuery.of(context).size.width,
                         child: Text(
-                          "Provide complete tableware solutions for the catering industry",
+                          "Elevate your catering with our all-inclusive tableware solutions!",
                           style: Theme.of(context)
                               .textTheme
                               .displayLarge!

@@ -23,7 +23,7 @@
 // // // // //           // If you have dynamic keys, adjust this part accordingly.
 // // // // //           Map<String, dynamic> transformedMap = {};
 // // // // //           for (int i = 0; i < list.length; i++) {
-// // // // //             transformedMap['key\\$i'] = list[i];
+// // // // //             transformedMap['key\\\$i'] = list[i];
 // // // // //           }
 // // // // //           return transformedMap;
 // // // // //         }).toList();
@@ -70,11 +70,11 @@
 // //       .collection("dataList")
 // //       .doc("eyk3OBt2CGIQvWfnUtYC")
 // //       .set(dataList)
-// //       .onError((e, _) => print("Error writing document: \\$e"));
+// //       .onError((e, _) => print("Error writing document: \\\$e"));
 
 // //   print('Data written to Firestore');
 // // } catch (e) {
-// //   print('Failed to write data: \\$e');
+// //   print('Failed to write data: \\\$e');
 // // }
 // // //   // runApp(MyApp());
 // // // }
@@ -291,7 +291,7 @@
 //     if (product[1].isNotEmpty) {
 //       final imagePath = product[1];
 //       final fileName = imagePath.split('/').last;
-//       final ref = storage.ref().child('uploads/\\$fileName');
+//       final ref = storage.ref().child('uploads/\\\$fileName');
 //       final file = File(imagePath);
 
 //       try {
@@ -611,8 +611,8 @@ Map<String, dynamic> mapData = {
   "Kraft Paper Fold Box": {
     "data": [
       [
-        "Wisdom - #8 Kraft Paper Fold Box - 40X50ct/CS",
-        "",
+        "Wisdom - #8 Kraft Paper Fold Box - 50X04ct/CS",
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fkraft-0.png?alt=media&token=253c417c-dbe4-4247-b26e-46ef137a1efc",
         true,
         true,
         true,
@@ -621,8 +621,8 @@ Map<String, dynamic> mapData = {
         "Price\$39.99"
       ],
       [
-        "Wisdom - #1 Kraft Paper Fold Box - 40X50ct/CS",
-        "",
+        "Wisdom - #1 Kraft Paper Fold Box - 50X04ct/CS",
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fkraft-1.jpg?alt=media&token=8e7b6d9a-e2e6-461f-b301-37330754088a",
         true,
         true,
         true,
@@ -631,34 +631,34 @@ Map<String, dynamic> mapData = {
         "Price\$39.99"
       ],
       [
-        "Wisdom - #2 Kraft Paper Fold Box - 40X50ct/CS",
-        "",
+        "Wisdom - #2 Kraft Paper Fold Box - 50X04ct/CS",
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fkraft-2.png?alt=media&token=32f70d9f-db7d-4ca2-a49f-e454699f4324",
         true,
         true,
         true,
         "PO#: 90002",
-        "Packing:4X50ct",
-        "Price\$38.99"
+        " Packing:50X04ct",
+        " Price\$38.99"
       ],
       [
-        "Wisdom - #4 Kraft Paper Fold Box - 40X40ct/CS",
-        "",
+        "Wisdom - #4 Kraft Paper Fold Box - 40X04ct/CS",
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fkraft-3.webp?alt=media&token=595d5b07-746b-47b6-8e15-e56fa01cf289",
         true,
         true,
         true,
         "Wisdom-#4 Kraft PaperFold Box",
-        "Packing:4X40ct",
-        "Price\$48.99"
+        " Packing:40X04ct",
+        " Price\$48.99"
       ],
       [
-        "Wisdom - #3 Kraft Paper Fold Box - 40X50ct/CS",
-        "",
+        "Wisdom - #3 Kraft Paper Fold Box - 50X04ct/CS",
+        "https://firebasestorage.googleapis.com/v0/b/restrosupplyhub.appspot.com/o/images%2Fkraft-4.webp?alt=media&token=a60c7cd9-a07d-4134-9a74-a8b41c0ee4f1",
         true,
         true,
         true,
         "PO#: 90003",
-        "Packing:4X50ct",
-        "Price\$48.99"
+        " Packing:50X04ct",
+        " Price\$48.99"
       ]
     ],
     "CategoryImage": [
@@ -744,7 +744,7 @@ Map<String, dynamic> mapData = {
         false,
         false,
         false,
-        "Chartland-Foil-12\" Aluminum Foil-Heave-200M",
+        "Foil-12\" Aluminum Foil-Heave-200M",
         "Price \$0.00"
       ],
       [
@@ -786,7 +786,7 @@ Map<String, dynamic> mapData = {
         true,
         true,
         "PO#:10023",
-        "Chartland-Dome Lids for 1.5 lb Oblong Pan - Clear",
+        "Dome Lids for 1.5 lb Oblong Pan - Clear",
         "Packing: 500ct/CS",
         "Price \$22.95"
       ],
@@ -1075,29 +1075,29 @@ Map<String, dynamic> mapData = {
   "Paper Shopping Bag": {
     "data": [
       [
-        " (Super Strong) Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
+        "Kraft Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
         "assets/PaperShoppingBag/-1918688910506603471.png",
         false,
-        false,
-        false,
-        "(Super Strong) Kraft Paper Handle Bag -10\"X6.5\"X12\"-250 ct",
+        true,
+        true,
+        "Kraft Paper Handle Bag-10\"X6X13\"-250 ct",
         "Packing: 250ct/CS",
         "Paper Bags",
-        "Price \$0.00"
+        "Price \$42.49"
       ],
       [
-        " (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X17 - 200ct/CS ",
+        "Kraft Paper Bags with Twisted Handles - 13X7X17 - 200ct/CS ",
         "assets/PaperShoppingBag/6792400537161498743.png",
+        true,
         false,
         true,
-        true,
-        "(Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X17",
-        " Packing: 200PCS",
-        " Paper Bags",
-        " Price \$0.00"
+        "Kraft Paper Bags with Twisted Handles - 13X7X17",
+        "Packing: 200PCS",
+        "Paper Bags",
+        "Price \$53.74"
       ],
       [
-        " (Super Strong) White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
+        "White Paper Bags with Twisted Handles - 10X6X13 - 250ct/CS ",
         "assets/PaperShoppingBag/-9004487357085058787.png",
         true,
         false,
@@ -1108,18 +1108,18 @@ Map<String, dynamic> mapData = {
         "Price \$64.28"
       ],
       [
-        " (Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X13 - 200ct/CS ",
+        "Kraft Paper Bags with Twisted Handles - 13X7X13 - 200ct/CS ",
         "assets/PaperShoppingBag/-3968352626926764221.png",
         true,
         false,
         true,
-        "(Super Strong) Kraft Paper Bags with Twisted Handles - 13X7X13",
-        " Packing: 200PCS",
-        " Paper Bags",
-        " Price \$54.32"
+        "Kraft Paper Bags with Twisted Handles - 13X7X13",
+        "Packing: 200PCS",
+        "Paper Bags",
+        "Price \$54.32"
       ],
       [
-        " (Super Strong)  Paper Bags with Twisted Handles -White - 13X7X17 - 200ct/CS ",
+        " Paper Bags with Twisted Handles -White - 13X7X17 - 200ct/CS ",
         "assets/PaperShoppingBag/7645501136332211547.png",
         true,
         false,
@@ -1135,13 +1135,13 @@ Map<String, dynamic> mapData = {
         true,
         false,
         true,
-        "PO#: PB003",
+        "PO#:PB003",
         "Packing: 250PCS",
         "Paper Bags",
-        "Price \$36.88"
+        "Price \$42.49"
       ],
       [
-        " (Super Strong) White Paper Bags with Twisted Handles - 8X4.5X10.6 - 250PCS",
+        "White Paper Bags with Twisted Handles - 8X4.5X10.6 - 250PCS",
         "assets/PaperShoppingBag/8546618619284421840.png",
         true,
         false,
@@ -1163,7 +1163,7 @@ Map<String, dynamic> mapData = {
         "Price \$51.84"
       ],
       [
-        " (Super Strong) Kraft Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
+        "Kraft Paper Bags with Twisted Handles - 8X4.5X10.6 - 250ct/CS ",
         "assets/PaperShoppingBag/6651280695903989693.png",
         true,
         true,
@@ -1183,7 +1183,7 @@ Map<String, dynamic> mapData = {
         "Paper Bags"
       ],
       [
-        " (Super Strong) White Paper Bags with Twisted Handles - 13X7X13 -200ct/CS ",
+        "White Paper Bags with Twisted Handles - 13X7X13 -200ct/CS ",
         "assets/PaperShoppingBag/9164454087588030262.png",
         true,
         true,
@@ -1762,12 +1762,12 @@ Map<String, dynamic> mapData = {
         "Garbage Bags - Strong - 35\" X 47 \"- Black"
       ],
       [
-        " Chartland  - Garbage Bags - Strong - 35\" X 47\" - Clear ",
+        " Garbage Bags - Strong - 35\" X 47\" - Clear ",
         "",
         true,
         true,
         true,
-        "Chartland  - Garbage Bags - Strong - 35\" X 47\" - Clear"
+        "Garbage Bags - Strong - 35\" X 47\" - Clear"
       ],
       [
         "Garbage Bags - Strong - 30\" X 38\" - Black ",

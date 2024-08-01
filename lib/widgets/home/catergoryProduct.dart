@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
@@ -12,8 +10,7 @@ import 'package:restrosupply/widgets/common/waiting.dart';
 import 'package:restrosupply/widgets/home/changeProduct.dart';
 
 class CatergoryproductWidget extends StatefulWidget {
-  final List<String> keys;
-  const CatergoryproductWidget({super.key, required this.keys});
+  const CatergoryproductWidget({super.key});
 
   @override
   State<CatergoryproductWidget> createState() => _CatergoryproductWidgetState();
@@ -97,7 +94,7 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                             Positioned.fill(
                                               child: Align(
                                                 alignment:
-                                                    Alignment.bottomCenter,
+                                                    Alignment.bottomRight,
                                                 child: InkWell(
                                                   splashColor: null,
                                                   highlightColor: null,
@@ -110,15 +107,14 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.08,
+                                                            0.06,
                                                     height:
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .width *
-                                                            0.04,
+                                                            0.03,
                                                     padding:
-                                                        const EdgeInsets.all(
-                                                            10),
+                                                        const EdgeInsets.all(4),
                                                     decoration: BoxDecoration(
                                                         color: Theme.of(context)
                                                             .primaryColor,

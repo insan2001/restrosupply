@@ -3,8 +3,9 @@ import 'package:restrosupply/constants.dart';
 
 class UserProvider extends ChangeNotifier {
   bool login = false;
-  int position = defaultUser;
+  String position = defaultUser;
   String? profileImg;
+  String name = "Unknown";
   String? uid;
 
   updateLogin(bool value) {
@@ -12,14 +13,22 @@ class UserProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  updatePosition(int num) {
-    position = num;
-    print("position updated: $position");
+  updateUid(String neWUid) {
+    uid = neWUid;
+    notifyListeners();
+  }
+
+  updateName(String text) {
+    name = text;
+    notifyListeners();
+  }
+
+  updatePosition(String pos) {
+    position = pos;
     notifyListeners();
   }
 
   updateProfile(String? img) {
-    print("updated Url: $img");
     profileImg = img;
     notifyListeners();
   }

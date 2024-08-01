@@ -3,16 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
+import 'dart:html' as html;
 
 class ProductImageWidget extends StatefulWidget {
-  final String path;
-  const ProductImageWidget({super.key, required this.path});
+  final List<Map<String, String>> images;
+  const ProductImageWidget({super.key, required this.images});
 
   @override
   State<ProductImageWidget> createState() => _ProductImageWidgetState();
 }
 
 class _ProductImageWidgetState extends State<ProductImageWidget> {
+  String? currentImage = "";
+
+  @override
+  void initState() {
+    currentImage = widget.images[0][images];
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -22,10 +31,10 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
       height: MediaQuery.of(context).size.width > mobileWidth
           ? MediaQuery.of(context).size.width * 0.25
           : MediaQuery.of(context).size.width * 0.6,
-      child: Stack(
-        children: [
-          FlipCard(
-            back: Container(
+      child: FlipCard(
+        back: Stack(
+          children: [
+            Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -34,7 +43,7 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                 ),
               ),
               child: CustomImageWidget(
-                path: widget.path,
+                path: currentImage,
                 width: MediaQuery.of(context).size.width > mobileWidth
                     ? MediaQuery.of(context).size.width * 0.25
                     : MediaQuery.of(context).size.width * 0.6,
@@ -43,52 +52,46 @@ class _ProductImageWidgetState extends State<ProductImageWidget> {
                     : MediaQuery.of(context).size.width * 0.6,
               ),
             ),
-            front: QrImageView(
-              // data: widget.url,
-              data: "",
-              size: MediaQuery.of(context).size.width > mobileWidth
-                  ? MediaQuery.of(context).size.width * 0.25
-                  : MediaQuery.of(context).size.width * 0.6,
-              version: QrVersions.auto,
-              backgroundColor: Colors.blueAccent,
-            ),
-            autoFlipDuration: const Duration(seconds: 1),
-            flipOnTouch: true,
-          ),
-          isAdmin
-              ? Positioned(
-                  top: 0,
-                  right: 0,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.black),
-                    child: Center(
-                      child: IconButton(
-                          onPressed: () async {
-                            // String fileName = widget.url.split("/").last;
-                            // List<String> productID = fileName.split("-");
-                            // await uploadFile(fileName).then((String value) {
-                            //   setState(() {
-                            //     dataList[categoryId[productID[0]]]![data]![
-                            //             int.parse(productID[1])][imageIndex] =
-                            //         value;
-                            //     widget.path;
-                            //   });
-                            //   // writeData(context);
-                            //   ScaffoldMessenger.of(context)
-                            //       .showSnackBar(SnackBar(content: Text(value)));
-                            // });
-                          },
-                          icon: Icon(
-                            Icons.edit,
-                            color: Theme.of(context).primaryColor,
-                            size: 20,
-                          )),
+            Positioned(
+              bottom: 10,
+              left: 10,
+              child: Row(
+                children: List.generate(
+                  widget.images.length,
+                  (index) => InkWell(
+                    onTap: () {
+                      setState(() {
+                        currentImage = widget.images[index][images];
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                        ),
+                      ),
+                      child: CustomImageWidget(
+                        path: widget.images[index][images],
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                   ),
-                )
-              : const SizedBox(),
-        ],
+                ),
+              ),
+            )
+          ],
+        ),
+        front: QrImageView(
+          data: html.window.location.href,
+          size: MediaQuery.of(context).size.width > mobileWidth
+              ? MediaQuery.of(context).size.width * 0.25
+              : MediaQuery.of(context).size.width * 0.6,
+          version: QrVersions.auto,
+          backgroundColor: Colors.blueAccent,
+        ),
+        autoFlipDuration: const Duration(seconds: 1),
+        flipOnTouch: true,
       ),
     );
   }

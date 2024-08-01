@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
@@ -18,11 +17,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late final List<String> keys;
+  // late final List<String> keys;
 
   @override
   void initState() {
-    keys = dataList.keys.toList();
     super.initState();
   }
 
@@ -42,12 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Theme.of(context).primaryColor,
               height: 2,
             ),
-            const ThreeWidget(),
-            Container(
-              color: Theme.of(context).primaryColor,
-              height: 2,
-            ),
-            CatergoryproductWidget(keys: keys),
+            CatergoryproductWidget(),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,
@@ -56,17 +49,18 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 10,
             ),
             isDevice(
-              desktop: Row(
-                children: [
-                  const Spacer(),
-                  const CommitImageWidget(),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.03,
-                    height: 20,
-                  ),
-                  const CommitTextWidget(),
-                  const Spacer(),
-                ],
+              desktop: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.85,
+                child: Row(
+                  children: [
+                    const CommitImageWidget(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.03,
+                      height: 20,
+                    ),
+                    const CommitTextWidget(),
+                  ],
+                ),
               ),
               mobile: const Column(
                 children: [
@@ -78,6 +72,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 10,
             ),
+            Container(
+              color: Theme.of(context).primaryColor,
+              height: 2,
+            ),
+            const ThreeWidget(),
             Container(
               color: Theme.of(context).primaryColor,
               height: 2,

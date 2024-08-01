@@ -1,14 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/modules/product.dart';
+import 'package:restrosupply/modules/userProvider.dart';
+import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/appBar/customScaffold.dart';
 import 'package:restrosupply/widgets/body/contacts.dart';
 import 'package:restrosupply/widgets/common/error.dart';
 import 'package:restrosupply/widgets/common/waiting.dart';
 import 'package:restrosupply/widgets/singleProduct/information.dart';
 import 'package:restrosupply/widgets/singleProduct/productImage.dart';
+import 'package:restrosupply/widgets/singleProduct/suggestGrid.dart';
 
 // name, imagepath, stock, pickup, shipping, details
 
@@ -28,6 +33,19 @@ class _SingleProductState extends State<SingleProduct> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      float: (context.watch<UserProvider>().position == admin ||
+              context.watch<UserProvider>().position == editor)
+          ? Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: IconButton(
+                  onPressed: () {
+                    context.go("${RouteConstants().edit}/${widget.productId}");
+                  },
+                  icon: Icon(Icons.edit)))
+          : null,
       body: SingleChildScrollView(
         child: FutureBuilder(
             future: FirebaseFirestore.instance
@@ -71,7 +89,7 @@ class _SingleProductState extends State<SingleProduct> {
                             width: MediaQuery.of(context).size.width * 0.12,
                           ),
                           ProductImageWidget(
-                            path: product.img![0],
+                            images: product.img,
                           ),
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.01,
@@ -86,32 +104,29 @@ class _SingleProductState extends State<SingleProduct> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ProductImageWidget(
-                            path: product.img![0],
+                            images: product.img,
                           ),
                           const SizedBox(height: 10),
                           InformationWidget(product: product),
                         ],
                       ),
                     ),
+
                     const SizedBox(
                       height: 20,
                     ),
-                    // Text(
-                    //   suggestText,
-                    //   style: MediaQuery.of(context).size.width > mobileWidth
-                    //       ? Theme.of(context).textTheme.displayMedium
-                    //       : Theme.of(context).textTheme.displaySmall,
-                    // ),
-                    // isDevice(
-                    //   desktop: SuggestGridWidget(
-                    //     category: widget.category,
-                    //   ),
-                    //   mobile: MyCustomListView(
-                    //     selectedData:
-                    //         dataList[widget.category]![data]!.take(8).toList(),
-                    //     category: widget.category,
-                    //   ),
-                    // ),
+
+                    isDevice(
+                      desktop: Text(
+                        suggestText,
+                        style: MediaQuery.of(context).size.width > mobileWidth
+                            ? Theme.of(context).textTheme.displayMedium
+                            : Theme.of(context).textTheme.displaySmall,
+                      ),
+                    ),
+                    isDevice(
+                      desktop: SuggestGridWidget(),
+                    ),
                     const ContactDetails()
                   ],
                 );

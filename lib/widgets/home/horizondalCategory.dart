@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/producs.dart';
@@ -89,7 +87,7 @@ class HorizondalWidget extends StatelessWidget {
                                 onTap: () {
                                   // String? category = valueToID(keys[index]);
                                   context.go(
-                                      "${RouteConstants().category}/$category");
+                                      "${RouteConstants().category}/${ids[index]}");
                                 },
                                 child: ProductsInfo(
                                   id: ids[index],

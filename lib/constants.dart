@@ -31,23 +31,24 @@ const String localLogoImage = "assets/images/logo.jpg";
 late final String myWebsiteURL;
 
 const String companyName = "Resto Supply Hub";
-const String suggestText = "You might also like these";
+const String suggestText = "Customers also bought";
 
-bool isAdmin = false;
-
-String mail = "resto@mail.com";
-String password = "pw123456";
+// String mail = "resto@mail.com";
+// String password = "pw123456";
 
 const String verify = "isCategory";
 
 // product keywords
-const String titlee = "title";
-const String prices = "price";
-const String images = "images";
-const String detailss = "details";
-const String stocks = "stock";
-const String pickups = "pickup";
-const String shippings = "shipping";
+const String titlee = "Title";
+const String prices = "Price";
+const String images = "Images";
+const String detailss = "Details";
+const String stocks = "Stock";
+const String pickups = "Pickup";
+const String shippings = "Shipping";
+const String qty = "Quantity";
+const String location = "Location";
+const String imageStore = "imageStorage";
 
 // category keywords
 const String category = "category";
@@ -59,10 +60,23 @@ const String keywordd = "keyword";
 // auth keywords
 const String users = "users";
 const String position = "position";
-
+String userProfile = "Profile";
+String userName = "User Name";
 // roles
 
-int superUser = 0;
-int admin = 1;
-int editor = 2;
-int defaultUser = 3;
+// int superUser = 0;
+String admin = "Admin";
+String editor = "Editor";
+String defaultUser = "User";
+// storage
+const String storageImage = "images";
+
+// user specifics
+
+const String cart = "cart";
+const String productId = "Product Id";
+const String amount = "Amount";
+
+// shared preferences
+const String email = "email";
+const String passText = "password";

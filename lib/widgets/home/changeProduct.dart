@@ -1,10 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
-import 'package:restrosupply/productData.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 import 'package:restrosupply/widgets/common/error.dart';
@@ -20,6 +17,13 @@ class ProductSideviewWidget extends StatefulWidget {
 
 class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
   int _productIndex = 0;
+  late final List<String> ids;
+
+  @override
+  void initState() {
+    ids = widget.ids;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +50,12 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
           onTap: () {
             // String? category = valueToID(widget.keys[widget.index]);
             context.go(
-                "${RouteConstants().product}/${widget.ids[index + _productIndex]}");
+                "${RouteConstants().product}/${ids[index + _productIndex]}");
           },
           child: FutureBuilder(
               future: FirebaseFirestore.instance
                   .collection(categoryProducts)
-                  .doc(widget.ids[index + _productIndex])
+                  .doc(ids[index + _productIndex])
                   .get(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
@@ -60,40 +64,40 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
                   return LoadingErrorWidget();
                 } else {
                   Map<String, dynamic> productData = snapshot.data!.data()!;
-                  return Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.only(
-                            right: 10, left: 10, top: 15, bottom: 15),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.black,
-                            ),
-                            borderRadius: BorderRadius.circular(20)),
-                        width: MediaQuery.of(context).size.width / 8,
-                        height: MediaQuery.of(context).size.width / 4.5,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            CustomImageWidget(
-                              path: productData[images][0],
-                              height: MediaQuery.of(context).size.width / 9,
-                              width: MediaQuery.of(context).size.width / 9,
-                            ),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              productData[titlee],
-                              style: Theme.of(context).textTheme.labelMedium,
-                              maxLines: 2,
-                              overflow: TextOverflow.fade,
-                            )
-                          ],
+                  ids;
+                  String productImg = productData[images].isEmpty
+                      ? ""
+                      : productData[images][0][images];
+                  return Container(
+                    padding: const EdgeInsets.only(
+                        right: 10, left: 10, top: 15, bottom: 15),
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1,
+                          color: Colors.black,
                         ),
-                      ),
-                    ],
+                        borderRadius: BorderRadius.circular(20)),
+                    width: MediaQuery.of(context).size.width / 8,
+                    height: MediaQuery.of(context).size.width / 4.5,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CustomImageWidget(
+                          path: productImg,
+                          height: MediaQuery.of(context).size.width / 9,
+                          width: MediaQuery.of(context).size.width / 9,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          productData[titlee],
+                          style: Theme.of(context).textTheme.labelMedium,
+                          maxLines: 2,
+                          overflow: TextOverflow.fade,
+                        )
+                      ],
+                    ),
                   );
                 }
               }),
@@ -101,7 +105,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
       ),
       IconButton(
         onPressed: () {
-          if (_productIndex + 3 < widget.ids.length) {
+          if (_productIndex + 3 < ids.length) {
             setState(() {
               _productIndex += 1;
             });
@@ -109,8 +113,7 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
         },
         icon: Icon(
           Icons.arrow_forward_ios,
-          color:
-              _productIndex + 3 == widget.ids.length ? Colors.grey : Colors.red,
+          color: _productIndex + 3 == ids.length ? Colors.grey : Colors.red,
           size: MediaQuery.of(context).size.width * 0.05,
         ),
       ),

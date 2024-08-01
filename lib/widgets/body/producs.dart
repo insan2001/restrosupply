@@ -46,7 +46,10 @@ class ProductsInfo extends StatelessWidget {
                     child: Text(
                       data[categoryName],
                       style: MediaQuery.of(context).size.width >= mobileWidth
-                          ? Theme.of(context).textTheme.labelMedium
+                          ? Theme.of(context)
+                              .textTheme
+                              .displaySmall!
+                              .copyWith(fontSize: 14)
                           : Theme.of(context)
                               .textTheme
                               .displaySmall!

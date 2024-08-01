@@ -1,60 +1,82 @@
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/data.dart';
 
 class Product {
-  final String title;
-  final double? price;
-  final List<String>? img;
-  final List<dynamic>? details;
-  bool stock = true;
-  bool pickup = true;
-  bool shipping = true;
+  String title;
+  double? price;
+  List<Map<String, String>> img;
+  // List<dynamic>? details;
+  List<String>? details;
+  bool stock;
+  bool pickup;
+  bool shipping;
+  int quantity;
 
   Product({
     required this.title,
     this.price,
-    this.img,
     this.details,
+    required this.img,
     required this.stock,
     required this.pickup,
     required this.shipping,
+    required this.quantity,
   });
 
   factory Product.fromMap(Map<String, dynamic> data) {
-    List<String> imgs = [];
-    for (String img in data[images]) {
-      imgs.add(img);
+    List<Map<String, String>> imgs = [];
+    for (Map<String, dynamic> imgData in data[images]) {
+      Map<String, String> temp = {};
+      temp[images] = imgData[images] ?? "";
+      temp[imageStore] = imgData[imageStore] ?? "";
+      imgs.add(temp);
     }
     List<String> details = [];
-    for (String detail in data[detailss]) {
+    for (String detail in data[detailss].split(",")) {
       details.add(detail);
     }
+
     return Product(
-        title: data[titlee],
-        img: imgs,
-        price: data[prices],
-        details: details,
-        stock: data[stocks],
-        pickup: data[pickups],
-        shipping: data[shippings]);
+      title: data[titlee],
+      img: imgs,
+      price: data[prices],
+      details: details,
+      stock: data[stocks],
+      pickup: data[pickups],
+      shipping: data[shippings],
+      quantity: data[qty] ?? 0,
+    );
   }
 
   factory Product.fromList(List<dynamic> data) {
     int priceInt = data.length - 2;
+    List<String>? d = [];
+    if (data.last.split("Price").length > 1) {
+      for (String s in data.sublist(detailsIndex, priceInt)) {
+        d.add(s);
+      }
+    } else {
+      if (data.length > priceInt + 1) {
+        d = [data[detailsIndex]];
+      } else {
+        for (String s in data.sublist(detailsIndex, priceInt + 1)) {
+          d.add(s);
+        }
+      }
+    }
+
     return Product(
       title: data[textIndex],
-      img: [data[imageIndex]],
+      img: [
+        {imageStore: "", images: data[imageIndex]}
+      ],
       stock: data[stockIndex],
       pickup: data[pickupIndex],
       shipping: data[shippingIndex],
-      details: data.last.split("Price").length > 1
-          ? data.sublist(detailsIndex, priceInt)
-          : dataList.length > priceInt + 1
-              ? [data[detailsIndex]]
-              : data.sublist(detailsIndex, priceInt + 1),
+      details: d,
       price: data.last.split("Price").length > 1
           ? double.parse(data.last.split("\$").last)
           : null,
+      quantity: 0,
     );
   }
   Map<String, dynamic> toJson() {
@@ -64,8 +86,9 @@ class Product {
       stocks: stock,
       pickups: pickup,
       shippings: shipping,
-      detailss: details,
+      detailss: details?.join(","),
       prices: price,
+      qty: quantity,
     };
   }
 }
