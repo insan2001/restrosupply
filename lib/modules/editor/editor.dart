@@ -44,18 +44,23 @@ class _DetailEditorState extends State<DetailEditor> {
           readOnly: !edit,
           decoration: InputDecoration(
             labelText: widget.title,
-            prefixIcon: widget.title == qty || widget.title == prices
+            prefixIcon: widget.title == qty ||
+                    widget.title == prices ||
+                    widget.title == pieces
                 ? Icon(Icons.looks_one_outlined)
                 : Icon(Icons.abc),
             suffixIcon: IconButton(
               onPressed: () async {
                 if (edit) {
                   dynamic updatable = "";
-                  if (widget.title == qty || widget.title == prices) {
+                  if (widget.title == qty ||
+                      widget.title == prices ||
+                      widget.title == pieces) {
                     try {
-                      updatable = widget.title == qty
-                          ? int.parse(editor.text)
-                          : double.parse(editor.text);
+                      updatable =
+                          (widget.title == qty || widget.title == pieces)
+                              ? int.parse(editor.text)
+                              : double.parse(editor.text);
                     } catch (_) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Container(
@@ -76,10 +81,7 @@ class _DetailEditorState extends State<DetailEditor> {
                         content: Container(
                             color: Colors.green,
                             child: Text("${widget.title} has been updated."))));
-                  } catch (e) {
-                    var s = e;
-                    print(s);
-                  }
+                  } catch (e) {}
                 }
                 setState(() {
                   edit = !edit;

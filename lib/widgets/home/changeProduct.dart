@@ -27,96 +27,105 @@ class _ProductSideviewWidgetState extends State<ProductSideviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      IconButton(
-        onPressed: () {
-          if (_productIndex != 0) {
-            setState(() {
-              _productIndex -= 1;
-            });
-          }
-        },
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: _productIndex == 0 ? Colors.grey : Colors.red,
-          size: MediaQuery.of(context).size.width * 0.05,
-        ),
-      ),
-      ...List.generate(
-        3,
-        (index) => InkWell(
-          splashColor: null,
-          highlightColor: null,
-          onTap: () {
-            // String? category = valueToID(widget.keys[widget.index]);
-            context.go(
-                "${RouteConstants().product}/${ids[index + _productIndex]}");
+    return SizedBox(
+      height: MediaQuery.of(context).size.width * 0.18,
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        IconButton(
+          onPressed: () {
+            if (_productIndex != 0) {
+              setState(() {
+                _productIndex -= 1;
+              });
+            }
           },
-          child: FutureBuilder(
-              future: FirebaseFirestore.instance
-                  .collection(categoryProducts)
-                  .doc(ids[index + _productIndex])
-                  .get(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return WaitingWidget();
-                } else if (snapshot.hasError) {
-                  return LoadingErrorWidget();
-                } else {
-                  Map<String, dynamic> productData = snapshot.data!.data()!;
-                  ids;
-                  String productImg = productData[images].isEmpty
-                      ? ""
-                      : productData[images][0][images];
-                  return Container(
-                    padding: const EdgeInsets.only(
-                        right: 10, left: 10, top: 15, bottom: 15),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.black,
-                        ),
-                        borderRadius: BorderRadius.circular(20)),
-                    width: MediaQuery.of(context).size.width / 8,
-                    height: MediaQuery.of(context).size.width / 4.5,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CustomImageWidget(
-                          path: productImg,
-                          height: MediaQuery.of(context).size.width / 9,
-                          width: MediaQuery.of(context).size.width / 9,
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          productData[titlee],
-                          style: Theme.of(context).textTheme.labelMedium,
-                          maxLines: 2,
-                          overflow: TextOverflow.fade,
-                        )
-                      ],
-                    ),
-                  );
-                }
-              }),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: _productIndex == 0 ? Colors.grey : Colors.red,
+            size: MediaQuery.of(context).size.width * 0.05,
+          ),
         ),
-      ),
-      IconButton(
-        onPressed: () {
-          if (_productIndex + 3 < ids.length) {
-            setState(() {
-              _productIndex += 1;
-            });
-          }
-        },
-        icon: Icon(
-          Icons.arrow_forward_ios,
-          color: _productIndex + 3 == ids.length ? Colors.grey : Colors.red,
-          size: MediaQuery.of(context).size.width * 0.05,
+        ...List.generate(
+          3,
+          (index) => InkWell(
+            splashColor: null,
+            highlightColor: null,
+            onTap: () {
+              // String? category = valueToID(widget.keys[widget.index]);
+              context.go(
+                  "${RouteConstants().product}/${ids[index + _productIndex]}");
+            },
+            child: FutureBuilder(
+                future: FirebaseFirestore.instance
+                    .collection(categoryProducts)
+                    .doc(ids[index + _productIndex])
+                    .get(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return WaitingWidget();
+                  } else if (snapshot.hasError) {
+                    return LoadingErrorWidget();
+                  } else {
+                    Map<String, dynamic> productData = snapshot.data!.data()!;
+                    ids;
+                    String productImg = productData[images].isEmpty
+                        ? ""
+                        : productData[images][0][images];
+                    return Container(
+                      padding: EdgeInsets.all(
+                          MediaQuery.of(context).size.width * 0.01),
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(20)),
+                      width: MediaQuery.of(context).size.width / 8,
+                      height: MediaQuery.of(context).size.width / 4.5,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CustomImageWidget(
+                            path: productImg,
+                            height: MediaQuery.of(context).size.width / 9,
+                            width: MediaQuery.of(context).size.width / 9,
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            productData[titlee],
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium!
+                                .copyWith(
+                                  fontSize:
+                                      MediaQuery.of(context).size.width * 0.01,
+                                ),
+                            maxLines: 2,
+                            overflow: TextOverflow.fade,
+                          )
+                        ],
+                      ),
+                    );
+                  }
+                }),
+          ),
         ),
-      ),
-    ]);
+        IconButton(
+          onPressed: () {
+            if (_productIndex + 3 < ids.length) {
+              setState(() {
+                _productIndex += 1;
+              });
+            }
+          },
+          icon: Icon(
+            Icons.arrow_forward_ios,
+            color: _productIndex + 3 == ids.length ? Colors.grey : Colors.red,
+            size: MediaQuery.of(context).size.width * 0.05,
+          ),
+        ),
+      ]),
+    );
   }
 }

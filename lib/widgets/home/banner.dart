@@ -47,9 +47,12 @@ class BannerWidget extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      CustomButtonWidget(
-                          navPath: "${RouteConstants().category}/$all",
-                          text: all)
+                      SizedBox(
+                        width: 180,
+                        child: CustomButtonWidget(
+                            navPath: "${RouteConstants().category}/$all",
+                            text: all),
+                      )
                     ],
                   ),
                 ),

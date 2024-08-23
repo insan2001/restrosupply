@@ -72,7 +72,7 @@ class HorizondalWidget extends StatelessWidget {
                         ),
                       )
                     : SizedBox(
-                        height: MediaQuery.of(context).size.width * 1.6,
+                        height: MediaQuery.of(context).size.width * 1.7,
                         child: GridView.builder(
                           itemCount: 6,
                           physics: const NeverScrollableScrollPhysics(),
@@ -97,6 +97,14 @@ class HorizondalWidget extends StatelessWidget {
                       );
               }
             }),
+        const isDevice(
+          desktop: SizedBox(
+            height: 10,
+          ),
+          mobile: SizedBox(
+            height: 10,
+          ),
+        ),
       ],
     );
   }

@@ -5,10 +5,14 @@ import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/modules/userProvider.dart';
 
 class AddToCartButton extends StatefulWidget {
-  final int quantity;
+  // final int quantity;
   final String productId;
+  final double price;
   const AddToCartButton(
-      {super.key, required this.quantity, required this.productId});
+      {super.key,
+      // required this.quantity,
+      required this.productId,
+      required this.price});
 
   @override
   State<AddToCartButton> createState() => _AddToCartButtonState();
@@ -55,15 +59,18 @@ class _AddToCartButtonState extends State<AddToCartButton> {
             if (context.read<UserProvider>().login) {
               DocumentReference ref = FirebaseFirestore.instance
                   .collection(users)
-                  .doc(context.read<UserProvider>().uid)
-                  .collection(cart)
-                  .doc(widget.productId);
+                  .doc(context.read<UserProvider>().uid);
+              DocumentSnapshot snapshot = await ref.get();
+              Map<String, dynamic>? fetchData =
+                  snapshot.data() as Map<String, dynamic>;
+              Map<String, dynamic> currentCart = fetchData[cart] ?? {};
 
-              if ((await ref.get()).exists) {
-                await ref.update({amount: qty});
-              } else {
-                await ref.set({amount: qty});
-              }
+              // Update or add the product in the cart
+              currentCart[widget.productId] = qty;
+
+              // Update the cart in Firestore
+              await ref.update({cart: currentCart});
+
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text("Product has been added"),

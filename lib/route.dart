@@ -3,13 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:restrosupply/routeConstants.dart';
 import 'package:restrosupply/screens/cart.dart';
 import 'package:restrosupply/screens/category.dart';
+import 'package:restrosupply/screens/checkout.dart';
 import 'package:restrosupply/screens/contactUs.dart';
 import 'package:restrosupply/screens/dev.dart';
 import 'package:restrosupply/screens/edit.dart';
 import 'package:restrosupply/screens/error.dart';
 import 'package:restrosupply/screens/homeScreen.dart';
 import 'package:restrosupply/screens/login.dart';
-import 'package:restrosupply/screens/payment.dart';
 import 'package:restrosupply/screens/product.dart';
 import 'package:restrosupply/screens/profile.dart';
 
@@ -69,12 +69,27 @@ class AppRouter {
         }),
       ),
       GoRoute(
+        name: RouteConstants().checkout,
+        path: RouteConstants().checkout,
+        pageBuilder: ((context, state) {
+          return MaterialPage(key: state.pageKey, child: CheckoutScreen());
+        }),
+      ),
+      GoRoute(
         name: RouteConstants().cart,
         path: RouteConstants().cart,
         pageBuilder: ((context, state) {
-          return MaterialPage(key: state.pageKey, child: ShoppinCartScreen());
+          return MaterialPage(
+              key: state.pageKey, child: const ShoppinCartScreen());
         }),
       ),
+      // GoRoute(
+      //   name: RouteConstants().orders,
+      //   path: RouteConstants().orders,
+      //   pageBuilder: ((context, state) {
+      //     return MaterialPage(key: state.pageKey, child: const OrderScreen());
+      //   }),
+      // ),
       GoRoute(
         name: RouteConstants().contactUs,
         path: RouteConstants().contactUs,
@@ -97,13 +112,13 @@ class AppRouter {
           return MaterialPage(key: state.pageKey, child: const DevScreen());
         }),
       ),
-      GoRoute(
-        name: RouteConstants().payment,
-        path: RouteConstants().payment,
-        pageBuilder: ((context, state) {
-          return MaterialPage(key: state.pageKey, child: const PaymentScreen());
-        }),
-      ),
+      // GoRoute(
+      //   name: RouteConstants().payment,
+      //   path: RouteConstants().payment,
+      //   pageBuilder: ((context, state) {
+      //     return MaterialPage(key: state.pageKey, child: const PaymentScreen());
+      //   }),
+      // ),
     ],
   );
 }

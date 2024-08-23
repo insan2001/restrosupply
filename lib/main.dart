@@ -3,15 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/firebase_options.dart';
-import 'package:restrosupply/functions/replace.dart';
-import 'package:restrosupply/modules/category.dart';
+import 'package:restrosupply/modules/cartProvider.dart';
 import 'package:restrosupply/modules/userProvider.dart';
 import 'package:restrosupply/route.dart';
-import 'package:restrosupply/sample.dart';
 
 import 'dart:html' as html;
 
@@ -62,13 +61,18 @@ CollectionReference userStore = FirebaseFirestore.instance.collection(users);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Stripe.publishableKey =
+      "pk_live_51PqmRqBCteq3n7P9q3kvJ48G9T2y6ccwdCZliWQynzG3zxG6t8wHJhTJm4eo1h9L78Vhu6HfomOLkmwHvJE4s2nS00VhfJxKJW";
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
   myWebsiteURL = html.window.location.href;
   // await writeeData();
   // print("data written");
   runApp(
     MultiProvider(
-      providers: [ChangeNotifierProvider(create: (context) => UserProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (context) => UserProvider()),
+        ChangeNotifierProvider(create: (context) => Cartprovider())
+      ],
       child: MainApp(),
     ),
   );

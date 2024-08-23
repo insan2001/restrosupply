@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:restrosupply/constants.dart';
+import 'package:restrosupply/functions/replace.dart';
 import 'package:restrosupply/modules/product.dart';
+import 'package:restrosupply/modules/userProvider.dart';
+import 'package:restrosupply/widgets/singleProduct/addToCart.dart';
 
 class InformationWidget extends StatefulWidget {
   final Product product;
@@ -45,48 +49,45 @@ class _InformationWidgetState extends State<InformationWidget> {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width > mobileWidth
                         ? 0
-                        : MediaQuery.of(context).size.width * 0.05),
+                        : MediaQuery.of(context).size.width * 0.005),
                 child: Text(
                   widget.product.title,
                   style: MediaQuery.of(context).size.width > mobileWidth
-                      ? Theme.of(context).textTheme.headlineMedium
-                      : Theme.of(context).textTheme.headlineSmall,
+                      ? Theme.of(context).textTheme.headlineLarge
+                      : Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
             ),
-            const SizedBox(height: 10),
-            Text(
-              widget.product.price == null
-                  ? "N/A"
-                  : "\$ ${widget.product.price.toString()}",
-              style: Theme.of(context)
-                  .textTheme
-                  .displayMedium!
-                  .copyWith(color: Theme.of(context).primaryColor),
+            SizedBox(
+              height: 20,
             ),
-
-            const SizedBox(height: 10),
             Text(
-              widget.product.quantity != 0
-                  ? "Quantity : ${widget.product.quantity}"
+              widget.product.quantity != -1
+                  ? widget.product.quantity == 0
+                      ? "Quantity (Box)        :    500"
+                      : "Quantity (Box)        :    ${widget.product.quantity}"
                   : "Usually available within 24 hours",
               style: Theme.of(context).textTheme.displaySmall!.copyWith(
                   color:
-                      widget.product.quantity != 0 ? Colors.black : Colors.red,
+                      widget.product.quantity != -1 ? Colors.black : Colors.red,
                   fontSize: 18),
             ),
-            const SizedBox(height: 10),
+            Text(
+              "Product per box    :    ${widget.product.piece.toString()}",
+              style: TextStyle(fontSize: 18),
+            ),
             widget.product.details != null
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: List.generate(widget.product.details!.length,
-                        (index) => Text(widget.product.details![index])),
+                    children: List.generate(
+                        widget.product.details!.length,
+                        (index) => Text(
+                              widget.product.details![index],
+                              style: TextStyle(fontSize: 18),
+                            )),
                   )
                 : SizedBox(),
-
-            const SizedBox(height: 10),
-
             Row(
               children: [
                 Icon(
@@ -99,9 +100,8 @@ class _InformationWidgetState extends State<InformationWidget> {
                 Text(
                   "Pickup - In store",
                   style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                        color:
-                            widget.product.pickup ? Colors.green : Colors.red,
-                      ),
+                      color: widget.product.pickup ? Colors.green : Colors.red,
+                      fontSize: 18),
                 ),
               ],
             ),
@@ -117,90 +117,37 @@ class _InformationWidgetState extends State<InformationWidget> {
                 Text(
                   "Delivery",
                   style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                        color:
-                            widget.product.shipping ? Colors.green : Colors.red,
-                      ),
+                      color:
+                          widget.product.shipping ? Colors.green : Colors.red,
+                      fontSize: 18),
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            // AddToCartButton(
-            //   quantity: widget.product.quantity,
-            //   productId: replaceEverything(widget.product.title),
-            // )
-            // (isAdmin &&
-            //         dataList[widget.category]![data]![widget.index][detailsIndex] ==
-            //             "")
-            //     ? InkWell(
-            //         onTap: () {
-            //           setState(() {
-            //             isEditDescription = true;
-            //           });
-            //         },
-            //         child: Container(
-            //           height: 50,
-            //           width: 100,
-            //           color: Colors.yellow,
-            //         ))
-            //     : const SizedBox(),
-            // GestureDetector(
-            //   onTap: () {
-            //     if (!isAdmin) return;
-            //     setState(() {
-            //       isEditDescription = true;
-            //     });
-            //   },
-            //   child: isEditDescription
-            //       ? SizedBox(
-            //           height: 100,
-            //           width: MediaQuery.of(context).size.width > mobileWidth
-            //               ? MediaQuery.of(context).size.width * 0.4
-            //               : MediaQuery.of(context).size.width * 0.7,
-            //           child: TextField(
-            //             controller: descriptionController,
-            //             onSubmitted: (value) {
-            //               List<String> description = value.split(",");
-
-            //               dataList[widget.category]![data]![widget.index] = [
-            //                 ...dataList[widget.category]![data]![widget.index]
-            //                     .sublist(0, 5),
-            //                 ...description
-            //               ];
-
-            //               setState(() {
-            //                 isEditDescription = false;
-            //               });
-            //             },
-            //           ),
-            //         )
-            //       : Column(
-            //           crossAxisAlignment: CrossAxisAlignment.start,
-            //           children: List.generate(
-            //             dataList[widget.category]![data]![widget.index].length -
-            //                 detailsIndex,
-            //             (index) => Row(
-            //               children: [
-            //                 SizedBox(
-            //                     width:
-            //                         MediaQuery.of(context).size.width <= mobileWidth
-            //                             ? 20
-            //                             : 0),
-            //                 SizedBox(
-            //                   width: MediaQuery.of(context).size.width > mobileWidth
-            //                       ? MediaQuery.of(context).size.width * 0.5
-            //                       : MediaQuery.of(context).size.width * 0.9,
-            //                   child: Text(
-            //                     dataList[widget.category]![data]![widget.index]
-            //                         [detailsIndex + index],
-            //                     style: Theme.of(context).textTheme.labelLarge,
-            //                     maxLines: 2,
-            //                   ),
-            //                 ),
-            //               ],
-            //             ),
-            //           ),
-            //         ),
-            // ),
+            Text(
+              widget.product.price == -1
+                  ? "Price : N/A"
+                  : "Price : \$ ${widget.product.price.toStringAsFixed(2)}",
+              style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                  color: widget.product.price == -1
+                      ? Colors.red
+                      : Theme.of(context).primaryColor),
+            ),
+            SizedBox(height: 10),
+            context.watch<UserProvider>().login && widget.product.price > 0
+                ? AddToCartButton(
+                    productId: replaceEverything(widget.product.title),
+                    price: widget.product.price,
+                  )
+                : Text(
+                    widget.product.price <= 0 &&
+                            context.watch<UserProvider>().login
+                        ? "This can't be added now"
+                        : "Log in to add to cart",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.red,
+                    ),
+                  ),
           ],
         ),
       ],

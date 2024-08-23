@@ -5,6 +5,7 @@ import 'package:restrosupply/constants.dart';
 import 'package:restrosupply/modules/adaptive.dart';
 import 'package:restrosupply/modules/userProvider.dart';
 import 'package:restrosupply/routeConstants.dart';
+import 'package:restrosupply/widgets/appBar/cartButton.dart';
 import 'package:restrosupply/widgets/appBar/title.dart';
 import 'package:restrosupply/widgets/body/customImage.dart';
 
@@ -30,9 +31,10 @@ class _CustomScaffoldState extends State<CustomScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         backgroundColor: Colors.white,
         actions: [
-          // CartButton(),
+          context.watch<UserProvider>().login ? CartButton() : SizedBox(),
           IconButton(
               onPressed: () async {
                 if (context.read<UserProvider>().login) {
@@ -55,9 +57,18 @@ class _CustomScaffoldState extends State<CustomScaffold> {
             width: 20,
           )
         ],
-        leading: GestureDetector(
-            onTap: () => context.go(RouteConstants().home),
-            child: const CustomImageWidget(path: logoImage)),
+        leading: Row(children: [
+          Container(
+            width: 200,
+            padding: EdgeInsets.all(8),
+            child: GestureDetector(
+                onTap: () => context.go(RouteConstants().home),
+                child: CustomImageWidget(
+                  path: logoImage,
+                  fit: BoxFit.fill,
+                )),
+          ),
+        ]),
         title: Center(
           child: isDevice(
             desktop: Wrap(
@@ -74,13 +85,13 @@ class _CustomScaffoldState extends State<CustomScaffold> {
                 ),
               ),
             ),
-            mobile: Text(
-              companyName,
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineSmall!
-                  .copyWith(color: Theme.of(context).primaryColor),
-            ),
+            // mobile: Text(
+            //   companyName,
+            //   style: Theme.of(context)
+            //       .textTheme
+            //       .headlineSmall!
+            //       .copyWith(color: Theme.of(context).primaryColor),
+            // ),
           ),
         ),
       ),

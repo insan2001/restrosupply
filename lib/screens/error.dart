@@ -21,8 +21,11 @@ class ErrorScreen extends StatelessWidget {
                 .copyWith(color: Theme.of(context).primaryColor),
           ),
           Material(
-              child: CustomButtonWidget(
-                  navPath: RouteConstants().home, text: "Home"))
+              child: SizedBox(
+            width: 200,
+            child: CustomButtonWidget(
+                navPath: RouteConstants().home, text: "Home"),
+          ))
         ],
       ),
     );

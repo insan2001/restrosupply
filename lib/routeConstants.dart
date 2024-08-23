@@ -10,4 +10,6 @@ class RouteConstants {
   final String cart = "/mycart";
   final String payment = "/pay";
   final String profile = "/profile";
+  final String checkout = "/checkout";
+  final String orders = "/orders";
 }

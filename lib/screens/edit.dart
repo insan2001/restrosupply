@@ -26,6 +26,7 @@ class _ProductEditorScreenState extends State<ProductEditorScreen> {
   TextEditingController descriptionEditor = TextEditingController();
   TextEditingController priceEditor = TextEditingController();
   TextEditingController qtyEditor = TextEditingController();
+  TextEditingController pieceEditor = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +86,12 @@ class _ProductEditorScreenState extends State<ProductEditorScreen> {
                           title: qty,
                           content: product.quantity.toString(),
                           controller: qtyEditor,
+                          path: widget.id,
+                        ),
+                        DetailEditor(
+                          title: pieces,
+                          content: product.piece.toString(),
+                          controller: pieceEditor,
                           path: widget.id,
                         ),
                         PickupSwitch(state: product.pickup, id: widget.id),

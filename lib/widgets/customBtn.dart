@@ -14,7 +14,6 @@ class CustomButtonWidget extends StatelessWidget {
       highlightColor: null,
       onTap: () => context.go(navPath),
       child: Container(
-        width: 180,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,

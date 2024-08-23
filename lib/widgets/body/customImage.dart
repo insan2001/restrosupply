@@ -17,6 +17,7 @@ class CustomImageWidget extends StatelessWidget {
       width: width,
       height: height,
       fit: fit ?? BoxFit.contain,
+      errorWidget: (context, url, error) => Image.asset(path!),
     );
   }
 }

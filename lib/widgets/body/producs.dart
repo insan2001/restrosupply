@@ -24,40 +24,43 @@ class ProductsInfo extends StatelessWidget {
               return LoadingErrorWidget();
             } else {
               Map<String, dynamic> data = snapshot.data!.data()!;
-              return Column(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    child: CustomImageWidget(
+              return Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    CustomImageWidget(
                       path: data[categoryImage],
                       width: MediaQuery.of(context).size.width >= mobileWidth
-                          ? MediaQuery.of(context).size.width / 7.5
+                          ? MediaQuery.of(context).size.width / 10
                           : MediaQuery.of(context).size.width * 0.4,
                       height: MediaQuery.of(context).size.width >= mobileWidth
-                          ? MediaQuery.of(context).size.width / 7.5
+                          ? MediaQuery.of(context).size.width / 10
                           : MediaQuery.of(context).size.width * 0.4,
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  SizedBox(
-                    height: 45,
-                    child: Text(
-                      data[categoryName],
-                      style: MediaQuery.of(context).size.width >= mobileWidth
-                          ? Theme.of(context)
-                              .textTheme
-                              .displaySmall!
-                              .copyWith(fontSize: 14)
-                          : Theme.of(context)
-                              .textTheme
-                              .displaySmall!
-                              .copyWith(fontSize: 20),
-                      maxLines: 3,
+                    const SizedBox(
+                      height: 10,
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 25,
+                      child: Text(
+                        data[categoryName],
+                        style: MediaQuery.of(context).size.width >= mobileWidth
+                            ? Theme.of(context)
+                                .textTheme
+                                .displaySmall!
+                                .copyWith(fontSize: 14)
+                            : Theme.of(context)
+                                .textTheme
+                                .displaySmall!
+                                .copyWith(fontSize: 20),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
+                    ),
+                  ],
+                ),
               );
             }
           }),

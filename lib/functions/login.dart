@@ -36,7 +36,6 @@ Future<String?> LoginUser(LoginData loginData, BuildContext context) async {
 
     return null;
   } catch (e) {
-    print(e.toString());
     return e.toString();
   }
 }

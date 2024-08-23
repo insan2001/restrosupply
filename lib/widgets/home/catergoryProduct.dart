@@ -57,14 +57,17 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                               width: MediaQuery.of(context).size.width * 0.85,
                               child: Row(
                                 children: [
-                                  SizedBox(
+                                  Container(
+                                    padding: EdgeInsets.all(
+                                        MediaQuery.of(context).size.width *
+                                            0.01),
                                     width: MediaQuery.of(context).size.width *
                                         0.25,
                                     child: Column(
                                       children: [
                                         Text(
                                           data[categoryName],
-                                          maxLines: 1,
+                                          maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: Theme.of(context)
                                               .textTheme
@@ -76,6 +79,9 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                                               .width *
                                                           0.02),
                                         ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
                                         Stack(
                                           children: [
                                             Center(
@@ -84,11 +90,12 @@ class _CatergoryproductWidgetState extends State<CatergoryproductWidget> {
                                                 width: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.2,
+                                                    0.16,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.2,
+                                                    0.16,
+                                                fit: BoxFit.cover,
                                               ),
                                             ),
                                             Positioned.fill(
