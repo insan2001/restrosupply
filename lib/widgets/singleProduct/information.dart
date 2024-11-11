@@ -61,21 +61,21 @@ class _InformationWidgetState extends State<InformationWidget> {
             SizedBox(
               height: 20,
             ),
-            Text(
-              widget.product.quantity != -1
-                  ? widget.product.quantity == 0
-                      ? "Quantity (Box)        :    500"
-                      : "Quantity (Box)        :    ${widget.product.quantity}"
-                  : "Usually available within 24 hours",
-              style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                  color:
-                      widget.product.quantity != -1 ? Colors.black : Colors.red,
-                  fontSize: 18),
-            ),
-            Text(
-              "Product per box    :    ${widget.product.piece.toString()}",
-              style: TextStyle(fontSize: 18),
-            ),
+            // Text(
+            //   widget.product.quantity != -1
+            //       ? widget.product.quantity == 0
+            //           ? "Quantity (Box)        :    500"
+            //           : "Quantity (Box)        :    ${widget.product.quantity}"
+            //       : "Usually available within 24 hours",
+            //   style: Theme.of(context).textTheme.displaySmall!.copyWith(
+            //       color:
+            //           widget.product.quantity != -1 ? Colors.black : Colors.red,
+            //       fontSize: 18),
+            // ),
+            // Text(
+            //   "Product per box    :    ${widget.product.piece.toString()}",
+            //   style: TextStyle(fontSize: 18),
+            // ),
             widget.product.details != null
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.start,

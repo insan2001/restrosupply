@@ -7,7 +7,6 @@ import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:restrosupply/constants.dart';
-import 'package:restrosupply/functions/placeOrder.dart';
 import 'package:restrosupply/modules/cartProvider.dart';
 import 'package:restrosupply/modules/userProvider.dart';
 import 'package:restrosupply/routeConstants.dart';
